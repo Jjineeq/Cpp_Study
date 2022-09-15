@@ -19,9 +19,9 @@ class State:
       result.append(self.get_new_board(i, i-3, moves))
     if not i in [0, 3, 6] :		# LEFT 연산자 
       result.append(self.get_new_board(i, i-1, moves))
-    if not i in [2, 5, 8]:		# DOWN 연산자 
+    if not i in [2, 5, 8]:		# RIGHT 연산자
       result.append(self.get_new_board(i, i+1, moves))
-    if not i in [6, 7, 8]:		# RIGHT 연산자 
+    if not i in [6, 7, 8]:		# DOWN 연산자
       result.append(self.get_new_board(i, i+3, moves))
     return result
 
@@ -36,8 +36,8 @@ class State:
     return self.board == other.board
 
 # 초기 상태
-puzzle = [1, 2, 3, 
-          4, 0, 5, 
+puzzle = [1, 2, 3,
+          4, 0, 5,
           7, 8, 6]
 
 # 목표 상태

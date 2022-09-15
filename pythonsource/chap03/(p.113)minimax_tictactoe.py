@@ -98,7 +98,7 @@ while True:
     draw(game_board)
     if len(empty_cells(game_board)) == 0 or game_over(game_board):
         break
-    i, v = minimax(game_board, 9, player=='X')
+    i, v = minimax(game_board, 5, player=='X')
     move(i, player)
     if player=='X':
         player='O'
