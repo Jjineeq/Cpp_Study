@@ -1,6 +1,8 @@
 import sys, random
 from tttAI import *
 import pygame
+from pygame import *
+
 
 width = 300
 height = 400

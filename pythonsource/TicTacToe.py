@@ -1,5 +1,8 @@
-import sys, random
+from dbm.ndbm import library
+from gettext import install
+import sys, random, pygame
 from tttAI import *
+
 
 width = 300
 height = 400
