@@ -154,3 +154,5 @@ def minimax(self,depth, alpha, beta, player):
         return max_score
     else: 
         return min_score
+
+minimax(5,5,5,5,1)

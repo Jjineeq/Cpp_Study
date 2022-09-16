@@ -115,3 +115,4 @@ class AI(object):
             return max_score
         else:
             return min_score
+AI
