@@ -2,11 +2,12 @@ import numpy as np
 import queue
 
 global N
-N=3
+N=3 # N 정의
+n = N-1
 
-def attacked_queens_pairs(seqs): 
+def attacked_queens_pairs(seqs): # h(n) 정의, 공격 가능한 퀸의 개수
     a = np.array([0] * N**2)  
-    a = a.reshape(N, N)  
+    a = a.reshape(N, N)  # N*N 2차원 배열
     n = 0  
 
     for i in range(1, N):
@@ -56,7 +57,25 @@ def display_board(seqs):
         print()  
     print('The number of queens to attack is' + str(attacked_queens_pairs(seqs)))
 
+def f(self):
+    return self.h() + self.g()
+
+def g(self):
+    return self.display_board()
+
+def __eq__(self,other):
+    return self.display_board == other.display_board
+
+#def h(self):
+    #return 
+
+
+
+
 open_queue = queue.PriorityQueue()
 open_queue.put(attacked_queens_pairs, display_board)
 
 closed_queue = []
+
+while not open_queue.epmty():
+    current = open.queue.get()
