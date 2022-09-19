@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pythonsource"
+    "\\pythonsource",
+    "\\pythonsource\\chap02",
+    "\\Source\\VS2010"
   ],
-  "SelectedNode": "\\pythonsource\\nqueen2.py",
+  "SelectedNode": "\\pythonsource\\nqueen2 (2).py",
   "PreviewInSolutionExplorer": false
 }

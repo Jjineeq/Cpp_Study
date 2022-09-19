@@ -1,5 +1,6 @@
 import numpy as np
 import queue
+import random
 
 global N
 N=3 # N 정의
@@ -57,6 +58,21 @@ def display_board(seqs):
         print()  
     print('The number of queens to attack is' + str(attacked_queens_pairs(seqs)))
 
+
+def expand(pos):
+    nums = list(range(1,N))
+    for j in range(N-1):
+        pos = seqs.index(0)
+        temp_seq = list(seqs)
+        temp = random.choice(nums)
+        temp_seqs[pos] = temp
+        nums.remove(temp)
+        
+
+
+
+
+
 def f(self):
     return self.h() + self.g()
 
@@ -66,9 +82,10 @@ def g(self):
 def __eq__(self,other):
     return self.display_board == other.display_board
 
-#def h(self):
-    #return 
+def h(self):
+    return self.exapnd()
 
+seqs = [0]*N**2
 
 
 
@@ -76,6 +93,9 @@ open_queue = queue.PriorityQueue()
 open_queue.put(attacked_queens_pairs, display_board)
 
 closed_queue = []
+
+
+
 
 while not open_queue.epmty():
     current = open.queue.get()
