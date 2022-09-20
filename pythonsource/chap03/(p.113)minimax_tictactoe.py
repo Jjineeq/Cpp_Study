@@ -92,6 +92,10 @@ def minimax(board, depth, maxPlayer):
                 pos = p # 최소값의 위치를 기억한다.
     return pos, value # 위치와 값을 반환한다.
 
+def alphabeta(node, depth, alpha, beta, maxPlyaer):
+    if depth == 0:
+        return 
+
 player='X'
 # 메인 프로그램
 while True:
@@ -110,5 +114,6 @@ elif check_win(game_board, 'O'):
     print('O 승리!')
 else:
     print('비겼습니다!')
+
 
 
