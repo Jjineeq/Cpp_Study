@@ -110,3 +110,5 @@ elif check_win(game_board, 'O'):
     print('O 승리!')
 else:
     print('비겼습니다!')
+
+

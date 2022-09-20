@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\pythonsource"
+    "\\pythonsource",
+    "\\pythonsource\\chap02",
+    "\\pythonsource\\chap03"
   ],
-  "SelectedNode": "\\pythonsource\\nqueen_2.py",
   "PreviewInSolutionExplorer": false
 }
