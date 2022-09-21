@@ -1,7 +1,5 @@
 import queue
 
-
-
 class NQueens:
 
     def __init__(self, size):
