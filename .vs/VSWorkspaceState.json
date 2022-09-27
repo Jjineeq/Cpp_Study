@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Source",
+    "\\pythonsource",
+    "\\pythonsource\\chap03",
     "\\Source\\Buckland_Chapter2-State Machines",
-    "\\Source\\Buckland_Chapter2-State Machines\\WestWorld1",
-    "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging"
+    "\\Source\\Buckland_Chapter6_Scripting_Source",
+    "\\Source\\Buckland_Chapter6_Scripting_Source\\cpp_using_lua"
   ],
-  "SelectedNode": "\\Source\\Buckland_Chapter2-State Machines\\WestWorld1\\Miner.cpp",
+  "SelectedNode": "\\pythonsource\\chap03\\(p.113)minimax_tictactoe.py",
   "PreviewInSolutionExplorer": false
 }
