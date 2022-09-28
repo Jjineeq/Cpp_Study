@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\pythonsource",
-    "\\pythonsource\\chap03",
-    "\\Source\\Buckland_Chapter2-State Machines",
-    "\\Source\\Buckland_Chapter6_Scripting_Source",
-    "\\Source\\Buckland_Chapter6_Scripting_Source\\cpp_using_lua"
+    "\\pythonsource\\chap02",
+    "\\pythonsource\\chap03"
   ],
   "SelectedNode": "\\pythonsource\\chap03\\(p.113)minimax_tictactoe.py",
   "PreviewInSolutionExplorer": false
