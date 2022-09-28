@@ -1,13 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudio
-
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-
 #file
 .vs/
 
