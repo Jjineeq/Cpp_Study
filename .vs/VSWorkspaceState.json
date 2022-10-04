@@ -3,10 +3,11 @@
     "",
     "\\Source",
     "\\Source\\Buckland_Chapter2-State Machines",
-    "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging",
+    "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2",
     "\\Source\\Common",
-    "\\Source\\Common\\misc"
+    "\\Source\\Common\\FSM",
+    "\\Source\\Common\\script"
   ],
-  "SelectedNode": "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging\\MinersWifeOwnedStates.cpp",
+  "SelectedNode": "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
