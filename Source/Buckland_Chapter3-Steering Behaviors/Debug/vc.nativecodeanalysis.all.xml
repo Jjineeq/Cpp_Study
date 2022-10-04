@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>'WinMain'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winbase.h(1006)을(를) 참조하십시오. </DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>261</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hWnd'은(는) '0'일 수 있습니다.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>220</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>222</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>223</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>225</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>227</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>228</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>240</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>254</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>256</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'ShowWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:4507에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'ShowWindow'의 SAL 주석과 일치하지 않습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>262</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hWnd'은(는) '0'일 수 있습니다.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>220</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>222</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>223</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>225</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>227</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>228</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>240</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>254</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>256</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'ShowWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:4507에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'UpdateWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:8425에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'UpdateWindow'의 SAL 주석과 일치하지 않습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+      <FILENAME>Cgdi.cpp</FILENAME>
+      <LINE>14</LINE>
+      <COLUMN>6</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>'Cgdi::m_OldPen' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).</DESCRIPTION>
+    <FUNCTION>Cgdi::{ctor}</FUNCTION>
+    <DECORATED>??0Cgdi@@AAE@XZ</DECORATED>
+    <FUNCLINE>14</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Cgdi::m_OldPen</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+      <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+      <LINE>74</LINE>
+      <COLUMN>42</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.</DESCRIPTION>
+    <FUNCTION>iniFileLoaderBase::GetParameterValueAsString</FUNCTION>
+    <DECORATED>?GetParameterValueAsString@iniFileLoaderBase@@AAEXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z</DECORATED>
+    <FUNCLINE>50</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>53</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>54</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'endIdx'이(가) 초기화되지 않았습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>57</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>59</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>62</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>이 분기 건너뛰기, ('begIdx!=npos'이(가) false라고 가정)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'endIdx'은(는) 'std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;::find_first_not_of'(d:\visual-studio\vc\tools\msvc\14.33.31629\include\xstring:4542에서 선언됨)에 대한 In/Out 인수입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>74</LINE>
+        <COLUMN>42</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'endIdx'이(가) 사용되는데 초기화되지 않았을 수 있습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+      <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+      <LINE>125</LINE>
+      <COLUMN>40</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.</DESCRIPTION>
+    <FUNCTION>iniFileLoaderBase::GetNextToken</FUNCTION>
+    <DECORATED>?GetNextToken@iniFileLoaderBase@@AAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ</DECORATED>
+    <FUNCLINE>94</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>97</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>105</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>106</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'endIdx'이(가) 초기화되지 않았습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>109</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>111</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>114</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>이 분기 건너뛰기, ('begIdx!=npos'이(가) false라고 가정)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'endIdx'은(는) 'std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;::substr'(d:\visual-studio\vc\tools\msvc\14.33.31629\include\xstring:4614에서 선언됨)에 대한 In/Out 인수입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Common\misc\</FILEPATH>
+        <FILENAME>iniFileLoaderBase.cpp</FILENAME>
+        <LINE>125</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'endIdx'이(가) 사용되는데 초기화되지 않았을 수 있습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Common\Time\</FILEPATH>
+      <FILENAME>PrecisionTimer.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).</DESCRIPTION>
+    <FUNCTION>PrecisionTimer::{ctor}</FUNCTION>
+    <DECORATED>??0PrecisionTimer@@QAE@XZ</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>PrecisionTimer::m_CurrentTime</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Common\Time\</FILEPATH>
+      <FILENAME>PrecisionTimer.cpp</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>16</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).</DESCRIPTION>
+    <FUNCTION>PrecisionTimer::{ctor}</FUNCTION>
+    <DECORATED>??0PrecisionTimer@@QAE@N@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>PrecisionTimer::m_CurrentTime</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

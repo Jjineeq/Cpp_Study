@@ -1,0 +1,23 @@
+﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  WindowUtils.cpp
+  Vector2d.cpp
+  PrecisionTimer.cpp
+  Path.cpp
+  ParamLoader.cpp
+  Obstacle.cpp
+  iniFileLoaderBase.cpp
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(9,42): warning C4305: '인수': 'int'에서 'const _Elem'(으)로 잘립니다.
+          with
+          [
+              _Elem=char
+          ]
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(9,38): warning C4309: '인수': 상수 값이 잘립니다.
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(57,23): warning C4129: ';': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(109,23): warning C4129: ';': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+  Cgdi.cpp
+  Vehicle.cpp
+  SteeringBehaviors.cpp
+  main.cpp
+  GameWorld.cpp
+  코드를 생성하고 있습니다...
+  Steering.vcxproj -> D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\Debug\Steering.exe

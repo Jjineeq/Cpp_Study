@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>205</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>'WinMain'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winbase.h(1006)을(를) 참조하십시오. </DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>261</LINE>
+      <COLUMN>13</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hWnd'은(는) '0'일 수 있습니다.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>220</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>222</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>223</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>225</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>227</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>228</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>240</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>254</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>256</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'ShowWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:4507에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'ShowWindow'의 SAL 주석과 일치하지 않습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+      <FILENAME>main.cpp</FILENAME>
+      <LINE>262</LINE>
+      <COLUMN>15</COLUMN>
+    </SFA>
+    <DEFECTCODE>6387</DEFECTCODE>
+    <DESCRIPTION>'hWnd'은(는) '0'일 수 있습니다.</DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain@16</DECORATED>
+    <FUNCLINE>205</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>220</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>221</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>222</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>223</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>224</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>225</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>226</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>227</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>228</LINE>
+        <COLUMN>25</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>240</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>254</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>256</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>261</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'ShowWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:4507에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) 'UpdateWindow'(c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winuser.h:8425에서 선언됨)에 대한 입력입니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\</FILEPATH>
+        <FILENAME>main.cpp</FILENAME>
+        <LINE>262</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'UpdateWindow'의 SAL 주석과 일치하지 않습니다.</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

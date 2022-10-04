@@ -1,0 +1,195 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/vehicle.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "559027a0cbd520cc4f42a35675904317d64c5949758d3dedcc80ca2c9c5d631e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/vehicle.h"
+          },
+          "hashes": {
+            "sha-256": "83065c0ccda69bf6031d672ac9da759e94a32ced5cbee660ec3fcfa32ceda61d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/movingentity.h"
+          },
+          "hashes": {
+            "sha-256": "5bb5fb57d6ed4abae404759e2ac875365b642d7b3f8e154aab5f4109ad97007b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/vector2d.h"
+          },
+          "hashes": {
+            "sha-256": "5af9944052d6c610cc30dd71e486d4e1e6b9ee628ac0ae7fa3f5b3f80a2d3a4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/utils.h"
+          },
+          "hashes": {
+            "sha-256": "168f0cd8cda45b2515d3baa1a418163fabed82c40c7f0a472917ea3b55d38edc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/basegameentity.h"
+          },
+          "hashes": {
+            "sha-256": "5aa5174e6a826591218990f40ff1a87c96e250afc8c24d4b6c8f62f5baa768b1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/geometry.h"
+          },
+          "hashes": {
+            "sha-256": "c6731a238b1b37f4b6e4479499b9f3629387b2c8852bacea8618a409479d4a80"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/c2dmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "afd1af30eecdcb70ed86d7f1166a5d913feec9b59806a7698dde1b10a79ea1ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/transformations.h"
+          },
+          "hashes": {
+            "sha-256": "fc2a69cbb7dad626db092cf626a9428076c7e0eee7c3819cbb3c1a642bb9524c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/smoother.h"
+          },
+          "hashes": {
+            "sha-256": "2dcd2108e5557515f82fc2be7c7b21066bbcb8f75ee52c1697ea66a6bc8f7d8c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/steeringbehaviors.h"
+          },
+          "hashes": {
+            "sha-256": "6b80df897c0f0cb9362d9418745c662a4468b7d440867f138a91f74f3e115527"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/constants.h"
+          },
+          "hashes": {
+            "sha-256": "78fbcad44d120390db728dae24b2fb958a7cff48fbb6357bd50b2e297bcd192c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/path.h"
+          },
+          "hashes": {
+            "sha-256": "c9ae248d6677ec0070bff2768ee92e031f6007f560dfec84b2356841c6de394e"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/paramloader.h"
+          },
+          "hashes": {
+            "sha-256": "3a8d4fc1a2fbafbb883c1f391cf2eac8c208d478806ba86dcb1db79d5bad91f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/inifileloaderbase.h"
+          },
+          "hashes": {
+            "sha-256": "4648dffe419af5f0d5e53cb37e31971be6ec91687314e8304abc7c50a6e2f685"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/gameworld.h"
+          },
+          "hashes": {
+            "sha-256": "e96966d5c1677269daa46328d69667495b197be4b82dc348317143d987f8642c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/time/precisiontimer.h"
+          },
+          "hashes": {
+            "sha-256": "f680c4791c1d7c713285c3862e2e20aa1ec2c5e7011ab501dd50d7442a3628e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cellspacepartition.h"
+          },
+          "hashes": {
+            "sha-256": "d1c83ffbf1d69b4f0f8bdc96fb710698803bea124167c54577d726c929c61e1b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/invertedaabbox2d.h"
+          },
+          "hashes": {
+            "sha-256": "96aa7f5e20476846a6697b8bb67e15f6f26d3d6c194e1f97364ea62fd1ac3edf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cgdi.h"
+          },
+          "hashes": {
+            "sha-256": "812d1517fb313c57d4ff75aecccae3d0c6ed32cac335f53e0f7557c992d5f7c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/entityfunctiontemplates.h"
+          },
+          "hashes": {
+            "sha-256": "c9b2e1946533241f39b2f973a9bb61d396fa4d753a914c27bb84c17ae3f7510b"
+          }
+        }
+      ]
+    }
+  ]
+}

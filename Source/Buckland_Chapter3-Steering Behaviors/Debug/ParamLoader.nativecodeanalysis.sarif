@@ -1,0 +1,67 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/paramloader.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "be26b8cc3249536ffa47b143b33c01cfb742ae38a2e62ad93e4cee33fcd8137d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/paramloader.h"
+          },
+          "hashes": {
+            "sha-256": "3a8d4fc1a2fbafbb883c1f391cf2eac8c208d478806ba86dcb1db79d5bad91f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/constants.h"
+          },
+          "hashes": {
+            "sha-256": "78fbcad44d120390db728dae24b2fb958a7cff48fbb6357bd50b2e297bcd192c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/inifileloaderbase.h"
+          },
+          "hashes": {
+            "sha-256": "4648dffe419af5f0d5e53cb37e31971be6ec91687314e8304abc7c50a6e2f685"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/utils.h"
+          },
+          "hashes": {
+            "sha-256": "168f0cd8cda45b2515d3baa1a418163fabed82c40c7f0a472917ea3b55d38edc"
+          }
+        }
+      ]
+    }
+  ]
+}

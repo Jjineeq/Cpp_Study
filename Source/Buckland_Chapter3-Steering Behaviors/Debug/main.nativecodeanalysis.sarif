@@ -1,0 +1,917 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C28251",
+          "message": {
+            "text": "'WinMain'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\winbase.h(1006)을(를) 참조하십시오. "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                },
+                "region": {
+                  "startLine": 205,
+                  "startColumn": 12,
+                  "endLine": 205,
+                  "endColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WinMain",
+                  "decoratedName": "WinMain@16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'hWnd'은(는) '0'일 수 있습니다."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                },
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 3,
+                  "endLine": 261,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WinMain",
+                  "decoratedName": "WinMain@16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 211,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 214,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 217,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 218,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 219,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 220,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 221,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 222,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 223,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 224,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 225,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 226,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 227,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 228,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 231,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 240,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 256,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 261,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) 'ShowWindow'(c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\winuser.h:4507에서 선언됨)에 대한 입력입니다."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 261,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'ShowWindow'의 SAL 주석과 일치하지 않습니다."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6387",
+          "message": {
+            "text": "'hWnd'은(는) '0'일 수 있습니다."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                },
+                "region": {
+                  "startLine": 262,
+                  "startColumn": 3,
+                  "endLine": 262,
+                  "endColumn": 17
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WinMain",
+                  "decoratedName": "WinMain@16",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 211,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 214,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 217,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 218,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 219,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 220,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 221,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 222,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 223,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 224,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 225,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 226,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 227,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 228,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 231,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 240,
+                            "startColumn": 8
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 254,
+                            "startColumn": 6
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) NULL일 수 있습니다. (이 분기 시작)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 256,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 261,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) 'ShowWindow'(c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\winuser.h:4507에서 선언됨)에 대한 입력입니다."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 262,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) 'UpdateWindow'(c:\\program files (x86)\\windows kits\\10\\include\\10.0.19041.0\\um\\winuser.h:8425에서 선언됨)에 대한 입력입니다."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+                          },
+                          "region": {
+                            "startLine": 262,
+                            "startColumn": 16
+                          }
+                        },
+                        "message": {
+                          "text": "'hWnd'은(는) NULL(이)면 안 됩니다. 이는 'UpdateWindow'의 SAL 주석과 일치하지 않습니다."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Cpp_Study/Source/Buckland_Chapter3-Steering Behaviors/main.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "9f66c4769f1d22decc9da79d8860fc8b582cf66a2447686edbadafc947f74391"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/constants.h"
+          },
+          "hashes": {
+            "sha-256": "78fbcad44d120390db728dae24b2fb958a7cff48fbb6357bd50b2e297bcd192c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/utils.h"
+          },
+          "hashes": {
+            "sha-256": "168f0cd8cda45b2515d3baa1a418163fabed82c40c7f0a472917ea3b55d38edc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/time/precisiontimer.h"
+          },
+          "hashes": {
+            "sha-256": "f680c4791c1d7c713285c3862e2e20aa1ec2c5e7011ab501dd50d7442a3628e0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/gameworld.h"
+          },
+          "hashes": {
+            "sha-256": "e96966d5c1677269daa46328d69667495b197be4b82dc348317143d987f8642c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/vector2d.h"
+          },
+          "hashes": {
+            "sha-256": "5af9944052d6c610cc30dd71e486d4e1e6b9ee628ac0ae7fa3f5b3f80a2d3a4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cellspacepartition.h"
+          },
+          "hashes": {
+            "sha-256": "d1c83ffbf1d69b4f0f8bdc96fb710698803bea124167c54577d726c929c61e1b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/invertedaabbox2d.h"
+          },
+          "hashes": {
+            "sha-256": "96aa7f5e20476846a6697b8bb67e15f6f26d3d6c194e1f97364ea62fd1ac3edf"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cgdi.h"
+          },
+          "hashes": {
+            "sha-256": "812d1517fb313c57d4ff75aecccae3d0c6ed32cac335f53e0f7557c992d5f7c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/basegameentity.h"
+          },
+          "hashes": {
+            "sha-256": "5aa5174e6a826591218990f40ff1a87c96e250afc8c24d4b6c8f62f5baa768b1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/geometry.h"
+          },
+          "hashes": {
+            "sha-256": "c6731a238b1b37f4b6e4479499b9f3629387b2c8852bacea8618a409479d4a80"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/c2dmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "afd1af30eecdcb70ed86d7f1166a5d913feec9b59806a7698dde1b10a79ea1ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/transformations.h"
+          },
+          "hashes": {
+            "sha-256": "fc2a69cbb7dad626db092cf626a9428076c7e0eee7c3819cbb3c1a642bb9524c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/entityfunctiontemplates.h"
+          },
+          "hashes": {
+            "sha-256": "c9b2e1946533241f39b2f973a9bb61d396fa4d753a914c27bb84c17ae3f7510b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/vehicle.h"
+          },
+          "hashes": {
+            "sha-256": "83065c0ccda69bf6031d672ac9da759e94a32ced5cbee660ec3fcfa32ceda61d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/movingentity.h"
+          },
+          "hashes": {
+            "sha-256": "5bb5fb57d6ed4abae404759e2ac875365b642d7b3f8e154aab5f4109ad97007b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/smoother.h"
+          },
+          "hashes": {
+            "sha-256": "2dcd2108e5557515f82fc2be7c7b21066bbcb8f75ee52c1697ea66a6bc8f7d8c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/paramloader.h"
+          },
+          "hashes": {
+            "sha-256": "3a8d4fc1a2fbafbb883c1f391cf2eac8c208d478806ba86dcb1db79d5bad91f8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/inifileloaderbase.h"
+          },
+          "hashes": {
+            "sha-256": "4648dffe419af5f0d5e53cb37e31971be6ec91687314e8304abc7c50a6e2f685"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/resource.h"
+          },
+          "hashes": {
+            "sha-256": "075e4be47b80f5b7a3ab179e25aa6b56019cae88d3d0a516fa65aff0d17d3237"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/windowutils.h"
+          },
+          "hashes": {
+            "sha-256": "c9d1b136ed217134411b0312e9a512ef2fe034b9c08951eff57e261007bfe316"
+          }
+        }
+      ]
+    }
+  ]
+}

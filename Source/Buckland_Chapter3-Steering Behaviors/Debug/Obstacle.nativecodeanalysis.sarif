@@ -1,0 +1,99 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/obstacle.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "5716f86c91147553207df05ce697afdeaeeb59c5454a25b9defe2d39d26b5f66"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/obstacle.h"
+          },
+          "hashes": {
+            "sha-256": "e810970d5231f8963243f26eb1d2a9464c3a9da3e22cf5cd87178ff3d125a601"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/vector2d.h"
+          },
+          "hashes": {
+            "sha-256": "5af9944052d6c610cc30dd71e486d4e1e6b9ee628ac0ae7fa3f5b3f80a2d3a4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/utils.h"
+          },
+          "hashes": {
+            "sha-256": "168f0cd8cda45b2515d3baa1a418163fabed82c40c7f0a472917ea3b55d38edc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/buckland_chapter3-steering behaviors/basegameentity.h"
+          },
+          "hashes": {
+            "sha-256": "5aa5174e6a826591218990f40ff1a87c96e250afc8c24d4b6c8f62f5baa768b1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/geometry.h"
+          },
+          "hashes": {
+            "sha-256": "c6731a238b1b37f4b6e4479499b9f3629387b2c8852bacea8618a409479d4a80"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/c2dmatrix.h"
+          },
+          "hashes": {
+            "sha-256": "afd1af30eecdcb70ed86d7f1166a5d913feec9b59806a7698dde1b10a79ea1ce"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/transformations.h"
+          },
+          "hashes": {
+            "sha-256": "fc2a69cbb7dad626db092cf626a9428076c7e0eee7c3819cbb3c1a642bb9524c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cgdi.h"
+          },
+          "hashes": {
+            "sha-256": "812d1517fb313c57d4ff75aecccae3d0c6ed32cac335f53e0f7557c992d5f7c4"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "'Cgdi::m_OldPen' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Cpp_Study/Source/Common/misc/Cgdi.cpp"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 7,
+                  "endLine": 14,
+                  "endColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Cgdi::{ctor}",
+                  "decoratedName": "??0Cgdi@@AAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Cgdi::m_OldPen"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "'Cgdi::m_OldBrush' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Cpp_Study/Source/Common/misc/Cgdi.cpp"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 7,
+                  "endLine": 14,
+                  "endColumn": 7
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Cgdi::{ctor}",
+                  "decoratedName": "??0Cgdi@@AAE@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "Cgdi::m_OldBrush"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.33.31630.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Cpp_Study/Source/Common/misc/Cgdi.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "37eefd06f564dd56a280e23551ed7918196ccf1acd9d09d45ca6082760e87762"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/cgdi.h"
+          },
+          "hashes": {
+            "sha-256": "812d1517fb313c57d4ff75aecccae3d0c6ed32cac335f53e0f7557c992d5f7c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/2d/vector2d.h"
+          },
+          "hashes": {
+            "sha-256": "5af9944052d6c610cc30dd71e486d4e1e6b9ee628ac0ae7fa3f5b3f80a2d3a4a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/cpp_study/source/common/misc/utils.h"
+          },
+          "hashes": {
+            "sha-256": "168f0cd8cda45b2515d3baa1a418163fabed82c40c7f0a472917ea3b55d38edc"
+          }
+        }
+      ]
+    }
+  ]
+}
