@@ -1,0 +1,47 @@
+﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  main.cpp
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(49,1): error C2664: 'void StateMachine<MinersSon>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
+          with
+          [
+              entity_type=MinersSon
+          ]
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<MinersSon>::SetCurrentState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(51,41): error C2653: 'SonsGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(51,58): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,1): error C2664: 'void StateMachine<MinersManager>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
+          with
+          [
+              entity_type=MinersManager
+          ]
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<MinersManager>::SetCurrentState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,41): error C2653: 'ManagersGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,62): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(29,32): error C2011: 'EnterMineAndDigForNugget': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(60,31): error C2011: 'VisitBankAndDepositGold': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(60): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(90,31): error C2011: 'GoHomeAndSleepTilRested': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(90): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(121,20): error C2011: 'QuenchThirst': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(121): message : 'QuenchThirst' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(151,15): error C2011: 'EatStew': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(151): message : 'EatStew' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,1): error C2664: 'void StateMachine<DeliveryMan>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
+          with
+          [
+              entity_type=DeliveryMan
+          ]
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<DeliveryMan>::SetCurrentState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,41): error C2653: 'SonsGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,58): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+  MinersWifeOwnedStates.cpp
+  MinersWife.cpp
+  MinerOwnedStates.cpp
+  Miner.cpp
+  MessageDispatcher.cpp
+  EntityManager.cpp
+  BaseGameEntity.cpp
+  코드를 생성하고 있습니다...

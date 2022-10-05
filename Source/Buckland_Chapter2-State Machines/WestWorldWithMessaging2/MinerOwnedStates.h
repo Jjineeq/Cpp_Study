@@ -29,25 +29,27 @@ struct Telegram;
 class EnterMineAndDigForNugget : public State<Miner>
 {
 private:
-  
-  EnterMineAndDigForNugget(){}
 
-  //copy ctor and assignment should be private
-  EnterMineAndDigForNugget(const EnterMineAndDigForNugget&);
-  EnterMineAndDigForNugget& operator=(const EnterMineAndDigForNugget&);
+  
+    EnterMineAndDigForNugget(){}
+
+    //copy ctor and assignment should be private
+    EnterMineAndDigForNugget(const EnterMineAndDigForNugget&);
+    EnterMineAndDigForNugget& operator=(const EnterMineAndDigForNugget&);
  
 public:
 
-  //this is a singleton
-  static EnterMineAndDigForNugget* Instance();
 
-  virtual void Enter(Miner* miner);
+    //this is a singleton
+    static EnterMineAndDigForNugget* Instance();
 
-  virtual void Execute(Miner* miner);
+    virtual void Enter(Miner* miner);
 
-  virtual void Exit(Miner* miner);
+    virtual void Execute(Miner* miner);
 
-  virtual bool OnMessage(Miner* agent, const Telegram& msg);
+    virtual void Exit(Miner* miner);
+
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 
 };
 

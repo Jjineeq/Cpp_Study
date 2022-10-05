@@ -30,7 +30,7 @@ class EnterMineAndDigForNugget : public State<DeliveryMan>
 {
 private:
 
-	EnterMineAndDigForNugget() {}
+	EnterMineAndDigForNugget(){}
 
 	//copy ctor and assignment should be private
 	EnterMineAndDigForNugget(const EnterMineAndDigForNugget&);
