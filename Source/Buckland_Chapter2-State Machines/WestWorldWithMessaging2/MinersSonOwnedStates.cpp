@@ -1,7 +1,7 @@
+#include "MinersSon.h"
 #include "MinersSonOwnedStates.h"
 #include "MinerOwnedStates.h"
 #include "MinersWifeOwnedStates.h"
-#include "MinersSon.h"
 #include "Locations.h"
 #include "Time/CrudeTimer.h"
 #include "MessageDispatcher.h"
@@ -31,10 +31,10 @@ void SonsGlobalState::Execute(MinersSon* son)
 {
     //1 in 10 chance of needing the bathroom (provided she is not already
     //in the bathroom)
-    if ((RandFloat() < 0.1) &&
-        !son->GetFSM()->isInState(*VisitBathroom::Instance()))
+    if ((RandFloat() < 0.2) &&
+        !son->GetFSM()->isInState(*TakeARest::Instance()))
     {
-        son->GetFSM()->ChangeState(VisitBathroom::Instance());
+        son->GetFSM()->ChangeState(TakeARest::Instance());
     }
 }
 
@@ -64,162 +64,87 @@ bool SonsGlobalState::OnMessage(MinersSon* son, const Telegram& msg)
     return false;
 }
 
-//-------------------------------------------------------------------------DoHouseWork
+//-------------------------------------------------------------------------DoStudy
 
-DoHouseWork* DoHouseWork::Instance()
+DoStudy* DoStudy::Instance()
 {
-    static DoHouseWork instance;
+    static DoStudy instance;
 
     return &instance;
 }
 
 
-void DoHouseWork::Enter(MinersSon* son)
+void DoStudy::Enter(MinersSon* son)
 {
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Time to do some more housework!";
+    cout << "\n" << GetNameOfEntity(son->ID()) << ": Time to do some more Study!";
 }
 
 
-void DoHouseWork::Execute(MinersSon* son)
+void DoStudy::Execute(MinersSon* son)
 {
     switch (RandInt(0, 2))
     {
     case 0:
 
-        cout << "\n" << GetNameOfEntity(son->ID()) << ": Moppin' the floor";
+        cout << "\n" << GetNameOfEntity(son->ID()) << ": Study Math";
 
         break;
 
     case 1:
 
-        cout << "\n" << GetNameOfEntity(son->ID()) << ": Washin' the dishes";
+        cout << "\n" << GetNameOfEntity(son->ID()) << ": Study English";
 
         break;
 
     case 2:
 
-        cout << "\n" << GetNameOfEntity(son->ID()) << ": Makin' the bed";
+        cout << "\n" << GetNameOfEntity(son->ID()) << ": Study Physics";
 
         break;
     }
 }
 
-void DoHouseWork::Exit(MinersSon* son)
+void DoStudy::Exit(MinersSon* son)
 {
 }
 
-bool DoHouseWork::OnMessage(MinersSon* son, const Telegram& msg)
+bool DoStudy::OnMessage(MinersSon* son, const Telegram& msg)
 {
     return false;
 }
 
-//------------------------------------------------------------------------VisitBathroom
+//------------------------------------------------------------------------TakeARest
 
-VisitBathroom* VisitBathroom::Instance()
+TakeARest* TakeARest::Instance()
 {
-    static VisitBathroom instance;
+    static TakeARest instance;
 
     return &instance;
 }
 
 
-void VisitBathroom::Enter(MinersSon* son)
+void TakeARest::Enter(MinersSon* son)
 {
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Walkin' to the can. Need to powda mah pretty li'lle nose";
+    cout << "\n" << GetNameOfEntity(son->ID()) << ": I'll need some rest";
 }
 
 
-void VisitBathroom::Execute(MinersSon* son)
+void TakeARest::Execute(MinersSon* son)
 {
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Ahhhhhh! Sweet relief!";
+    cout << "\n" << GetNameOfEntity(son->ID()) << ": What a nice time";
 
     son->GetFSM()->RevertToPreviousState();
 }
 
-void VisitBathroom::Exit(MinersSon* son)
+void TakeARest::Exit(MinersSon* son)
 {
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Leavin' the Jon";
+    cout << "\n" << GetNameOfEntity(son->ID()) << ": Return to Study";
 }
 
 
-bool VisitBathroom::OnMessage(MinersSon* son, const Telegram& msg)
+bool TakeARest::OnMessage(MinersSon* son, const Telegram& msg)
 {
     return false;
 }
 
 
-//------------------------------------------------------------------------CookStew
-
-CookStew* CookStew::Instance()
-{
-    static CookStew instance;
-
-    return &instance;
-}
-
-
-void CookStew::Enter(MinersSon* son)
-{
-    //if not already cooking put the stew in the oven
-    if (!son->Cooking())
-    {
-        cout << "\n" << GetNameOfEntity(son->ID()) << ": Putting the stew in the oven";
-
-        //send a delayed message myself so that I know when to take the stew
-        //out of the oven
-        Dispatch->DispatchMessage(1.5,                  //time delay
-            son->ID(),           //sender ID
-            son->ID(),           //receiver ID
-            Msg_StewReady,        //msg
-            NO_ADDITIONAL_INFO);
-
-        son->SetCooking(true);
-    }
-}
-
-
-void CookStew::Execute(MinersSon* son)
-{
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Fussin' over food";
-}
-
-void CookStew::Exit(MinersSon* son)
-{
-    SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Puttin' the stew on the table";
-}
-
-
-bool CookStew::OnMessage(MinersSon* son, const Telegram& msg)
-{
-    SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-
-    switch (msg.Msg)
-    {
-    case Msg_StewReady:
-    {
-        cout << "\nMessage received by " << GetNameOfEntity(son->ID()) <<
-            " at time: " << Clock->GetCurrentTime();
-
-        SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-        cout << "\n" << GetNameOfEntity(son->ID()) << ": StewReady! Lets eat";
-
-        //let hubby know the stew is ready
-        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
-            son->ID(),
-            ent_Miner_Bob,
-            Msg_StewReady,
-            NO_ADDITIONAL_INFO);
-
-        son->SetCooking(false);
-
-        son->GetFSM()->ChangeState(DoHouseWork::Instance());
-    }
-
-    return true;
-
-    }//end switch
-
-    return false;
-}

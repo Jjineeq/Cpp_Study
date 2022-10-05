@@ -46,7 +46,7 @@ public:
         //set up the state machine
         m_pStateMachine = new StateMachine<MinersSon>(this);
 
-        m_pStateMachine->SetCurrentState(DoHouseWork::Instance());
+        m_pStateMachine->SetCurrentState(DoStudy::Instance());
 
         m_pStateMachine->SetGlobalState(SonsGlobalState::Instance());
     }

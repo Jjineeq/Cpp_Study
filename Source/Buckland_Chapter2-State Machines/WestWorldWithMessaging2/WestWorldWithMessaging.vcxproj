@@ -46,7 +46,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\User\github\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>

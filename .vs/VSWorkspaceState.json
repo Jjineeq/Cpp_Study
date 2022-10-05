@@ -6,8 +6,8 @@
     "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2",
     "\\Source\\Common",
     "\\Source\\Common\\FSM",
-    "\\Source\\Common\\script"
+    "\\Source\\Common\\misc"
   ],
-  "SelectedNode": "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2\\MinerOwnedStates.h",
+  "SelectedNode": "\\Source\\Common\\misc\\ConsoleUtils.h",
   "PreviewInSolutionExplorer": false
 }

@@ -48,20 +48,20 @@ public:
 //
 
 //------------------------------------------------------------------------
-class DoHouseWork : public State<MinersSon>
+class DoStudy : public State<MinersSon>
 {
 private:
 
-	DoHouseWork() {}
+	DoStudy() {}
 
 	//copy ctor and assignment should be private
-	DoHouseWork(const DoHouseWork&);
-	DoHouseWork& operator=(const DoHouseWork&);
+	DoStudy(const DoStudy&);
+	DoStudy& operator=(const DoStudy&);
 
 public:
 
 	//this is a singleton
-	static DoHouseWork* Instance();
+	static DoStudy* Instance();
 
 	virtual void Enter(MinersSon* son);
 
@@ -79,20 +79,20 @@ public:
 //
 
 //------------------------------------------------------------------------
-class VisitBathroom : public State<MinersSon>
+class TakeARest : public State<MinersSon>
 {
 private:
 
-	VisitBathroom() {}
+	TakeARest() {}
 
 	//copy ctor and assignment should be private
-	VisitBathroom(const VisitBathroom&);
-	VisitBathroom& operator=(const VisitBathroom&);
+	TakeARest(const TakeARest&);
+	TakeARest& operator=(const TakeARest&);
 
 public:
 
 	//this is a singleton
-	static VisitBathroom* Instance();
+	static TakeARest* Instance();
 
 	virtual void Enter(MinersSon* son);
 
@@ -102,35 +102,6 @@ public:
 
 	virtual bool OnMessage(MinersSon* son, const Telegram& msg);
 
-};
-
-
-//------------------------------------------------------------------------
-//
-
-//------------------------------------------------------------------------
-class CookStew : public State<MinersSon>
-{
-private:
-
-	CookStew() {}
-
-	//copy ctor and assignment should be private
-	CookStew(const CookStew&);
-	CookStew& operator=(const CookStew&);
-
-public:
-
-	//this is a singleton
-	static CookStew* Instance();
-
-	virtual void Enter(MinersSon* son);
-
-	virtual void Execute(MinersSon* son);
-
-	virtual void Exit(MinersSon* son);
-
-	virtual bool OnMessage(MinersSon* son, const Telegram& msg);
 };
 
 
