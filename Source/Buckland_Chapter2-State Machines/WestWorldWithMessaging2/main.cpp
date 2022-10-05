@@ -1,6 +1,5 @@
 #include <fstream>
 #include <time.h>
-
 #include "Locations.h"
 #include "Miner.h"
 #include "MinersWife.h"
@@ -14,6 +13,7 @@
 
 
 std::ofstream os;
+using namespace std;
 
 int main()
 {
@@ -57,7 +57,7 @@ int main()
     Liam->Update();
     Noah->Update();
 
-    //dispatch any delayed messages
+    //dispatch any delayed messages 
     Dispatch->DispatchDelayedMessages();
 
     Sleep(800);

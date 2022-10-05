@@ -1,5 +1,5 @@
-#ifndef MINERSWIFE_OWNED_STATES_H
-#define MINERSWIFE_OWNED_STATES_H
+#ifndef MINERSSON_OWNED_STATES_H
+#define MINERSSON_OWNED_STATES_H
 //------------------------------------------------------------------------
 //
 //  Name:   MinersSonOwnedStates.h

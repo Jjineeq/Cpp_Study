@@ -68,15 +68,15 @@ bool SonsGlobalState::OnMessage(MinersSon* son, const Telegram& msg)
 
 DoStudy* DoStudy::Instance()
 {
-    static DoStudy instance;
+  static DoStudy instance;
 
-    return &instance;
+  return &instance;
 }
 
 
 void DoStudy::Enter(MinersSon* son)
 {
-    cout << "\n" << GetNameOfEntity(son->ID()) << ": Time to do some more Study!";
+  cout << "\n" << GetNameOfEntity(son->ID()) << ": Time to do some more Study!";
 }
 
 

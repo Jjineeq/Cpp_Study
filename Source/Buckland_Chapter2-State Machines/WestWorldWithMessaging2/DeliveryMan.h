@@ -48,7 +48,7 @@ public:
 
         m_pStateMachine->SetCurrentState(DoHouseWork::Instance());
 
-        m_pStateMachine->SetGlobalState(SonsGlobalState::Instance());
+        m_pStateMachine->SetGlobalState(DeliveryManGlobalState::Instance());
     }
 
     ~DeliveryMan() { delete m_pStateMachine; }

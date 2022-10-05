@@ -10,6 +10,7 @@
 //
 //------------------------------------------------------------------------
 
+
 #include <string>
 
 #include "fsm/State.h"
@@ -17,10 +18,10 @@
 #include "Locations.h"
 #include "MinersSonOwnedStates.h"
 #include "misc/ConsoleUtils.h"
+#include "MinersWife.h"
 #include "Miner.h"
 #include "fsm/StateMachine.h"
 #include "misc/Utils.h"
-
 
 
 class MinersSon : public BaseGameEntity
