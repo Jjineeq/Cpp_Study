@@ -18,26 +18,26 @@ extern std::ofstream os;
 
 //-----------------------------------------------------------------------Global state
 
-ManagersGlobalState* ManagersGlobalState::Instance()
+MinersMangersGlobalState* MinersMangersGlobalState::Instance()
 {
-    static ManagersGlobalState instance;
+    static MinersMangersGlobalState instance;
 
     return &instance;
 }
 
 
-void ManagersGlobalState::Execute(MinersManager* manager)
+void MinersMangersGlobalState::Execute(MinersManager* MinersManger)
 {
     //1 in 10 chance of needing the bathroom (provided she is not already
     //in the bathroom)
     if ((RandFloat() < 0.1) &&
-        !manager->GetFSM()->isInState(*VisitBathroom::Instance()))
+        !MinersManger->GetFSM()->isInState(*DigDiamond::Instance()))
     {
-        manager->GetFSM()->ChangeState(VisitBathroom::Instance());
+        MinersManger->GetFSM()->ChangeState(DigDiamond::Instance());
     }
 }
 
-bool ManagersGlobalState::OnMessage(MinersManager* manager, const Telegram& msg)
+bool MinersMangersGlobalState::OnMessage(MinersManager* MinersManger, const Telegram& msg)
 {
     SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
@@ -45,15 +45,15 @@ bool ManagersGlobalState::OnMessage(MinersManager* manager, const Telegram& msg)
     {
     case Msg_HiHoneyImHome:
     {
-        cout << "\nMessage handled by " << GetNameOfEntity(manager->ID()) << " at time: "
+        cout << "\nMessage handled by " << GetNameOfEntity(MinersManger->ID()) << " at time: "
             << Clock->GetCurrentTime();
 
         SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 
-        cout << "\n" << GetNameOfEntity(manager->ID()) <<
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) <<
             ": Hi honey. Let me make you some of mah fine country stew";
 
-        manager->GetFSM()->ChangeState(CookStew::Instance());
+        MinersManger->GetFSM()->ChangeState(BreakTime::Instance());
     }
 
     return true;
@@ -63,157 +63,157 @@ bool ManagersGlobalState::OnMessage(MinersManager* manager, const Telegram& msg)
     return false;
 }
 
-//-------------------------------------------------------------------------DoHouseWork
+//-------------------------------------------------------------------------DigGold
 
-DoHouseWork* DoHouseWork::Instance()
+DigGold* DigGold::Instance()
 {
-    static DoHouseWork instance;
+    static DigGold instance;
 
     return &instance;
 }
 
 
-void DoHouseWork::Enter(MinersManager* manager)
+void DigGold::Enter(MinersManager* MinersManger)
 {
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Time to do some more housework!";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": Time to Work";
 }
 
 
-void DoHouseWork::Execute(MinersManager* manager)
+void DigGold::Execute(MinersManager* MinersManger)
 {
     switch (RandInt(0, 2))
     {
     case 0:
 
-        cout << "\n" << GetNameOfEntity(manager->ID()) << ": Moppin' the floor";
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": dig gold";
 
         break;
 
     case 1:
 
-        cout << "\n" << GetNameOfEntity(manager->ID()) << ": Washin' the dishes";
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": prepare for transportation";
 
         break;
 
     case 2:
 
-        cout << "\n" << GetNameOfEntity(manager->ID()) << ": Makin' the bed";
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": tidy up one's surroundings";
 
         break;
     }
 }
 
-void DoHouseWork::Exit(MinersManager* manager)
+void DigGold::Exit(MinersManager* MinersManger)
 {
 }
 
-bool DoHouseWork::OnMessage(MinersManager* manager, const Telegram& msg)
+bool DigGold::OnMessage(MinersManager* MinersManger, const Telegram& msg)
 {
     return false;
 }
 
-//------------------------------------------------------------------------VisitBathroom
+//------------------------------------------------------------------------DigDiamond
 
-VisitBathroom* VisitBathroom::Instance()
+DigDiamond* DigDiamond::Instance()
 {
-    static VisitBathroom instance;
+    static DigDiamond instance;
 
     return &instance;
 }
 
 
-void VisitBathroom::Enter(MinersManager* manager)
+void DigDiamond::Enter(MinersManager* MinersManger)
 {
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Walkin' to the can. Need to powda mah pretty li'lle nose";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ":I found a diamond";
 }
 
 
-void VisitBathroom::Execute(MinersManager* manager)
+void DigDiamond::Execute(MinersManager* MinersManger)
 {
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Ahhhhhh! Sweet relief!";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": Stop digging and gather around";
 
-    manager->GetFSM()->RevertToPreviousState();
+    MinersManger->GetFSM()->RevertToPreviousState();
 }
 
-void VisitBathroom::Exit(MinersManager* manager)
+void DigDiamond::Exit(MinersManager* MinersManger)
 {
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Leavin' the Jon";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ":Let's dig this up and start over";
 }
 
 
-bool VisitBathroom::OnMessage(MinersManager* manager, const Telegram& msg)
+bool DigDiamond::OnMessage(MinersManager* MinersManger, const Telegram& msg)
 {
     return false;
 }
 
 
-//------------------------------------------------------------------------CookStew
+//------------------------------------------------------------------------BreakTime
 
-CookStew* CookStew::Instance()
+BreakTime* BreakTime::Instance()
 {
-    static CookStew instance;
+    static BreakTime instance;
 
     return &instance;
 }
 
 
-void CookStew::Enter(MinersManager* manager)
+void BreakTime::Enter(MinersManager* MinersManger)
 {
     //if not already cooking put the stew in the oven
-    if (!manager->Cooking())
+    if (!MinersManger->BreakTime())
     {
-        cout << "\n" << GetNameOfEntity(manager->ID()) << ": Putting the stew in the oven";
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ":Let's take a break for about 10 minutes";
 
         //send a delayed message myself so that I know when to take the stew
         //out of the oven
-        Dispatch->DispatchMessage(1.5,                  //time delay
-            manager->ID(),           //sender ID
-            manager->ID(),           //receiver ID
-            Msg_StewReady,        //msg
+        Dispatch->DispatchMessage(1,                  //time delay
+            MinersManger->ID(),           //sender ID
+            MinersManger->ID(),           //receiver ID
+            Msg_BreakTime,        //msg
             NO_ADDITIONAL_INFO);
 
-        manager->SetCooking(true);
+        MinersManger->SetBreakTime(true);
     }
 }
 
 
-void CookStew::Execute(MinersManager* manager)
+void BreakTime::Execute(MinersManager* MinersManger)
 {
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Fussin' over food";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": Aren't you tired?";
 }
 
-void CookStew::Exit(MinersManager* manager)
+void BreakTime::Exit(MinersManager* MinersManger)
 {
     SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
 
-    cout << "\n" << GetNameOfEntity(manager->ID()) << ": Puttin' the stew on the table";
+    cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ": There's a lot going on today";
 }
 
 
-bool CookStew::OnMessage(MinersManager* manager, const Telegram& msg)
+bool BreakTime::OnMessage(MinersManager* MinersManger, const Telegram& msg)
 {
     SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
     switch (msg.Msg)
     {
-    case Msg_StewReady:
+    case Msg_BreakTime:
     {
-        cout << "\nMessage received by " << GetNameOfEntity(manager->ID()) <<
+        cout << "\nMessage received by " << GetNameOfEntity(MinersManger->ID()) <<
             " at time: " << Clock->GetCurrentTime();
 
         SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-        cout << "\n" << GetNameOfEntity(manager->ID()) << ": StewReady! Lets eat";
+        cout << "\n" << GetNameOfEntity(MinersManger->ID()) << ":Why don't you rest a little?";
 
         //let hubby know the stew is ready
         Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
-            manager->ID(),
+            MinersManger->ID(),
             ent_Miner_Bob,
-            Msg_StewReady,
+            Msg_BreakTime,
             NO_ADDITIONAL_INFO);
 
-        manager->SetCooking(false);
+        MinersManger->SetBreakTime(false);
 
-        manager->GetFSM()->ChangeState(DoHouseWork::Instance());
+        MinersManger->GetFSM()->ChangeState(DigGold::Instance());
     }
 
     return true;

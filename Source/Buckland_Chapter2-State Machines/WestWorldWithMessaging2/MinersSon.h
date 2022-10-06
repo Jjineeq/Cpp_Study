@@ -4,12 +4,11 @@
 //
 //  Name: MinersSon.h
 //
-//  Desc: class to implement Miner Bob's Son.
+//  Desc: class to implement Miner Bob's son.
 //
 //  Author: Mat Buckland 2003 (fup@ai-junkie.com)
 //
 //------------------------------------------------------------------------
-
 
 #include <string>
 
@@ -18,10 +17,10 @@
 #include "Locations.h"
 #include "MinersSonOwnedStates.h"
 #include "misc/ConsoleUtils.h"
-#include "MinersWife.h"
 #include "Miner.h"
 #include "fsm/StateMachine.h"
 #include "misc/Utils.h"
+
 
 
 class MinersSon : public BaseGameEntity
@@ -34,13 +33,13 @@ private:
     location_type   m_Location;
 
     //is she presently cooking?
-    bool            m_bCooking;
+    bool            m_bGoAcademy;
 
 
 public:
 
     MinersSon(int id) :m_Location(shack),
-        m_bCooking(false),
+        m_bGoAcademy(false),
         BaseGameEntity(id)
 
     {
@@ -67,8 +66,8 @@ public:
     location_type Location()const { return m_Location; }
     void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-    bool          Cooking()const { return m_bCooking; }
-    void          SetCooking(bool val) { m_bCooking = val; }
+    bool          GoAcademy()const { return m_bGoAcademy; }
+    void          SetGoAcademy(bool val) { m_bGoAcademy = val; }
 
 };
 

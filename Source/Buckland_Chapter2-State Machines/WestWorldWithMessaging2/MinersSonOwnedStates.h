@@ -105,4 +105,33 @@ public:
 };
 
 
+//------------------------------------------------------------------------
+//
+
+//------------------------------------------------------------------------
+class GoAcademy : public State<MinersSon>
+{
+private:
+
+	GoAcademy() {}
+
+	//copy ctor and assignment should be private
+	GoAcademy(const GoAcademy&);
+	GoAcademy& operator=(const GoAcademy&);
+
+public:
+
+	//this is a singleton
+	static GoAcademy* Instance();
+
+	virtual void Enter(MinersSon* son);
+
+	virtual void Execute(MinersSon* son);
+
+	virtual void Exit(MinersSon* son);
+
+	virtual bool OnMessage(MinersSon* son, const Telegram& msg);
+};
+
+
 #endif

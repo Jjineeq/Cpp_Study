@@ -1,16 +1,14 @@
 #include "DeliveryManOwnedStates.h"
-#include "fsm/State.h"
+#include "MinerOwnedStates.h"
 #include "DeliveryMan.h"
 #include "Locations.h"
-#include "messaging/Telegram.h"
+#include "Time/CrudeTimer.h"
 #include "MessageDispatcher.h"
 #include "MessageTypes.h"
-#include "Time/CrudeTimer.h"
 #include "EntityNames.h"
 
 #include <iostream>
 using std::cout;
-
 
 #ifdef TEXTOUTPUT
 #include <fstream>
@@ -18,275 +16,209 @@ extern std::ofstream os;
 #define cout os
 #endif
 
+//-----------------------------------------------------------------------Global state
 
-//------------------------------------------------------------------------methods for EnterMineAndDigForNugget
-EnterMineAndDigForNugget* EnterMineAndDigForNugget::Instance()
+DeliveryMansGlobalState* DeliveryMansGlobalState::Instance()
 {
-    static EnterMineAndDigForNugget instance;
+  static DeliveryMansGlobalState instance;
 
-    return &instance;
+  return &instance;
 }
 
 
-void EnterMineAndDigForNugget::Enter(DeliveryMan* pDeliveryMan)
+void DeliveryMansGlobalState::Execute(DeliveryMan* DeliveryMan)
 {
-    //if the DeliveryMan is not already located at the goldmine, he must
-    //change location to the gold mine
-    if (pDeliveryMan->Location() != goldmine)
-    {
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Walkin' to the goldmine";
+  //1 in 10 chance of needing the bathroom (provided she is not already
+  //in the bathroom)
+  if ( (RandFloat() < 0.1) && 
+       !DeliveryMan->GetFSM()->isInState(*DeliveryToHouse::Instance()) )
+  {
+    DeliveryMan->GetFSM()->ChangeState(DeliveryToHouse::Instance());
+  }
+}
 
-        pDeliveryMan->ChangeLocation(goldmine);
+bool DeliveryMansGlobalState::OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg)
+{
+  SetTextColor(BACKGROUND_RED|FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
+
+  switch(msg.Msg)
+  {
+  case Msg_HiHoneyImHome:
+   {
+       cout << "\nMessage handled by " << GetNameOfEntity(DeliveryMan->ID()) << " at time: " 
+       << Clock->GetCurrentTime();
+
+     SetTextColor(FOREGROUND_GREEN|FOREGROUND_INTENSITY);
+
+     cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << 
+          ": Hi honey. Let me make you some of mah fine country stew";
+
+     DeliveryMan->GetFSM()->ChangeState(DeliveryToHouse::Instance());
+   }
+
+   return true;
+
+  }//end switch
+
+  return false;
+}
+
+//-------------------------------------------------------------------------ArrangeParcel
+
+ArrangeParcel* ArrangeParcel::Instance()
+{
+  static ArrangeParcel instance;
+
+  return &instance;
+}
+
+
+void ArrangeParcel::Enter(DeliveryMan* DeliveryMan)
+{
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": It's time for logistics";
+}
+
+
+void ArrangeParcel::Execute(DeliveryMan* DeliveryMan)
+{
+  switch(RandInt(0,2))
+  {
+  case 0:
+
+    cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Let's drop off the goods";
+
+    break;
+
+  case 1:
+
+    cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Let's get on board";
+
+    break;
+
+  case 2:
+
+    cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Let's sort things out";
+
+    break;
+  }
+}
+
+void ArrangeParcel::Exit(DeliveryMan* DeliveryMan)
+{
+}
+
+bool ArrangeParcel::OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg)
+{
+  return false;
+}
+
+//------------------------------------------------------------------------DrinkWater
+
+DrinkWater* DrinkWater::Instance()
+{
+  static DrinkWater instance;
+
+  return &instance;
+}
+
+
+void DrinkWater::Enter(DeliveryMan* DeliveryMan)
+{  
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Let's drink water and rest"; 
+}
+
+
+void DrinkWater::Execute(DeliveryMan* DeliveryMan)
+{
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": find cool water";
+
+  DeliveryMan->GetFSM()->RevertToPreviousState();
+}
+
+void DrinkWater::Exit(DeliveryMan* DeliveryMan)
+{
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": done drinking, so I'll keep going";
+}
+
+
+bool DrinkWater::OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg)
+{
+  return false;
+}
+
+
+//------------------------------------------------------------------------DeliveryToHouse
+
+DeliveryToHouse* DeliveryToHouse::Instance()
+{
+  static DeliveryToHouse instance;
+
+  return &instance;
+}
+
+
+void DeliveryToHouse::Enter(DeliveryMan* DeliveryMan)
+{
+  //if not already cooking put the stew in the oven
+  if (!DeliveryMan->Delivery())
+  {
+    cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Putting the stew in the oven";
+  
+    //send a delayed message myself so that I know when to take the stew
+    //out of the oven
+    Dispatch->DispatchMessage(1.5,                  //time delay
+                              DeliveryMan->ID(),           //sender ID
+                              DeliveryMan->ID(),           //receiver ID
+                              Msg_DeliveryReady,        //msg
+                              NO_ADDITIONAL_INFO); 
+
+    DeliveryMan->SetDelivery(true);
+  }
+}
+
+
+void DeliveryToHouse::Execute(DeliveryMan* DeliveryMan)
+{
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": Time to delivery to Elsa";
+}
+
+void DeliveryToHouse::Exit(DeliveryMan* DeliveryMan)
+{
+  SetTextColor(FOREGROUND_GREEN|FOREGROUND_INTENSITY);
+  
+  cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": I should send a text saying, I'll be there in 5 minutes.";
+}
+
+
+bool DeliveryToHouse::OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg)
+{
+  SetTextColor(BACKGROUND_RED|FOREGROUND_RED|FOREGROUND_GREEN|FOREGROUND_BLUE);
+
+  switch(msg.Msg)
+  {
+    case Msg_DeliveryReady:
+    {
+      cout << "\nMessage received by " << GetNameOfEntity(DeliveryMan->ID()) <<
+           " at time: " << Clock->GetCurrentTime();
+
+      SetTextColor(FOREGROUND_GREEN|FOREGROUND_INTENSITY);
+      cout << "\n" << GetNameOfEntity(DeliveryMan->ID()) << ": I'll go to delivery";
+
+      //let hubby know the stew is ready
+      Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
+                                DeliveryMan->ID(),
+                                ent_Elsa,
+                                Msg_DeliveryReady,
+                                NO_ADDITIONAL_INFO);
+
+      DeliveryMan->SetDelivery(false);
+
+      DeliveryMan->GetFSM()->ChangeState(ArrangeParcel::Instance());               
     }
+
+    return true;
+
+  }//end switch
+
+  return false;
 }
-
-
-void EnterMineAndDigForNugget::Execute(DeliveryMan* pDeliveryMan)
-{
-    //Now the DeliveryMan is at the goldmine he digs for gold until he
-    //is carrying in excess of MaxNuggets. If he gets thirsty during
-    //his digging he packs up work for a while and changes state to
-    //gp to the saloon for a whiskey.
-    pDeliveryMan->AddToGoldCarried(1);
-
-    pDeliveryMan->IncreaseFatigue();
-
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Pickin' up a nugget";
-
-    //if enough gold mined, go and put it in the bank
-    if (pDeliveryMan->PocketsFull())
-    {
-        pDeliveryMan->GetFSM()->ChangeState(VisitBankAndDepositGold::Instance());
-    }
-
-    if (pDeliveryMan->Thirsty())
-    {
-        pDeliveryMan->GetFSM()->ChangeState(QuenchThirst::Instance());
-    }
-}
-
-
-void EnterMineAndDigForNugget::Exit(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": "
-        << "Ah'm leavin' the goldmine with mah pockets full o' sweet gold";
-}
-
-
-bool EnterMineAndDigForNugget::OnMessage(DeliveryMan* pDeliveryMan, const Telegram& msg)
-{
-    //send msg to global message handler
-    return false;
-}
-
-//------------------------------------------------------------------------methods for VisitBankAndDepositGold
-
-VisitBankAndDepositGold* VisitBankAndDepositGold::Instance()
-{
-    static VisitBankAndDepositGold instance;
-
-    return &instance;
-}
-
-void VisitBankAndDepositGold::Enter(DeliveryMan* pDeliveryMan)
-{
-    //on entry the DeliveryMan makes sure he is located at the bank
-    if (pDeliveryMan->Location() != bank)
-    {
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Goin' to the bank. Yes siree";
-
-        pDeliveryMan->ChangeLocation(bank);
-    }
-}
-
-
-void VisitBankAndDepositGold::Execute(DeliveryMan* pDeliveryMan)
-{
-    //deposit the gold
-    pDeliveryMan->AddToWealth(pDeliveryMan->GoldCarried());
-
-    pDeliveryMan->SetGoldCarried(0);
-
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": "
-        << "Depositing gold. Total savings now: " << pDeliveryMan->Wealth();
-
-    //wealthy enough to have a well earned rest?
-    if (pDeliveryMan->Wealth() >= ComfortLevel)
-    {
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": "
-            << "WooHoo! Rich enough for now. Back home to mah li'lle lady";
-
-        pDeliveryMan->GetFSM()->ChangeState(GoHomeAndSleepTilRested::Instance());
-    }
-
-    //otherwise get more gold
-    else
-    {
-        pDeliveryMan->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
-    }
-}
-
-
-void VisitBankAndDepositGold::Exit(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Leavin' the bank";
-}
-
-
-bool VisitBankAndDepositGold::OnMessage(DeliveryMan* pDeliveryMan, const Telegram& msg)
-{
-    //send msg to global message handler
-    return false;
-}
-//------------------------------------------------------------------------methods for GoHomeAndSleepTilRested
-
-GoHomeAndSleepTilRested* GoHomeAndSleepTilRested::Instance()
-{
-    static GoHomeAndSleepTilRested instance;
-
-    return &instance;
-}
-
-void GoHomeAndSleepTilRested::Enter(DeliveryMan* pDeliveryMan)
-{
-    if (pDeliveryMan->Location() != shack)
-    {
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Walkin' home";
-
-        pDeliveryMan->ChangeLocation(shack);
-
-        //let the wife know I'm home
-        Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY, //time delay
-            pDeliveryMan->ID(),        //ID of sender
-            ent_Elsa,            //ID of recipient
-            Msg_HiHoneyImHome,   //the message
-            NO_ADDITIONAL_INFO);
-    }
-}
-
-void GoHomeAndSleepTilRested::Execute(DeliveryMan* pDeliveryMan)
-{
-    //if DeliveryMan is not fatigued start to dig for nuggets again.
-    if (!pDeliveryMan->Fatigued())
-    {
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": "
-            << "All mah fatigue has drained away. Time to find more gold!";
-
-        pDeliveryMan->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
-    }
-
-    else
-    {
-        //sleep
-        pDeliveryMan->DecreaseFatigue();
-
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "ZZZZ... ";
-    }
-}
-
-void GoHomeAndSleepTilRested::Exit(DeliveryMan* pDeliveryMan)
-{
-}
-
-
-bool GoHomeAndSleepTilRested::OnMessage(DeliveryMan* pDeliveryMan, const Telegram& msg)
-{
-    SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
-
-    switch (msg.Msg)
-    {
-    case Msg_StewReady:
-
-        cout << "\nMessage handled by " << GetNameOfEntity(pDeliveryMan->ID())
-            << " at time: " << Clock->GetCurrentTime();
-
-        SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
-
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID())
-            << ": Okay Hun, ahm a comin'!";
-
-        pDeliveryMan->GetFSM()->ChangeState(EatStew::Instance());
-
-        return true;
-
-    }//end switch
-
-    return false; //send message to global message handler
-}
-
-//------------------------------------------------------------------------QuenchThirst
-
-QuenchThirst* QuenchThirst::Instance()
-{
-    static QuenchThirst instance;
-
-    return &instance;
-}
-
-void QuenchThirst::Enter(DeliveryMan* pDeliveryMan)
-{
-    if (pDeliveryMan->Location() != saloon)
-    {
-        pDeliveryMan->ChangeLocation(saloon);
-
-        cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Boy, ah sure is thusty! Walking to the saloon";
-    }
-}
-
-void QuenchThirst::Execute(DeliveryMan* pDeliveryMan)
-{
-    pDeliveryMan->BuyAndDrinkAWhiskey();
-
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "That's mighty fine sippin' liquer";
-
-    pDeliveryMan->GetFSM()->ChangeState(EnterMineAndDigForNugget::Instance());
-}
-
-
-void QuenchThirst::Exit(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Leaving the saloon, feelin' good";
-}
-
-
-bool QuenchThirst::OnMessage(DeliveryMan* pDeliveryMan, const Telegram& msg)
-{
-    //send msg to global message handler
-    return false;
-}
-
-//------------------------------------------------------------------------EatStew
-
-EatStew* EatStew::Instance()
-{
-    static EatStew instance;
-
-    return &instance;
-}
-
-
-void EatStew::Enter(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Smells Reaaal goood Elsa!";
-}
-
-void EatStew::Execute(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Tastes real good too!";
-
-    pDeliveryMan->GetFSM()->RevertToPreviousState();
-}
-
-void EatStew::Exit(DeliveryMan* pDeliveryMan)
-{
-    cout << "\n" << GetNameOfEntity(pDeliveryMan->ID()) << ": " << "Thankya li'lle lady. Ah better get back to whatever ah wuz doin'";
-}
-
-
-bool EatStew::OnMessage(DeliveryMan* pDeliveryMan, const Telegram& msg)
-{
-    //send msg to global message handler
-    return false;
-}
-
-

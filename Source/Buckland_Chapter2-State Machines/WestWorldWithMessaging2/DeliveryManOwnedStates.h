@@ -1,5 +1,5 @@
-#ifndef DeliveryMan_OWNED_STATES_H
-#define DeliveryMan_OWNED_STATES_H
+#ifndef DELIVERYMAN_OWNED_STATES_H
+#define DELIVERYMAN_OWNED_STATES_H
 //------------------------------------------------------------------------
 //
 //  Name:   DeliveryManOwnedStates.h
@@ -10,7 +10,6 @@
 //
 //------------------------------------------------------------------------
 #include "fsm/State.h"
-using namespace std;
 
 class DeliveryMan;
 
@@ -35,13 +34,13 @@ public:
 	//this is a singleton
 	static DeliveryMansGlobalState* Instance();
 
-	virtual void Enter(DeliveryMan* DeliveryMan) {}
+	virtual void Enter(DeliveryMan* wife) {}
 
-	virtual void Execute(DeliveryMan* DeliveryMan);
+	virtual void Execute(DeliveryMan* wife);
 
-	virtual void Exit(DeliveryMan* DeliveryMan) {}
+	virtual void Exit(DeliveryMan* wife) {}
 
-	virtual bool OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg);
+	virtual bool OnMessage(DeliveryMan* wife, const Telegram& msg);
 };
 
 
@@ -49,28 +48,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class DoHouseWork : public State<DeliveryMan>
+class ArrangeParcel : public State<DeliveryMan>
 {
 private:
 
-	DoHouseWork() {}
+	ArrangeParcel() {}
 
 	//copy ctor and assignment should be private
-	DoHouseWork(const DoHouseWork&);
-	DoHouseWork& operator=(const DoHouseWork&);
+	ArrangeParcel(const ArrangeParcel&);
+	ArrangeParcel& operator=(const ArrangeParcel&);
 
 public:
 
 	//this is a singleton
-	static DoHouseWork* Instance();
+	static ArrangeParcel* Instance();
 
-	virtual void Enter(DeliveryMan* DeliveryMan);
+	virtual void Enter(DeliveryMan* wife);
 
-	virtual void Execute(DeliveryMan* DeliveryMan);
+	virtual void Execute(DeliveryMan* wife);
 
-	virtual void Exit(DeliveryMan* DeliveryMan);
+	virtual void Exit(DeliveryMan* wife);
 
-	virtual bool OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg);
+	virtual bool OnMessage(DeliveryMan* wife, const Telegram& msg);
 
 };
 
@@ -80,28 +79,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class VisitBathroom : public State<DeliveryMan>
+class DrinkWater : public State<DeliveryMan>
 {
 private:
 
-	VisitBathroom() {}
+	DrinkWater() {}
 
 	//copy ctor and assignment should be private
-	VisitBathroom(const VisitBathroom&);
-	VisitBathroom& operator=(const VisitBathroom&);
+	DrinkWater(const DrinkWater&);
+	DrinkWater& operator=(const DrinkWater&);
 
 public:
 
 	//this is a singleton
-	static VisitBathroom* Instance();
+	static DrinkWater* Instance();
 
-	virtual void Enter(DeliveryMan* DeliveryMan);
+	virtual void Enter(DeliveryMan* wife);
 
-	virtual void Execute(DeliveryMan* DeliveryMan);
+	virtual void Execute(DeliveryMan* wife);
 
-	virtual void Exit(DeliveryMan* DeliveryMan);
+	virtual void Exit(DeliveryMan* wife);
 
-	virtual bool OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg);
+	virtual bool OnMessage(DeliveryMan* wife, const Telegram& msg);
 
 };
 
@@ -110,28 +109,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class CookStew : public State<DeliveryMan>
+class DeliveryToHouse : public State<DeliveryMan>
 {
 private:
 
-	CookStew() {}
+	DeliveryToHouse() {}
 
 	//copy ctor and assignment should be private
-	CookStew(const CookStew&);
-	CookStew& operator=(const CookStew&);
+	DeliveryToHouse(const DeliveryToHouse&);
+	DeliveryToHouse& operator=(const DeliveryToHouse&);
 
 public:
 
 	//this is a singleton
-	static CookStew* Instance();
+	static DeliveryToHouse* Instance();
 
-	virtual void Enter(DeliveryMan* DeliveryMan);
+	virtual void Enter(DeliveryMan* wife);
 
-	virtual void Execute(DeliveryMan* DeliveryMan);
+	virtual void Execute(DeliveryMan* wife);
 
-	virtual void Exit(DeliveryMan* DeliveryMan);
+	virtual void Exit(DeliveryMan* wife);
 
-	virtual bool OnMessage(DeliveryMan* DeliveryMan, const Telegram& msg);
+	virtual bool OnMessage(DeliveryMan* wife, const Telegram& msg);
 };
 
 

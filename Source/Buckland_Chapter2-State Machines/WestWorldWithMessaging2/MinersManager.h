@@ -1,10 +1,10 @@
-#ifndef MINERSMANAGER_H
-#define MINERSMANAGER_H
+#ifndef MINERSMANGER_H
+#define MINERSMANGER_H
 //------------------------------------------------------------------------
 //
 //  Name: MinersManager.h
 //
-//  Desc: class to implement Miner Bob's Manager.
+//  Desc: class to implement Miner Bob's MinersManger.
 //
 //  Author: Mat Buckland 2003 (fup@ai-junkie.com)
 //
@@ -33,22 +33,22 @@ private:
     location_type   m_Location;
 
     //is she presently cooking?
-    bool            m_bCooking;
+    bool            m_bBreakTime;
 
 
 public:
 
     MinersManager(int id) :m_Location(shack),
-        m_bCooking(false),
+        m_bBreakTime(false),
         BaseGameEntity(id)
 
     {
         //set up the state machine
         m_pStateMachine = new StateMachine<MinersManager>(this);
 
-        m_pStateMachine->SetCurrentState(DoHouseWork::Instance());
+        m_pStateMachine->SetCurrentState(DigGold::Instance());
 
-        m_pStateMachine->SetGlobalState(ManagersGlobalState::Instance());
+        m_pStateMachine->SetGlobalState(MinersMangersGlobalState::Instance());
     }
 
     ~MinersManager() { delete m_pStateMachine; }
@@ -66,8 +66,8 @@ public:
     location_type Location()const { return m_Location; }
     void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-    bool          Cooking()const { return m_bCooking; }
-    void          SetCooking(bool val) { m_bCooking = val; }
+    bool          BreakTime()const { return m_bBreakTime; }
+    void          SetBreakTime(bool val) { m_bBreakTime = val; }
 
 };
 

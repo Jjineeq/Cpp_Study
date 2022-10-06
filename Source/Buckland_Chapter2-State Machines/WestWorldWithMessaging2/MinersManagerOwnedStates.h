@@ -1,5 +1,5 @@
-#ifndef MINERSWIFE_OWNED_STATES_H
-#define MINERSWIFE_OWNED_STATES_H
+#ifndef MINERSMANAGER_OWNED_STATES_H
+#define MINERSMANAGER_OWNED_STATES_H
 //------------------------------------------------------------------------
 //
 //  Name:   MinersManagerOwnedStates.h
@@ -19,28 +19,28 @@ class MinersManager;
 //
 
 //------------------------------------------------------------------------
-class ManagersGlobalState : public State<MinersManager>
+class MinersMangersGlobalState : public State<MinersManager>
 {
 private:
 
-	ManagersGlobalState() {}
+	MinersMangersGlobalState() {}
 
 	//copy ctor and assignment should be private
-	ManagersGlobalState(const ManagersGlobalState&);
-	ManagersGlobalState& operator=(const ManagersGlobalState&);
+	MinersMangersGlobalState(const MinersMangersGlobalState&);
+	MinersMangersGlobalState& operator=(const MinersMangersGlobalState&);
 
 public:
 
 	//this is a singleton
-	static ManagersGlobalState* Instance();
+	static MinersMangersGlobalState* Instance();
 
-	virtual void Enter(MinersManager* manager) {}
+	virtual void Enter(MinersManager* MinersManger) {}
 
-	virtual void Execute(MinersManager* manager);
+	virtual void Execute(MinersManager* MinersManger);
 
-	virtual void Exit(MinersManager* manager) {}
+	virtual void Exit(MinersManager* MinersManger) {}
 
-	virtual bool OnMessage(MinersManager* manager, const Telegram& msg);
+	virtual bool OnMessage(MinersManager* MinersManger, const Telegram& msg);
 };
 
 
@@ -48,28 +48,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class DoHouseWork : public State<MinersManager>
+class DigGold : public State<MinersManager>
 {
 private:
 
-	DoHouseWork() {}
+	DigGold() {}
 
 	//copy ctor and assignment should be private
-	DoHouseWork(const DoHouseWork&);
-	DoHouseWork& operator=(const DoHouseWork&);
+	DigGold(const DigGold&);
+	DigGold& operator=(const DigGold&);
 
 public:
 
 	//this is a singleton
-	static DoHouseWork* Instance();
+	static DigGold* Instance();
 
-	virtual void Enter(MinersManager* manager);
+	virtual void Enter(MinersManager* MinersManger);
 
-	virtual void Execute(MinersManager* manager);
+	virtual void Execute(MinersManager* MinersManger);
 
-	virtual void Exit(MinersManager* manager);
+	virtual void Exit(MinersManager* MinersManger);
 
-	virtual bool OnMessage(MinersManager* manager, const Telegram& msg);
+	virtual bool OnMessage(MinersManager* MinersManger, const Telegram& msg);
 
 };
 
@@ -79,28 +79,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class VisitBathroom : public State<MinersManager>
+class DigDiamond : public State<MinersManager>
 {
 private:
 
-	VisitBathroom() {}
+	DigDiamond() {}
 
 	//copy ctor and assignment should be private
-	VisitBathroom(const VisitBathroom&);
-	VisitBathroom& operator=(const VisitBathroom&);
+	DigDiamond(const DigDiamond&);
+	DigDiamond& operator=(const DigDiamond&);
 
 public:
 
 	//this is a singleton
-	static VisitBathroom* Instance();
+	static DigDiamond* Instance();
 
-	virtual void Enter(MinersManager* manager);
+	virtual void Enter(MinersManager* MinersManger);
 
-	virtual void Execute(MinersManager* manager);
+	virtual void Execute(MinersManager* MinersManger);
 
-	virtual void Exit(MinersManager* manager);
+	virtual void Exit(MinersManager* MinersManger);
 
-	virtual bool OnMessage(MinersManager* manager, const Telegram& msg);
+	virtual bool OnMessage(MinersManager* MinersManger, const Telegram& msg);
 
 };
 
@@ -109,28 +109,28 @@ public:
 //
 
 //------------------------------------------------------------------------
-class CookStew : public State<MinersManager>
+class BreakTime : public State<MinersManager>
 {
 private:
 
-	CookStew() {}
+	BreakTime() {}
 
 	//copy ctor and assignment should be private
-	CookStew(const CookStew&);
-	CookStew& operator=(const CookStew&);
+	BreakTime(const BreakTime&);
+	BreakTime& operator=(const BreakTime&);
 
 public:
 
 	//this is a singleton
-	static CookStew* Instance();
+	static BreakTime* Instance();
 
-	virtual void Enter(MinersManager* manager);
+	virtual void Enter(MinersManager* MinersManger);
 
-	virtual void Execute(MinersManager* manager);
+	virtual void Execute(MinersManager* MinersManger);
 
-	virtual void Exit(MinersManager* manager);
+	virtual void Exit(MinersManager* MinersManger);
 
-	virtual bool OnMessage(MinersManager* manager, const Telegram& msg);
+	virtual bool OnMessage(MinersManager* MinersManger, const Telegram& msg);
 };
 
 

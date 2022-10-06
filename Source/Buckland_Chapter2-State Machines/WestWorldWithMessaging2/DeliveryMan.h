@@ -32,23 +32,23 @@ private:
 
     location_type   m_Location;
 
-    //is she presently cooking?
-    bool            m_bCooking;
+    //is she presently Delivery?
+    bool            m_bDelivery;
 
 
 public:
 
     DeliveryMan(int id) :m_Location(shack),
-        m_bCooking(false),
+        m_bDelivery(false),
         BaseGameEntity(id)
 
     {
         //set up the state machine
         m_pStateMachine = new StateMachine<DeliveryMan>(this);
 
-        m_pStateMachine->SetCurrentState(DoHouseWork::Instance());
+        m_pStateMachine->SetCurrentState(ArrangeParcel::Instance());
 
-        m_pStateMachine->SetGlobalState(DeliveryManGlobalState::Instance());
+        m_pStateMachine->SetGlobalState(DeliveryMansGlobalState::Instance());
     }
 
     ~DeliveryMan() { delete m_pStateMachine; }
@@ -66,8 +66,8 @@ public:
     location_type Location()const { return m_Location; }
     void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-    bool          Cooking()const { return m_bCooking; }
-    void          SetCooking(bool val) { m_bCooking = val; }
+    bool          Delivery()const { return m_bDelivery; }
+    void          SetDelivery(bool val) { m_bDelivery = val; }
 
 };
 

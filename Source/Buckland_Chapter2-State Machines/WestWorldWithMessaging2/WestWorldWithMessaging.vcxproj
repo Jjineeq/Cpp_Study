@@ -46,7 +46,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\User\github\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -156,6 +156,8 @@
     <ClInclude Include="..\..\Common\Time\CrudeTimer.h" />
     <ClInclude Include="..\..\Common\utils.h" />
     <ClInclude Include="BaseGameEntity.h" />
+    <ClInclude Include="DeliveryMan.h" />
+    <ClInclude Include="DeliveryManOwnedStates.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
     <ClInclude Include="Locations.h" />
@@ -163,6 +165,10 @@
     <ClInclude Include="MessageTypes.h" />
     <ClInclude Include="Miner.h" />
     <ClInclude Include="MinerOwnedStates.h" />
+    <ClInclude Include="MinersManager.h" />
+    <ClInclude Include="MinersManagerOwnedStates.h" />
+    <ClInclude Include="MinersSon.h" />
+    <ClInclude Include="MinersSonOwnedStates.h" />
     <ClInclude Include="MinersWife.h" />
     <ClInclude Include="MinersWifeOwnedStates.h" />
   </ItemGroup>

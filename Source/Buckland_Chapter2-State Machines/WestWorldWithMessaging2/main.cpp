@@ -49,7 +49,7 @@ int main()
 
 
   //run Bob and Elsa through a few Update calls
-  for (int i=0; i<30; ++i)
+  for (int i=0; i<20; ++i)
   { 
     Bob->Update();
     Elsa->Update();
@@ -72,7 +72,7 @@ int main()
 
   //wait for a keypress before exiting
   PressAnyKeyToContinue();
-
+  printf("2018312031 Jang_seong_ho");
 
   return 0;
 }

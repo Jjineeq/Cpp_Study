@@ -207,7 +207,7 @@ bool CookStew::OnMessage(MinersWife* wife, const Telegram& msg)
       //let hubby know the stew is ready
       Dispatch->DispatchMessage(SEND_MSG_IMMEDIATELY,
                                 wife->ID(),
-                                ent_Miner_Bob,
+                                ent_Miner_Bob&ent_Kris,
                                 Msg_StewReady,
                                 NO_ADDITIONAL_INFO);
 
