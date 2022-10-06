@@ -46,7 +46,7 @@
     <OutDir>.\Debug\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
+    <IncludePath>D:\Cpp_Study\Source\Common;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>.\Release\</OutDir>
@@ -131,11 +131,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\Common\Time\CrudeTimer.cpp" />
     <ClCompile Include="BaseGameEntity.cpp" />
+    <ClCompile Include="DeliveryMan.cpp" />
+    <ClCompile Include="DeliveryManOwnedStates.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MessageDispatcher.cpp" />
     <ClCompile Include="Miner.cpp" />
     <ClCompile Include="MinerOwnedStates.cpp" />
+    <ClCompile Include="MinersManager.cpp" />
+    <ClCompile Include="MinersManagerOwnedStates.cpp" />
+    <ClCompile Include="MinersSon.cpp" />
+    <ClCompile Include="MinersSonOwnedStates.cpp" />
     <ClCompile Include="MinersWife.cpp" />
     <ClCompile Include="MinersWifeOwnedStates.cpp" />
   </ItemGroup>

@@ -19,5 +19,15 @@ D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(109,23): warning C4129: ';
   SteeringBehaviors.cpp
   main.cpp
   GameWorld.cpp
+  C/C++ 코드 분석을 실행하고 있습니다...
   코드를 생성하고 있습니다...
+GameWorld.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
   Steering.vcxproj -> D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\Debug\Steering.exe
+D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(205): warning C28251: 'WinMain'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winbase.h(1006)을(를) 참조하십시오. 
+D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(261): warning C6387: 'hWnd'은(는) '0'일 수 있습니다.
+D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(262): warning C6387: 'hWnd'은(는) '0'일 수 있습니다.
+D:\Cpp_Study\Source\Common\misc\Cgdi.cpp(14): warning C26495: 'Cgdi::m_OldPen' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(74): warning C6001: 초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.
+D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(125): warning C6001: 초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.
+D:\Cpp_Study\Source\Common\Time\PrecisionTimer.cpp(7): warning C26495: 'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).
+D:\Cpp_Study\Source\Common\Time\PrecisionTimer.cpp(30): warning C26495: 'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).

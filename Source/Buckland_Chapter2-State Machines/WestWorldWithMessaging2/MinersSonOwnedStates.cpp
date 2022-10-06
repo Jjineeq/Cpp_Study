@@ -38,31 +38,7 @@ void SonsGlobalState::Execute(MinersSon* son)
     }
 }
 
-bool SonsGlobalState::OnMessage(MinersSon* son, const Telegram& msg)
-{
-    SetTextColor(BACKGROUND_RED | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 
-    switch (msg.Msg)
-    {
-    case Msg_HiHoneyImHome:
-    {
-        cout << "\nMessage handled by " << GetNameOfEntity(son->ID()) << " at time: "
-            << Clock->GetCurrentTime();
-
-        SetTextColor(FOREGROUND_GREEN | FOREGROUND_INTENSITY);
-
-        cout << "\n" << GetNameOfEntity(son->ID()) <<
-            ": Hi honey. Let me make you some of mah fine country stew";
-
-        son->GetFSM()->ChangeState(CookStew::Instance());
-    }
-
-    return true;
-
-    }//end switch
-
-    return false;
-}
 
 //-------------------------------------------------------------------------DoStudy
 

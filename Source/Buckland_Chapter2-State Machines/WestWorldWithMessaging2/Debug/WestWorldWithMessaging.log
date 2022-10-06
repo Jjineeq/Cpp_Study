@@ -1,43 +1,115 @@
-﻿cl : 명령줄 warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
-  MinersWifeOwnedStates.cpp
-  MinersWife.cpp
-  MinerOwnedStates.cpp
-  Miner.cpp
-  MessageDispatcher.cpp
+﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
   main.cpp
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(49,42): error C2653: 'DoStudy': 클래스 또는 네임스페이스 이름이 아닙니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(49,51): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(51,41): error C2653: 'SonsGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(51,58): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,1): error C2664: 'void StateMachine<MinersManager>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,1): error C2664: 'void StateMachine<MinersManager>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
           with
           [
               entity_type=MinersManager
           ]
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<MinersManager>::SetCurrentState' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,41): error C2653: 'ManagersGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,62): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(29,32): error C2011: 'EnterMineAndDigForNugget': 'class' 형식 재정의
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(60,31): error C2011: 'VisitBankAndDepositGold': 'class' 형식 재정의
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(62): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(90,31): error C2011: 'GoHomeAndSleepTilRested': 'class' 형식 재정의
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(92): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(121,20): error C2011: 'QuenchThirst': 'class' 형식 재정의
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(123): message : 'QuenchThirst' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(151,15): error C2011: 'EatStew': 'class' 형식 재정의
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(153): message : 'EatStew' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,1): error C2664: 'void StateMachine<DeliveryMan>::SetCurrentState(State<entity_type> *)': 인수 1을(를) 'DoHouseWork *'에서 'State<entity_type> *'(으)로 변환할 수 없습니다.
-          with
-          [
-              entity_type=DeliveryMan
-          ]
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<DeliveryMan>::SetCurrentState' 선언을 참조하십시오.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,41): error C2653: 'SonsGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
-C:\Users\jangs\OneDrive\Documents\GitHub\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,58): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
-  EntityManager.cpp
-  BaseGameEntity.cpp
-  CrudeTimer.cpp
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(49,63): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(49,8): message : 'StateMachine<MinersManager>::SetCurrentState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,41): error C2653: 'ManagersGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(51,62): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(52,19): error C2011: 'DoHouseWork': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWifeOwnedStates.h(51): message : 'DoHouseWork' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(83,21): error C2011: 'VisitBathroom': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWifeOwnedStates.h(82): message : 'VisitBathroom' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(113,16): error C2011: 'CookStew': 'class' 형식 재정의
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWifeOwnedStates.h(112): message : 'CookStew' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,55): error C2027: 정의되지 않은 형식 'DoHouseWork'을(를) 사용했습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWifeOwnedStates.h(51): message : 'DoHouseWork' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(49,1): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,41): error C2653: 'DeliveryManGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,65): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+  MinersSonOwnedStates.cpp
+  DeliveryManOwnedStates.cpp
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,41): error C2653: 'DeliveryManGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,65): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(31,32): error C2511: 'void EnterMineAndDigForNugget::Enter(DeliveryMan *)': 오버로드된 멤버 함수가 'EnterMineAndDigForNugget'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(44,32): error C2511: 'void EnterMineAndDigForNugget::Execute(DeliveryMan *)': 오버로드된 멤버 함수가 'EnterMineAndDigForNugget'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(50,19): error C2039: 'AddToGoldCarried': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(52,19): error C2039: 'IncreaseFatigue': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(57,23): error C2039: 'PocketsFull': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(59,80): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'VisitBankAndDepositGold *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(59,78): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(62,23): error C2039: 'Thirsty': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(64,69): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'QuenchThirst *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(64,67): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(69,32): error C2511: 'void EnterMineAndDigForNugget::Exit(DeliveryMan *)': 오버로드된 멤버 함수가 'EnterMineAndDigForNugget'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(76,32): error C2511: 'bool EnterMineAndDigForNugget::OnMessage(DeliveryMan *,const Telegram &)': 오버로드된 멤버 함수가 'EnterMineAndDigForNugget'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(29): message : 'EnterMineAndDigForNugget' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(91,31): error C2511: 'void VisitBankAndDepositGold::Enter(DeliveryMan *)': 오버로드된 멤버 함수가 'VisitBankAndDepositGold'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(62): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(103,31): error C2511: 'void VisitBankAndDepositGold::Execute(DeliveryMan *)': 오버로드된 멤버 함수가 'VisitBankAndDepositGold'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(62): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(106,19): error C2039: 'AddToWealth': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(106,45): error C2039: 'GoldCarried': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(108,19): error C2039: 'SetGoldCarried': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(111,68): error C2039: 'Wealth': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(114,23): error C2039: 'Wealth': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(119,80): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'GoHomeAndSleepTilRested *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(119,78): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(125,81): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'EnterMineAndDigForNugget *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(125,79): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(130,31): error C2511: 'void VisitBankAndDepositGold::Exit(DeliveryMan *)': 오버로드된 멤버 함수가 'VisitBankAndDepositGold'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(62): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(136,31): error C2511: 'bool VisitBankAndDepositGold::OnMessage(DeliveryMan *,const Telegram &)': 오버로드된 멤버 함수가 'VisitBankAndDepositGold'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(62): message : 'VisitBankAndDepositGold' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(150,31): error C2511: 'void GoHomeAndSleepTilRested::Enter(DeliveryMan *)': 오버로드된 멤버 함수가 'GoHomeAndSleepTilRested'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(92): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(167,31): error C2511: 'void GoHomeAndSleepTilRested::Execute(DeliveryMan *)': 오버로드된 멤버 함수가 'GoHomeAndSleepTilRested'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(92): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(170,24): error C2039: 'Fatigued': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(175,81): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'EnterMineAndDigForNugget *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(175,79): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(181,23): error C2039: 'DecreaseFatigue': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(187,31): error C2511: 'void GoHomeAndSleepTilRested::Exit(DeliveryMan *)': 오버로드된 멤버 함수가 'GoHomeAndSleepTilRested'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(92): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(192,31): error C2511: 'bool GoHomeAndSleepTilRested::OnMessage(DeliveryMan *,const Telegram &)': 오버로드된 멤버 함수가 'GoHomeAndSleepTilRested'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(92): message : 'GoHomeAndSleepTilRested' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(208,64): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'EatStew *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(208,62): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(226,20): error C2511: 'void QuenchThirst::Enter(DeliveryMan *)': 오버로드된 멤버 함수가 'QuenchThirst'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(123): message : 'QuenchThirst' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(236,20): error C2511: 'void QuenchThirst::Execute(DeliveryMan *)': 오버로드된 멤버 함수가 'QuenchThirst'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(123): message : 'QuenchThirst' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(238,19): error C2039: 'BuyAndDrinkAWhiskey': 'DeliveryMan'의 멤버가 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(26): message : 'DeliveryMan' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(242,77): error C2664: 'void StateMachine<DeliveryMan>::ChangeState(State<DeliveryMan> *)': 인수 1을(를) 'EnterMineAndDigForNugget *'에서 'State<DeliveryMan> *'(으)로 변환할 수 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(242,75): message : 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+D:\Cpp_Study\Source\Common\fsm\StateMachine.h(83,9): message : 'StateMachine<DeliveryMan>::ChangeState' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(246,20): error C2511: 'void QuenchThirst::Exit(DeliveryMan *)': 오버로드된 멤버 함수가 'QuenchThirst'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(123): message : 'QuenchThirst' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(252,20): error C2511: 'bool QuenchThirst::OnMessage(DeliveryMan *,const Telegram &)': 오버로드된 멤버 함수가 'QuenchThirst'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(123): message : 'QuenchThirst' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(268,15): error C2511: 'void EatStew::Enter(DeliveryMan *)': 오버로드된 멤버 함수가 'EatStew'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(153): message : 'EatStew' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(273,15): error C2511: 'void EatStew::Execute(DeliveryMan *)': 오버로드된 멤버 함수가 'EatStew'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(153): message : 'EatStew' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(280,15): error C2511: 'void EatStew::Exit(DeliveryMan *)': 오버로드된 멤버 함수가 'EatStew'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(153): message : 'EatStew' 선언을 참조하십시오.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.cpp(286,15): error C2511: 'bool EatStew::OnMessage(DeliveryMan *,const Telegram &)': 오버로드된 멤버 함수가 'EatStew'에 없습니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(153): message : 'EatStew' 선언을 참조하십시오.
+  DeliveryMan.cpp
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,41): error C2653: 'DeliveryManGlobalState': 클래스 또는 네임스페이스 이름이 아닙니다.
+D:\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(51,65): error C3861: 'Instance': 식별자를 찾을 수 없습니다.
   코드를 생성하고 있습니다...
