@@ -1,5 +1,32 @@
 ﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
   main.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\BaseGameEntity.h(14,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'messaging/Telegram.h': No such file or directory
+  MinersWifeOwnedStates.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWifeOwnedStates.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinersWife.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersWife.h(15,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinersSonOwnedStates.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSonOwnedStates.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinersSon.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersSon.h(15,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinersManagerOwnedStates.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManagerOwnedStates.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinersManager.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinersManager.h(15,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  MinerOwnedStates.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MinerOwnedStates.h(13,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  Miner.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\BaseGameEntity.h(14,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'messaging/Telegram.h': No such file or directory
+  MessageDispatcher.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\MessageDispatcher.h(18,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'misc/ConsoleUtils.h': No such file or directory
+  EntityManager.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\BaseGameEntity.h(14,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'messaging/Telegram.h': No such file or directory
   DeliveryManOwnedStates.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryManOwnedStates.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  DeliveryMan.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\DeliveryMan.h(15,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'fsm/State.h': No such file or directory
+  BaseGameEntity.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\BaseGameEntity.h(14,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'messaging/Telegram.h': No such file or directory
+  CrudeTimer.cpp
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\..\Common\Time\CrudeTimer.cpp': No such file or directory
   코드를 생성하고 있습니다...
-  WestWorldWithMessaging.vcxproj -> C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter2-State Machines\WestWorldWithMessaging2\Debug\WestWorldWithMessaging.exe

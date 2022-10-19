@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Source",
-    "\\Source\\Buckland_Chapter2-State Machines",
-    "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2"
+    "\\Source\\Buckland_Chapter3-Steering Behaviors"
   ],
-  "SelectedNode": "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2\\main.cpp",
+  "SelectedNode": "\\Source\\Buckland_Chapter3-Steering Behaviors\\SteeringBehaviors.cpp",
   "PreviewInSolutionExplorer": false
 }

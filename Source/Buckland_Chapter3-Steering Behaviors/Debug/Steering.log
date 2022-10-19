@@ -1,33 +1,26 @@
 ﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
   WindowUtils.cpp
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\Common\misc\WindowUtils.cpp': No such file or directory
   Vector2d.cpp
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\Common\2D\Vector2d.cpp': No such file or directory
   PrecisionTimer.cpp
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\Common\Time\PrecisionTimer.cpp': No such file or directory
   Path.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\Path.h(16,10): fatal  error C1083: 포함 파일을 열 수 없습니다. '2d/Vector2D.h': No such file or directory
   ParamLoader.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\ParamLoader.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'misc/iniFileLoaderBase.h': No such file or directory
   Obstacle.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\Obstacle.h(12,10): fatal  error C1083: 포함 파일을 열 수 없습니다. '2d/Vector2D.h': No such file or directory
   iniFileLoaderBase.cpp
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(9,42): warning C4305: '인수': 'int'에서 'const _Elem'(으)로 잘립니다.
-          with
-          [
-              _Elem=char
-          ]
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(9,38): warning C4309: '인수': 상수 값이 잘립니다.
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(57,23): warning C4129: ';': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(109,23): warning C4129: ';': 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\Common\misc\iniFileLoaderBase.cpp': No such file or directory
   Cgdi.cpp
+c1xx : fatal  error C1083: 소스 파일을 열 수 없습니다. '..\Common\misc\Cgdi.cpp': No such file or directory
   Vehicle.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\MovingEntity.h(16,10): fatal  error C1083: 포함 파일을 열 수 없습니다. '2D/Vector2D.h': No such file or directory
   SteeringBehaviors.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\SteeringBehaviors.h(18,10): fatal  error C1083: 포함 파일을 열 수 없습니다. '2d/Vector2D.h': No such file or directory
   main.cpp
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(7,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'misc/utils.h': No such file or directory
   GameWorld.cpp
-  C/C++ 코드 분석을 실행하고 있습니다...
+C:\Users\User\github\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\GameWorld.h(18,10): fatal  error C1083: 포함 파일을 열 수 없습니다. '2d/Vector2D.h': No such file or directory
   코드를 생성하고 있습니다...
-GameWorld.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
-  Steering.vcxproj -> D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\Debug\Steering.exe
-D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(205): warning C28251: 'WinMain'에 대한 주석이 일치하지 않습니다. 이 인스턴스에는 주석 없음이(가) 있습니다. c:\program files (x86)\windows kits\10\include\10.0.19041.0\um\winbase.h(1006)을(를) 참조하십시오. 
-D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(261): warning C6387: 'hWnd'은(는) '0'일 수 있습니다.
-D:\Cpp_Study\Source\Buckland_Chapter3-Steering Behaviors\main.cpp(262): warning C6387: 'hWnd'은(는) '0'일 수 있습니다.
-D:\Cpp_Study\Source\Common\misc\Cgdi.cpp(14): warning C26495: 'Cgdi::m_OldPen' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(74): warning C6001: 초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.
-D:\Cpp_Study\Source\Common\misc\iniFileLoaderBase.cpp(125): warning C6001: 초기화되지 않은 메모리 'endIdx'을(를) 사용하고 있습니다.
-D:\Cpp_Study\Source\Common\Time\PrecisionTimer.cpp(7): warning C26495: 'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).
-D:\Cpp_Study\Source\Common\Time\PrecisionTimer.cpp(30): warning C26495: 'PrecisionTimer::m_CurrentTime' 변수가 초기화되지 않았습니다. 항상 멤버 변수를 초기화하세요(type.6).
