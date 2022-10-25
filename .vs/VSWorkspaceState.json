@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Source",
+    "\\pythonsource",
+    "\\pythonsource\\chap08",
+    "\\Source\\Buckland_Chapter2-State Machines",
+    "\\Source\\Buckland_Chapter2-State Machines\\WestWorldWithMessaging2",
     "\\Source\\Buckland_Chapter3-Steering Behaviors"
   ],
-  "SelectedNode": "\\Source\\Buckland_Chapter3-Steering Behaviors\\SteeringBehaviors.cpp",
+  "SelectedNode": "\\pythonsource\\8queen_complete.py",
   "PreviewInSolutionExplorer": false
 }
