@@ -6,7 +6,7 @@ import kivy.uix.textinput
 import kivy.uix.label
 import numpy
 from kivy.config import Config
-import GA
+import ga
 
 class BuzzleApp(kivy.app.App):
     pop_created = 0 # 0 means a population is not yet created.
@@ -53,13 +53,13 @@ class BuzzleApp(kivy.app.App):
                 break
 
             # Selecting the best parents in the population for mating.
-            parents = GA.select_mating_pool(self.population_1D_vector, population_fitness, num_parents_mating)
+            parents = ga.select_mating_pool(self.population_1D_vector, population_fitness, num_parents_mating)
 
             # Generating next generation using crossover.
-            offspring_crossover = GA.crossover(parents, offspring_size=(self.num_solutions - parents.shape[0], 8))
+            offspring_crossover = ga.crossover(parents, offspring_size=(self.num_solutions - parents.shape[0], 8))
 
             # Adding some variations to the offspring using mutation.
-            offspring_mutation = GA.mutation(offspring_crossover, num_mutations=numpy.uint8(self.num_mutations_TextInput.text))
+            offspring_mutation = ga.mutation(offspring_crossover, num_mutations=numpy.uint8(self.num_mutations_TextInput.text))
 
             # Creating the new population based on the parents and offspring.
             self.population_1D_vector[0:parents.shape[0], :] = parents
