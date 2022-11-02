@@ -1,6 +1,7 @@
 from json.encoder import INFINITY
 from queue import Empty
-
+from tttAI import *
+from pygame import * 
 
 
 def run_game(surface, menu, ttt):
@@ -155,4 +156,4 @@ def minimax(self,depth, alpha, beta, player):
     else: 
         return min_score
 
-minimax(5,5,5,5,1)
+minimax(5,5,5,5,2)
