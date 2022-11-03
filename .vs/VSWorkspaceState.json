@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Source",
+    "\\Source\\Buckland_Chapter5-Pathfinder-study",
+    "\\Source\\Common",
+    "\\Source\\Common\\Graph"
   ],
-  "SelectedNode": "\\Pathfinder.sln(Source\\Buckland_Chapter5-Pathfinder-study\\Pathfinder.sln)",
+  "SelectedNode": "\\Source\\Common\\Graph\\GraphAlgorithms.h",
   "PreviewInSolutionExplorer": false
 }
