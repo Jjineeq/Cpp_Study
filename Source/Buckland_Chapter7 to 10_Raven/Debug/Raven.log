@@ -1,0 +1,54 @@
+﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  Trigger_WeaponGiver.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Trigger_SoundNotify.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Trigger_HealthGiver.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_PathPlanner.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  main.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Scriptor.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Feature.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Goal_TraverseEdge.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Goal_Think.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Goal_AdjustRange.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  ExploreGoal_Evaluator.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Weapon_ShotGun.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Weapon_RocketLauncher.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Weapon_RailGun.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Weapon_Blaster.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Weapon.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Projectile_Slug.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Projectile_Rocket.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Projectile_Pellet.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Projectile_Bolt.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Raven_WeaponSystem.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_SteeringBehaviors.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Map.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Game.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_Bot.cpp
+C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  코드를 생성하고 있습니다...
