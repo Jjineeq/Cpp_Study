@@ -1,54 +1,72 @@
 ﻿cl : 명령줄  warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  WindowUtils.cpp
+  Vector2d.cpp
+  PrecisionTimer.cpp
+  FrameCounter.cpp
+  DebugConsole.cpp
+  CrudeTimer.cpp
+  Cgdi.cpp
+  Raven_TargetingSystem.cpp
+  Raven_WeaponSystem.cpp
   Trigger_WeaponGiver.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
   Trigger_SoundNotify.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
   Trigger_HealthGiver.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  Raven_SensoryMemory.cpp
+  MessageDispatcher.cpp
+  Raven_SteeringBehaviors.cpp
   Raven_PathPlanner.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  main.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Scriptor.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Feature.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Goal_TraverseEdge.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Goal_Think.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Goal_AdjustRange.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  ExploreGoal_Evaluator.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Weapon_ShotGun.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Weapon_RocketLauncher.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Weapon_RailGun.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Weapon_Blaster.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Weapon.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Projectile_Slug.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Projectile_Rocket.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Projectile_Pellet.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Projectile_Bolt.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  FuzzySet_Triangle.cpp
+  FuzzySet_Singleton.cpp
+  FuzzySet_RightShoulder.cpp
+  FuzzySet_LeftShoulder.cpp
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
-  Raven_WeaponSystem.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_SteeringBehaviors.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Map.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Game.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
-  Raven_Bot.cpp
-C:\Users\user\github\Cpp_Study\Source\Common\Script\scriptor.h(14,12): fatal  error C1083: 포함 파일을 열 수 없습니다. 'lua.h': No such file or directory
+  FuzzyVariable.cpp
+  FuzzyOperators.cpp
+  FuzzyModule.cpp
+  Goal_Wander.cpp
+  Goal_TraverseEdge.cpp
+  Goal_SeekToPosition.cpp
+  Goal_SayPhrase.cpp
+  Goal_DodgeSideToSide.cpp
+  Raven_Feature.cpp
+  GetWeaponGoal_Evaluator.cpp
+  GetHealthGoal_Evaluator.cpp
+  ExploreGoal_Evaluator.cpp
+  AttackTargetGoal_Evaluator.cpp
+  Goal_Think.cpp
+  Goal_NegotiateDoor.cpp
+  Goal_MoveToPosition.cpp
+  Goal_HuntTarget.cpp
+  Goal_GetItem.cpp
+  Goal_FollowPath.cpp
+  Goal_Explore.cpp
   코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Goal_AttackTarget.cpp
+  Goal_AdjustRange.cpp
+  Raven_Goal_Types.cpp
+  Raven_UserOptions.cpp
+  Raven_Door.cpp
+  GraveMarkers.cpp
+  EntityManager.cpp
+  Raven_Scriptor.cpp
+  BaseGameEntity.cpp
+  Raven_Projectile.cpp
+  Projectile_Slug.cpp
+  Projectile_Rocket.cpp
+  Projectile_Pellet.cpp
+  Projectile_Bolt.cpp
+  Weapon_ShotGun.cpp
+  Weapon_RocketLauncher.cpp
+  Weapon_RailGun.cpp
+  Weapon_Blaster.cpp
+  Raven_Weapon.cpp
+  Raven_Map.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Raven_Game.cpp
+  Raven_Bot.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+  Raven.vcxproj -> C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\Debug\Raven.exe
