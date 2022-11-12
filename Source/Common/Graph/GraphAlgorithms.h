@@ -116,7 +116,7 @@ bool Graph_SearchDFS<graph_type>::Search()
   while (!stack.empty())
   {
     //grab the next edge
-    const Edge* Next = stack.top();
+    const Edge* Next = stack.front();
 
     //remove the edge from the stack
     stack.pop();
@@ -144,13 +144,18 @@ bool Graph_SearchDFS<graph_type>::Search()
     //visited node)
     graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, Next->To());
 
-    for (const Edge* pE=ConstEdgeItr.begin();
+    for (const Edge* pE = ConstEdgeItr.begin();
         !ConstEdgeItr.end();
-         pE=ConstEdgeItr.next())
+        pE = ConstEdgeItr.next())
     {
       if (m_Visited[pE->To()] == unvisited)
       {
         stack.push(pE);
+
+        m_Visited[pE->To()] = vistied;
+        pE = ConstEdgeltr.begin();
+        ConstEdgeltr.next() = pE;
+
       }
     }
   }
@@ -182,8 +187,7 @@ std::list<int> Graph_SearchDFS<graph_type>::GetPathToTarget()const
 
   return path;
 }
-
-
+   
 
 //----------------------------- Graph_SearchBFS -------------------------------
 //

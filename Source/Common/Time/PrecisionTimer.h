@@ -1,4 +1,4 @@
-#ifndef PRECISION_TIMER_H
+﻿#ifndef PRECISION_TIMER_H
 #define PRECISION_TIMER_H
 //-----------------------------------------------------------------------
 //

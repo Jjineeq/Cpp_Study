@@ -1,4 +1,4 @@
-#include "Pathfinder.h"
+﻿#include "Pathfinder.h"
 #include "Graph/HandyGraphFunctions.h"
 #include "misc/Cgdi.h"
 #include "Time/PrecisionTimer.h"
@@ -540,7 +540,7 @@ void Pathfinder::Render()
   {
     //draw time taken to complete algorithm
     string time = ttos(m_dTimeTaken, 8);
-    string s = "Time Elapsed for " + GetNameOfCurrentSearchAlgorithm() + " is " + time;
+    string s = "2018312031 장성호 Time Elapsed for " + GetNameOfCurrentSearchAlgorithm() + " is " + time;
     gdi->TextAtPos(1,m_icyClient + 3,s); 
   }
 
