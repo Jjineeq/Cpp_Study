@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Source",
+    "\\Source\\Buckland_Chapter7 to 10_Raven"
   ],
-  "SelectedNode": "\\Pathfinder.sln(Source\\Buckland_Chapter5-Pathfinder-study\\Pathfinder.sln)",
+  "SelectedNode": "\\Source\\Buckland_Chapter7 to 10_Raven\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
