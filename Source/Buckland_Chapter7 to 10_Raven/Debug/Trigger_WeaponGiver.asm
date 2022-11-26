@@ -10,19 +10,19 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG164007 DB	'DefaultGiverTriggerRange', 00H
+$SG166139 DB	'DefaultGiverTriggerRange', 00H
 	ORG $+3
-$SG164008 DB	'Weapon_RespawnDelay', 00H
-$SG172748 DB	'invalid argument', 00H
+$SG166140 DB	'Weapon_RespawnDelay', 00H
+$SG174880 DB	'invalid argument', 00H
 	ORG $+3
-$SG172749 DB	'%s', 00H
+$SG174881 DB	'%s', 00H
 	ORG $+1
-$SG172750 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG174882 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG172752 DB	00H, 00H
+$SG174884 DB	00H, 00H
 	ORG $+2
-$SG172751 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG174883 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -38,7 +38,7 @@ $SG172751 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG172753 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG174885 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+2
@@ -57,7 +57,7 @@ $SG172753 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG172854 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG174986 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -4337,7 +4337,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG172854
+	push	OFFSET $SG174986
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4643,11 +4643,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG172748
-	push	OFFSET $SG172749
+	push	OFFSET $SG174880
+	push	OFFSET $SG174881
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG172750
+	push	OFFSET $SG174882
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4657,9 +4657,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG172751
-	push	OFFSET $SG172752
-	push	OFFSET $SG172753
+	push	OFFSET $SG174883
+	push	OFFSET $SG174884
+	push	OFFSET $SG174885
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -22450,7 +22450,7 @@ $LN4@clear:
 ?clear@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z ENDP ; std::basic_ios<char,std::char_traits<char> >::clear
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -22939,7 +22939,7 @@ _in$ = 8						; size = 4
 ; 61   :   //create this trigger's region of fluence
 ; 62   :   AddCircularTriggerRegion(Pos(), script->GetDouble("DefaultGiverTriggerRange"));
 
-	push	OFFSET $SG164007
+	push	OFFSET $SG166139
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -22966,7 +22966,7 @@ _in$ = 8						; size = 4
 ; 64   : 
 ; 65   :   SetRespawnDelay((unsigned int)(script->GetDouble("Weapon_RespawnDelay") * FrameRate));
 
-	push	OFFSET $SG164008
+	push	OFFSET $SG166140
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -38302,7 +38302,7 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _powf
 _TEXT	SEGMENT
 tv74 = -4						; size = 4
@@ -38310,14 +38310,14 @@ __X$ = 8						; size = 4
 __Y$ = 12						; size = 4
 _powf	PROC						; COMDAT
 
-; 742  :         {
+; 748  :         {
 
 	push	ebp
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 
-; 743  :             return (float)pow(_X, _Y);
+; 749  :             return (float)pow(_X, _Y);
 
 	cvtss2sd xmm0, DWORD PTR __Y$[ebp]
 	sub	esp, 8
@@ -38330,7 +38330,7 @@ _powf	PROC						; COMDAT
 	fstp	DWORD PTR tv74[ebp]
 	fld	DWORD PTR tv74[ebp]
 
-; 744  :         }
+; 750  :         }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -38341,7 +38341,7 @@ _powf	PROC						; COMDAT
 _powf	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _ldexpf
 _TEXT	SEGMENT
 tv73 = -4						; size = 4
@@ -38349,14 +38349,14 @@ __X$ = 8						; size = 4
 __Y$ = 12						; size = 4
 _ldexpf	PROC						; COMDAT
 
-; 705  :     {
+; 711  :     {
 
 	push	ebp
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 
-; 706  :         return (float)ldexp(_X, _Y);
+; 712  :         return (float)ldexp(_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -38368,7 +38368,7 @@ _ldexpf	PROC						; COMDAT
 	fstp	DWORD PTR tv73[ebp]
 	fld	DWORD PTR tv73[ebp]
 
-; 707  :     }
+; 713  :     }
 
 	add	esp, 4
 	cmp	ebp, esp

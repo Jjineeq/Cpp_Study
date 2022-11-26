@@ -10,6 +10,18 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
+$SG180894 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
+	ORG $+2
+$SG181342 DB	'invalid argument', 00H
+	ORG $+3
+$SG181343 DB	'%s', 00H
+	ORG $+1
+$SG181346 DB	00H, 00H
+	ORG $+2
+$SG181344 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
+	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -25,25 +37,7 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG169444 DB	'RG: ', 00H
-	ORG $+3
-$SG169446 DB	'RL: ', 00H
-	ORG $+3
-$SG169448 DB	'SG: ', 00H
-	ORG $+3
-$SG179210 DB	'invalid argument', 00H
-	ORG $+3
-$SG178762 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
-	ORG $+2
-$SG179211 DB	'%s', 00H
-	ORG $+1
-$SG179212 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
-	ORG $+2
-$SG179214 DB	00H, 00H
-	ORG $+2
-$SG179213 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG181345 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -59,9 +53,15 @@ $SG179213 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG179215 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG181347 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
+	ORG $+2
+$SG171576 DB	'RG: ', 00H
+	ORG $+3
+$SG171578 DB	'RL: ', 00H
+	ORG $+3
+$SG171580 DB	'SG: ', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -3484,11 +3484,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG179210
-	push	OFFSET $SG179211
+	push	OFFSET $SG181342
+	push	OFFSET $SG181343
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG179212
+	push	OFFSET $SG181344
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3498,9 +3498,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG179213
-	push	OFFSET $SG179214
-	push	OFFSET $SG179215
+	push	OFFSET $SG181345
+	push	OFFSET $SG181346
+	push	OFFSET $SG181347
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -3925,7 +3925,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG178762
+	push	OFFSET $SG180894
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -20109,7 +20109,7 @@ $LN4@RenderInfo:
 ; 67   :   case type_rail_gun:
 ; 68   :     s="RG: ";break;
 
-	push	OFFSET $SG169444
+	push	OFFSET $SG171576
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 	jmp	SHORT $LN2@RenderInfo
@@ -20118,7 +20118,7 @@ $LN5@RenderInfo:
 ; 69   :   case type_rocket_launcher:
 ; 70   :     s="RL: "; break;
 
-	push	OFFSET $SG169446
+	push	OFFSET $SG171578
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 	jmp	SHORT $LN2@RenderInfo
@@ -20127,7 +20127,7 @@ $LN6@RenderInfo:
 ; 71   :   case type_shotgun:
 ; 72   :     s="SG: "; break;
 
-	push	OFFSET $SG169448
+	push	OFFSET $SG171580
 	lea	ecx, DWORD PTR _s$[ebp]
 	call	??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::operator=
 $LN2@RenderInfo:
@@ -31272,7 +31272,7 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT _sprintf_s
 _TEXT	SEGMENT
 __ArgList$ = -8						; size = 4
@@ -31332,7 +31332,7 @@ _sprintf_s PROC						; COMDAT
 _sprintf_s ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT __vsprintf_s_l
 _TEXT	SEGMENT
 tv73 = -8						; size = 4
@@ -31399,7 +31399,7 @@ $LN4@vsprintf_s:
 __vsprintf_s_l ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_stdio_config.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_stdio_config.h
 ;	COMDAT ___local_stdio_printf_options
 _TEXT	SEGMENT
 ___local_stdio_printf_options PROC			; COMDAT
@@ -31421,19 +31421,19 @@ ___local_stdio_printf_options PROC			; COMDAT
 ___local_stdio_printf_options ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _frexpl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 __Y$ = 16						; size = 4
 _frexpl	PROC						; COMDAT
 
-; 861  :     {
+; 867  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 862  :         return frexp((double)_X, _Y);
+; 868  :         return frexp((double)_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -31443,7 +31443,7 @@ _frexpl	PROC						; COMDAT
 	call	_frexp
 	add	esp, 12					; 0000000cH
 
-; 863  :     }
+; 869  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -31452,18 +31452,18 @@ _frexpl	PROC						; COMDAT
 _frexpl	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _fabsl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 _fabsl	PROC						; COMDAT
 
-; 840  :     {
+; 846  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 841  :         return fabs((double)_X);
+; 847  :         return fabs((double)_X);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __X$[ebp]
@@ -31471,7 +31471,7 @@ _fabsl	PROC						; COMDAT
 	call	_fabs
 	add	esp, 8
 
-; 842  :     }
+; 848  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp

@@ -10,62 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG163884 DB	'<Goal_Think::Arbitrate>: no evaluator selected', 00H
-	ORG $+1
-$SG163885 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
-	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
-	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
-	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
-	DB	00H, 't', 00H, 'u', 00H, 'd', 00H, 'y', 00H, '\', 00H, 'S', 00H
-	DB	'o', 00H, 'u', 00H, 'r', 00H, 'c', 00H, 'e', 00H, '\', 00H, 'B'
-	DB	00H, 'u', 00H, 'c', 00H, 'k', 00H, 'l', 00H, 'a', 00H, 'n', 00H
-	DB	'd', 00H, '_', 00H, 'C', 00H, 'h', 00H, 'a', 00H, 'p', 00H, 't'
-	DB	00H, 'e', 00H, 'r', 00H, '7', 00H, ' ', 00H, 't', 00H, 'o', 00H
-	DB	' ', 00H, '1', 00H, '0', 00H, '_', 00H, 'R', 00H, 'a', 00H, 'v'
-	DB	00H, 'e', 00H, 'n', 00H, '\', 00H, 'g', 00H, 'o', 00H, 'a', 00H
-	DB	'l', 00H, 's', 00H, '\', 00H, 'G', 00H, 'o', 00H, 'a', 00H, 'l'
-	DB	00H, '_', 00H, 'T', 00H, 'h', 00H, 'i', 00H, 'n', 00H, 'k', 00H
-	DB	'.', 00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
-	ORG $+2
-?colors@@3QBKB DD 0ffH					; colors
-	DD	0ff0000H
-	DD	0ff00H
-	DD	00H
-	DD	0c8c8ffH
-	DD	0c8c8c8H
-	DD	0ffffH
-	DD	0aaffH
-	DD	0aa00ffH
-	DD	05a85H
-	DD	0ffffffH
-	DD	06400H
-	DD	0ffff00H
-	DD	0c8c8c8H
-	DD	0e6e6ffH
-$SG163886 DB	'M', 00H, 'o', 00H, 's', 00H, 't', 00H, 'D', 00H, 'e', 00H
-	DB	's', 00H, 'i', 00H, 'r', 00H, 'a', 00H, 'b', 00H, 'l', 00H, 'e'
-	DB	00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, '"', 00H, '<', 00H
-	DB	'G', 00H, 'o', 00H, 'a', 00H, 'l', 00H, '_', 00H, 'T', 00H, 'h'
-	DB	00H, 'i', 00H, 'n', 00H, 'k', 00H, ':', 00H, ':', 00H, 'A', 00H
-	DB	'r', 00H, 'b', 00H, 'i', 00H, 't', 00H, 'r', 00H, 'a', 00H, 't'
-	DB	00H, 'e', 00H, '>', 00H, ':', 00H, ' ', 00H, 'n', 00H, 'o', 00H
-	DB	' ', 00H, 'e', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'u', 00H, 'a'
-	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, ' ', 00H, 's', 00H, 'e', 00H
-	DB	'l', 00H, 'e', 00H, 'c', 00H, 't', 00H, 'e', 00H, 'd', 00H, '"'
-	DB	00H, 00H, 00H
-$SG171781 DB	'invalid argument', 00H
+$SG173913 DB	'invalid argument', 00H
 	ORG $+3
-$SG172757 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
-	ORG $+2
-$SG171782 DB	'%s', 00H
+$SG173914 DB	'%s', 00H
 	ORG $+1
-$SG171783 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG173915 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG171785 DB	00H, 00H
+$SG173917 DB	00H, 00H
 	ORG $+2
-$SG171784 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG173916 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -81,9 +35,56 @@ $SG171784 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG171786 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG173918 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
+	ORG $+2
+$SG166016 DB	'<Goal_Think::Arbitrate>: no evaluator selected', 00H
+	ORG $+1
+?colors@@3QBKB DD 0ffH					; colors
+	DD	0ff0000H
+	DD	0ff00H
+	DD	00H
+	DD	0c8c8ffH
+	DD	0c8c8c8H
+	DD	0ffffH
+	DD	0aaffH
+	DD	0aa00ffH
+	DD	05a85H
+	DD	0ffffffH
+	DD	06400H
+	DD	0ffff00H
+	DD	0c8c8c8H
+	DD	0e6e6ffH
+$SG166017 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
+	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
+	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
+	DB	00H, 't', 00H, 'u', 00H, 'd', 00H, 'y', 00H, '\', 00H, 'S', 00H
+	DB	'o', 00H, 'u', 00H, 'r', 00H, 'c', 00H, 'e', 00H, '\', 00H, 'B'
+	DB	00H, 'u', 00H, 'c', 00H, 'k', 00H, 'l', 00H, 'a', 00H, 'n', 00H
+	DB	'd', 00H, '_', 00H, 'C', 00H, 'h', 00H, 'a', 00H, 'p', 00H, 't'
+	DB	00H, 'e', 00H, 'r', 00H, '7', 00H, ' ', 00H, 't', 00H, 'o', 00H
+	DB	' ', 00H, '1', 00H, '0', 00H, '_', 00H, 'R', 00H, 'a', 00H, 'v'
+	DB	00H, 'e', 00H, 'n', 00H, '\', 00H, 'g', 00H, 'o', 00H, 'a', 00H
+	DB	'l', 00H, 's', 00H, '\', 00H, 'G', 00H, 'o', 00H, 'a', 00H, 'l'
+	DB	00H, '_', 00H, 'T', 00H, 'h', 00H, 'i', 00H, 'n', 00H, 'k', 00H
+	DB	'.', 00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
+	ORG $+6
+$SG166018 DB	'M', 00H, 'o', 00H, 's', 00H, 't', 00H, 'D', 00H, 'e', 00H
+	DB	's', 00H, 'i', 00H, 'r', 00H, 'a', 00H, 'b', 00H, 'l', 00H, 'e'
+	DB	00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, '"', 00H, '<', 00H
+	DB	'G', 00H, 'o', 00H, 'a', 00H, 'l', 00H, '_', 00H, 'T', 00H, 'h'
+	DB	00H, 'i', 00H, 'n', 00H, 'k', 00H, ':', 00H, ':', 00H, 'A', 00H
+	DB	'r', 00H, 'b', 00H, 'i', 00H, 't', 00H, 'r', 00H, 'a', 00H, 't'
+	DB	00H, 'e', 00H, '>', 00H, ':', 00H, ' ', 00H, 'n', 00H, 'o', 00H
+	DB	' ', 00H, 'e', 00H, 'v', 00H, 'a', 00H, 'l', 00H, 'u', 00H, 'a'
+	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, ' ', 00H, 's', 00H, 'e', 00H
+	DB	'l', 00H, 'e', 00H, 'c', 00H, 't', 00H, 'e', 00H, 'd', 00H, '"'
+	DB	00H, 00H, 00H
+	ORG $+4
+$SG174889 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -3734,11 +3735,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG171781
-	push	OFFSET $SG171782
+	push	OFFSET $SG173913
+	push	OFFSET $SG173914
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG171783
+	push	OFFSET $SG173915
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3748,9 +3749,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG171784
-	push	OFFSET $SG171785
-	push	OFFSET $SG171786
+	push	OFFSET $SG173916
+	push	OFFSET $SG173917
+	push	OFFSET $SG173918
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -10621,13 +10622,13 @@ $LN3@Arbitrate:
 
 	cmp	DWORD PTR _MostDesirable$[ebp], 0
 	je	SHORT $LN7@Arbitrate
-	mov	edx, OFFSET $SG163884
+	mov	edx, OFFSET $SG166016
 	test	edx, edx
 	jne	SHORT $LN8@Arbitrate
 $LN7@Arbitrate:
 	push	116					; 00000074H
-	push	OFFSET $SG163885
-	push	OFFSET $SG163886
+	push	OFFSET $SG166017
+	push	OFFSET $SG166018
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN8@Arbitrate:

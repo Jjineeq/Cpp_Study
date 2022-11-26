@@ -16,15 +16,15 @@ _BSS	SEGMENT
 ?g_pRaven@@3PAVRaven_Game@@A DD 01H DUP (?)		; g_pRaven
 _BSS	ENDS
 CONST	SEGMENT
-$SG172084 DB	'Raven', 00H
-$SG172163 DB	00H
+$SG174216 DB	'Raven', 00H
+$SG174295 DB	00H
 	ORG $+1
-$SG172086 DB	'MyWindowClass', 00H
+$SG174218 DB	'MyWindowClass', 00H
 	ORG $+2
-$SG172160 DB	'map', 00H
-$SG172161 DB	'Raven map file (*.map)', 00H
+$SG174292 DB	'map', 00H
+$SG174293 DB	'Raven map file (*.map)', 00H
 	ORG $+1
-$SG172162 DB	'Filename: ', 00H
+$SG174294 DB	'Filename: ', 00H
 	ORG $+1
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
@@ -41,24 +41,24 @@ $SG172162 DB	'Filename: ', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG172216 DB	'Error', 00H
+$SG174348 DB	'Error', 00H
 	ORG $+2
-$SG172217 DB	'Registration Failed!', 00H
+$SG174349 DB	'Registration Failed!', 00H
 	ORG $+3
-$SG172220 DB	'Error!', 00H
+$SG174352 DB	'Error!', 00H
 	ORG $+1
-$SG172221 DB	'CreateWindowEx Failed!', 00H
+$SG174353 DB	'CreateWindowEx Failed!', 00H
 	ORG $+1
-$SG181266 DB	'invalid argument', 00H
+$SG183398 DB	'invalid argument', 00H
 	ORG $+3
-$SG181267 DB	'%s', 00H
+$SG183399 DB	'%s', 00H
 	ORG $+1
-$SG181270 DB	00H, 00H
+$SG183402 DB	00H, 00H
 	ORG $+2
-$SG181268 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183400 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG181269 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG183401 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -74,16 +74,16 @@ $SG181269 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG181271 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG183403 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG181450 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183582 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 _DATA	SEGMENT
-?g_szApplicationName@@3PADA DD FLAT:$SG172084		; g_szApplicationName
-?g_szWindowClassName@@3PADA DD FLAT:$SG172086		; g_szWindowClassName
+?g_szApplicationName@@3PADA DD FLAT:$SG174216		; g_szApplicationName
+?g_szWindowClassName@@3PADA DD FLAT:$SG174218		; g_szWindowClassName
 _DATA	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -4316,11 +4316,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG181266
-	push	OFFSET $SG181267
+	push	OFFSET $SG183398
+	push	OFFSET $SG183399
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG181268
+	push	OFFSET $SG183400
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4330,9 +4330,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG181269
-	push	OFFSET $SG181270
-	push	OFFSET $SG181271
+	push	OFFSET $SG183401
+	push	OFFSET $SG183402
+	push	OFFSET $SG183403
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -11781,11 +11781,11 @@ $LN22@WindowProc:
 ; 203  :           
 ; 204  :           FileOpenDlg(hwnd, szFileName, szTitleName, "Raven map file (*.map)", "map");
 
-	push	OFFSET $SG172160
+	push	OFFSET $SG174292
 	lea	ecx, DWORD PTR $T8[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
-	push	OFFSET $SG172161
+	push	OFFSET $SG174293
 	lea	ecx, DWORD PTR $T7[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
@@ -11809,9 +11809,9 @@ $LN22@WindowProc:
 ; 205  : 
 ; 206  :           debug_con << "Filename: " << szTitleName << "";
 
-	push	OFFSET $SG172163
+	push	OFFSET $SG174295
 	push	OFFSET ?szTitleName@?1??WindowProc@@YGJPAUHWND__@@IIJ@Z@4PADA
-	push	OFFSET $SG172162
+	push	OFFSET $SG174294
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY0L@D@DebugConsole@@QAEAAV0@AAY0L@$$CBD@Z ; DebugConsole::operator<<<char [11]>
@@ -26808,7 +26808,7 @@ __Where$ = 12						; size = 4
 ??2@YAPAXIPAX@Z ENDP					; operator new
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\time.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\time.h
 _TEXT	SEGMENT
 __Time$ = 8						; size = 4
 _time	PROC
@@ -26981,8 +26981,8 @@ _WinMain@16 PROC
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG172216
-	push	OFFSET $SG172217
+	push	OFFSET $SG174348
+	push	OFFSET $SG174349
 	push	0
 	call	DWORD PTR __imp__MessageBoxA@16
 	cmp	esi, esp
@@ -27069,8 +27069,8 @@ $LN6@WinMain:
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG172220
-	push	OFFSET $SG172221
+	push	OFFSET $SG174352
+	push	OFFSET $SG174353
 	push	0
 	call	DWORD PTR __imp__MessageBoxA@16
 	cmp	esi, esp

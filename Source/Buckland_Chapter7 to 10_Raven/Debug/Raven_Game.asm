@@ -10,39 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-?colors@@3QBKB DD 0ffH					; colors
-	DD	0ff0000H
-	DD	0ff00H
-	DD	00H
-	DD	0c8c8ffH
-	DD	0c8c8c8H
-	DD	0ffffH
-	DD	0aaffH
-	DD	0aa00ffH
-	DD	05a85H
-	DD	0ffffffH
-	DD	06400H
-	DD	0ffff00H
-	DD	0c8c8c8H
-	DD	0e6e6ffH
-$SG181638 DB	'Map has no spawn points!', 00H
+$SG197445 DB	'invalid argument', 00H
 	ORG $+3
-$SG181754 DB	'GraveLifetime', 00H
-	ORG $+2
-$SG181756 DB	'MaxSearchCyclesPerUpdateStep', 00H
-	ORG $+3
-$SG181759 DB	'NumBots', 00H
-$SG182691 DB	'Queuing', 00H
-$SG195313 DB	'invalid argument', 00H
-	ORG $+3
-$SG195314 DB	'%s', 00H
+$SG197446 DB	'%s', 00H
 	ORG $+1
-$SG195315 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG197447 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG195317 DB	00H, 00H
+$SG197449 DB	00H, 00H
 	ORG $+2
-$SG195316 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG197448 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -58,14 +35,38 @@ $SG195316 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG195318 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG197450 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG180083 DB	'StartMap', 00H
+$SG182215 DB	'StartMap', 00H
 	ORG $+3
-$SG195529 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG197661 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
+	ORG $+2
+?colors@@3QBKB DD 0ffH					; colors
+	DD	0ff0000H
+	DD	0ff00H
+	DD	00H
+	DD	0c8c8ffH
+	DD	0c8c8c8H
+	DD	0ffffH
+	DD	0aaffH
+	DD	0aa00ffH
+	DD	05a85H
+	DD	0ffffffH
+	DD	06400H
+	DD	0ffff00H
+	DD	0c8c8c8H
+	DD	0e6e6ffH
+$SG183770 DB	'Map has no spawn points!', 00H
+	ORG $+3
+$SG183886 DB	'GraveLifetime', 00H
+	ORG $+2
+$SG183888 DB	'MaxSearchCyclesPerUpdateStep', 00H
+	ORG $+3
+$SG183891 DB	'NumBots', 00H
+$SG184823 DB	'Queuing', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -4641,11 +4642,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG195313
-	push	OFFSET $SG195314
+	push	OFFSET $SG197445
+	push	OFFSET $SG197446
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG195315
+	push	OFFSET $SG197447
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4655,9 +4656,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG195316
-	push	OFFSET $SG195317
-	push	OFFSET $SG195318
+	push	OFFSET $SG197448
+	push	OFFSET $SG197449
+	push	OFFSET $SG197450
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -23058,7 +23059,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?begin@?$vector@PAVWall2D@@V?$allocator@PAVWall2D@@@std@@@std@@QBE?AV?$_Vector_const_iterator@V?$_Vector_val@U?$_Simple_types@PAVWall2D@@@std@@@std@@@2@XZ ENDP ; std::vector<Wall2D *,std::allocator<Wall2D *> >::begin
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -23260,7 +23261,7 @@ __ehhandler$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z:
 text$x	ENDS
 ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z ENDP		; PopLuaNumber<double>
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv95 = -104						; size = 4
@@ -23583,7 +23584,7 @@ _VariableName$ = 8					; size = 4
 ?GetInt@Scriptor@@QAEHPAD@Z ENDP			; Scriptor::GetInt
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ?PopLuaString@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv134 = -140						; size = 4
@@ -26744,7 +26745,7 @@ $LN9@LoadMap:
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 	cmp	DWORD PTR $T6[ebp], 0
 	je	SHORT $LN10@LoadMap
-	push	OFFSET $SG181754
+	push	OFFSET $SG183886
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -26773,7 +26774,7 @@ $LN11@LoadMap:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 	cmp	DWORD PTR $T4[ebp], 0
 	je	SHORT $LN12@LoadMap
-	push	OFFSET $SG181756
+	push	OFFSET $SG183888
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -26840,7 +26841,7 @@ $LN15@LoadMap:
 ; 398  :   { 
 ; 399  :     AddBots(script->GetInt("NumBots"));
 
-	push	OFFSET $SG181759
+	push	OFFSET $SG183891
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -28305,7 +28306,7 @@ $LN23@Render:
 
 ; 793  :       gdi->TextAtPos(GetClientCursorPosition(), "Queuing");
 
-	push	OFFSET $SG182691
+	push	OFFSET $SG184823
 	lea	ecx, DWORD PTR $T16[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
@@ -28668,7 +28669,7 @@ __$EHRec$ = -12						; size = 12
 ; 44   :   //load in the default map
 ; 45   :   LoadMap(script->GetString("StartMap"));
 
-	push	OFFSET $SG180083
+	push	OFFSET $SG182215
 	lea	eax, DWORD PTR $T2[ebp]
 	push	eax
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
@@ -28953,7 +28954,7 @@ _pBot$ = 8						; size = 4
 ; 205  :   {
 ; 206  :     ErrorBox("Map has no spawn points!"); return false;
 
-	push	OFFSET $SG181638
+	push	OFFSET $SG183770
 	call	?ErrorBox@@YAXPAD@Z			; ErrorBox
 	add	esp, 4
 	xor	al, al

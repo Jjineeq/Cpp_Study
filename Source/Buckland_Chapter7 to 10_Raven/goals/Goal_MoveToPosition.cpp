@@ -8,6 +8,8 @@
 
 #include "Goal_SeekToPosition.h"
 #include "Goal_FollowPath.h"
+#include "Goal_Wander.h"
+
 
 
 
@@ -29,6 +31,8 @@ void Goal_MoveToPosition::Activate()
   if (m_pOwner->GetPathPlanner()->RequestPathToPosition(m_vDestination))
   {
     AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_vDestination));
+    
+    //AddSubgoal(new Goal_Wander(m_pOwner));
   }
 }
 

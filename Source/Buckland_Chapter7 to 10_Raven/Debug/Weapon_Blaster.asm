@@ -10,36 +10,37 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG172915 DB	'Bolt_MaxSpeed', 00H
 ?piecewise_construct@std@@3Upiecewise_construct_t@1@B	ORG $+1 ; std::piecewise_construct
-	ORG $+1
-$SG172916 DB	'Blaster_IdealRange', 00H
-	ORG $+1
-$SG172917 DB	'Blaster_FiringFreq', 00H
-	ORG $+1
-$SG172918 DB	'Blaster_MaxRoundsCarried', 00H
 	ORG $+3
-$SG172919 DB	'Blaster_DefaultRounds', 00H
+$SG175047 DB	'Bolt_MaxSpeed', 00H
 	ORG $+2
-$SG172939 DB	'DistToTarget', 00H
-	ORG $+3
-$SG172940 DB	'Desirability', 00H
-	ORG $+3
-$SG172974 DB	'DistToTarget', 00H
-	ORG $+3
-$SG172975 DB	'Target_Close', 00H
-	ORG $+3
-$SG172976 DB	'Target_Medium', 00H
-	ORG $+2
-$SG172977 DB	'Target_Far', 00H
+$SG175048 DB	'Blaster_IdealRange', 00H
 	ORG $+1
-$SG172978 DB	'Desirability', 00H
+$SG175049 DB	'Blaster_FiringFreq', 00H
+	ORG $+1
+$SG175050 DB	'Blaster_MaxRoundsCarried', 00H
 	ORG $+3
-$SG172979 DB	'VeryDesirable', 00H
+$SG175051 DB	'Blaster_DefaultRounds', 00H
 	ORG $+2
-$SG172980 DB	'Desirable', 00H
+$SG175071 DB	'DistToTarget', 00H
+	ORG $+3
+$SG175072 DB	'Desirability', 00H
+	ORG $+3
+$SG175106 DB	'DistToTarget', 00H
+	ORG $+3
+$SG175107 DB	'Target_Close', 00H
+	ORG $+3
+$SG175108 DB	'Target_Medium', 00H
 	ORG $+2
-$SG172981 DB	'Undesirable', 00H
+$SG175109 DB	'Target_Far', 00H
+	ORG $+1
+$SG175110 DB	'Desirability', 00H
+	ORG $+3
+$SG175111 DB	'VeryDesirable', 00H
+	ORG $+2
+$SG175112 DB	'Desirable', 00H
+	ORG $+2
+$SG175113 DB	'Undesirable', 00H
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -55,16 +56,16 @@ $SG172981 DB	'Undesirable', 00H
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG183574 DB	'invalid argument', 00H
+$SG185706 DB	'invalid argument', 00H
 	ORG $+3
-$SG183575 DB	'%s', 00H
+$SG185707 DB	'%s', 00H
 	ORG $+1
-$SG183578 DB	00H, 00H
-	ORG $+2
-$SG183576 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG185708 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
-	ORG $+6
-$SG183577 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+	ORG $+2
+$SG185710 DB	00H, 00H
+	ORG $+2
+$SG185709 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -80,11 +81,11 @@ $SG183577 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG183579 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG185711 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG183711 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG185843 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -4312,11 +4313,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG183574
-	push	OFFSET $SG183575
+	push	OFFSET $SG185706
+	push	OFFSET $SG185707
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG183576
+	push	OFFSET $SG185708
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4326,9 +4327,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG183577
-	push	OFFSET $SG183578
-	push	OFFSET $SG183579
+	push	OFFSET $SG185709
+	push	OFFSET $SG185710
+	push	OFFSET $SG185711
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -9530,7 +9531,7 @@ _DistToTarget$ = 8					; size = 8
 ; 65   :   //fuzzify distance and amount of ammo
 ; 66   :   m_FuzzyModule.Fuzzify("DistToTarget", DistToTarget);
 
-	push	OFFSET $SG172939
+	push	OFFSET $SG175071
 	lea	ecx, DWORD PTR $T3[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
@@ -9549,7 +9550,7 @@ _DistToTarget$ = 8					; size = 8
 ; 67   : 
 ; 68   :   m_dLastDesirabilityScore = m_FuzzyModule.DeFuzzify("Desirability", FuzzyModule::max_av);
 
-	push	OFFSET $SG172940
+	push	OFFSET $SG175072
 	lea	ecx, DWORD PTR $T2[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
@@ -9849,30 +9850,30 @@ _owner$ = 8						; size = 4
 
 	mov	eax, DWORD PTR _owner$[ebp]
 	push	eax
-	push	OFFSET $SG172915
+	push	OFFSET $SG175047
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG172916
+	push	OFFSET $SG175048
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG172917
+	push	OFFSET $SG175049
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG172918
+	push	OFFSET $SG175050
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
 	push	eax
-	push	OFFSET $SG172919
+	push	OFFSET $SG175051
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -10108,7 +10109,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 79   :   FuzzyVariable& DistToTarget = m_FuzzyModule.CreateFLV("DistToTarget");
 
-	push	OFFSET $SG172974
+	push	OFFSET $SG175106
 	lea	ecx, DWORD PTR $T11[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
@@ -10137,7 +10138,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T9[ebp], esp
-	push	OFFSET $SG172975
+	push	OFFSET $SG175107
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	ecx, DWORD PTR _$S1$[ebp]
 	push	ecx
@@ -10162,7 +10163,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T8[ebp], esp
-	push	OFFSET $SG172976
+	push	OFFSET $SG175108
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	eax, DWORD PTR _$S2$[ebp]
 	push	eax
@@ -10187,7 +10188,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T7[ebp], esp
-	push	OFFSET $SG172977
+	push	OFFSET $SG175109
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	edx, DWORD PTR _$S3$[ebp]
 	push	edx
@@ -10201,7 +10202,7 @@ __$EHRec$ = -12						; size = 12
 ; 84   : 
 ; 85   :   FuzzyVariable& Desirability = m_FuzzyModule.CreateFLV("Desirability"); 
 
-	push	OFFSET $SG172978
+	push	OFFSET $SG175110
 	lea	ecx, DWORD PTR $T10[ebp]
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 4
@@ -10229,7 +10230,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T6[ebp], esp
-	push	OFFSET $SG172979
+	push	OFFSET $SG175111
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	edx, DWORD PTR _$S4$[ebp]
 	push	edx
@@ -10254,7 +10255,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T5[ebp], esp
-	push	OFFSET $SG172980
+	push	OFFSET $SG175112
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	ecx, DWORD PTR _$S5$[ebp]
 	push	ecx
@@ -10279,7 +10280,7 @@ __$EHRec$ = -12						; size = 12
 	sub	esp, 28					; 0000001cH
 	mov	ecx, esp
 	mov	DWORD PTR $T4[ebp], esp
-	push	OFFSET $SG172981
+	push	OFFSET $SG175113
 	call	??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@QBD@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::basic_string<char,std::char_traits<char>,std::allocator<char> >
 	lea	eax, DWORD PTR _$S6$[ebp]
 	push	eax
@@ -17993,7 +17994,7 @@ ___formal$ = 8						; size = 4
 ??0?$tuple@$$V@std@@QAE@ABV01@@Z ENDP			; std::tuple<>::tuple<>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -18195,7 +18196,7 @@ __ehhandler$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z:
 text$x	ENDS
 ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z ENDP		; PopLuaNumber<double>
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv95 = -104						; size = 4

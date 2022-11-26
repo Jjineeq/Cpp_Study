@@ -10,47 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-?colors@@3QBKB DD 0ffH					; colors
-	DD	0ff0000H
-	DD	0ff00H
-	DD	00H
-	DD	0c8c8ffH
-	DD	0c8c8c8H
-	DD	0ffffH
-	DD	0aaffH
-	DD	0aa00ffH
-	DD	05a85H
-	DD	0ffffffH
-	DD	06400H
-	DD	0ffff00H
-	DD	0c8c8c8H
-	DD	0e6e6ffH
-$SG168993 DB	'WallDetectionFeelerLength', 00H
-	ORG $+2
-$SG168994 DB	'SeparationWeight', 00H
+$SG180398 DB	'invalid argument', 00H
 	ORG $+3
-$SG168995 DB	'WanderWeight', 00H
-	ORG $+3
-$SG168996 DB	'WallAvoidanceWeight', 00H
-$SG168997 DB	'SeekWeight', 00H
+$SG180399 DB	'%s', 00H
 	ORG $+1
-$SG168998 DB	'ArriveWeight', 00H
-	ORG $+3
-$SG168999 DB	'ViewDistance', 00H
-	ORG $+3
-$SG178266 DB	'invalid argument', 00H
-	ORG $+3
-$SG177859 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
-	ORG $+2
-$SG178267 DB	'%s', 00H
-	ORG $+1
-$SG178268 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG180400 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG178270 DB	00H, 00H
+$SG180402 DB	00H, 00H
 	ORG $+2
-$SG178269 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG180401 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -66,9 +35,40 @@ $SG178269 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG178271 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG180403 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
+	ORG $+2
+?colors@@3QBKB DD 0ffH					; colors
+	DD	0ff0000H
+	DD	0ff00H
+	DD	00H
+	DD	0c8c8ffH
+	DD	0c8c8c8H
+	DD	0ffffH
+	DD	0aaffH
+	DD	0aa00ffH
+	DD	05a85H
+	DD	0ffffffH
+	DD	06400H
+	DD	0ffff00H
+	DD	0c8c8c8H
+	DD	0e6e6ffH
+$SG171125 DB	'WallDetectionFeelerLength', 00H
+	ORG $+2
+$SG171126 DB	'SeparationWeight', 00H
+	ORG $+3
+$SG171127 DB	'WanderWeight', 00H
+	ORG $+3
+$SG171128 DB	'WallAvoidanceWeight', 00H
+$SG171129 DB	'SeekWeight', 00H
+	ORG $+1
+$SG171130 DB	'ArriveWeight', 00H
+	ORG $+3
+$SG171131 DB	'ViewDistance', 00H
+	ORG $+3
+$SG179991 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -1389,11 +1389,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG178266
-	push	OFFSET $SG178267
+	push	OFFSET $SG180398
+	push	OFFSET $SG180399
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG178268
+	push	OFFSET $SG180400
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1403,9 +1403,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG178269
-	push	OFFSET $SG178270
-	push	OFFSET $SG178271
+	push	OFFSET $SG180401
+	push	OFFSET $SG180402
+	push	OFFSET $SG180403
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -4669,7 +4669,7 @@ _this$ = -4						; size = 4
 ?size@?$vector@PAVWall2D@@V?$allocator@PAVWall2D@@@std@@@std@@QBEIXZ ENDP ; std::vector<Wall2D *,std::allocator<Wall2D *> >::size
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -7437,7 +7437,7 @@ _agent$ = 12						; size = 4
 
 ; 32   :              m_dWallDetectionFeelerLength(script->GetDouble("WallDetectionFeelerLength")),
 
-	push	OFFSET $SG168993
+	push	OFFSET $SG171125
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7470,7 +7470,7 @@ _agent$ = 12						; size = 4
 
 ; 28   :              m_dWeightSeparation(script->GetDouble("SeparationWeight")),
 
-	push	OFFSET $SG168994
+	push	OFFSET $SG171126
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7479,7 +7479,7 @@ _agent$ = 12						; size = 4
 
 ; 29   :              m_dWeightWander(script->GetDouble("WanderWeight")),
 
-	push	OFFSET $SG168995
+	push	OFFSET $SG171127
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7488,7 +7488,7 @@ _agent$ = 12						; size = 4
 
 ; 30   :              m_dWeightWallAvoidance(script->GetDouble("WallAvoidanceWeight")),
 
-	push	OFFSET $SG168996
+	push	OFFSET $SG171128
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7497,7 +7497,7 @@ _agent$ = 12						; size = 4
 
 ; 40   :              m_dWeightSeek(script->GetDouble("SeekWeight")),
 
-	push	OFFSET $SG168997
+	push	OFFSET $SG171129
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7506,7 +7506,7 @@ _agent$ = 12						; size = 4
 
 ; 41   :              m_dWeightArrive(script->GetDouble("ArriveWeight")),
 
-	push	OFFSET $SG168998
+	push	OFFSET $SG171130
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -7515,7 +7515,7 @@ _agent$ = 12						; size = 4
 
 ; 31   :              m_dViewDistance(script->GetDouble("ViewDistance")),
 
-	push	OFFSET $SG168999
+	push	OFFSET $SG171131
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble

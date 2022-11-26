@@ -10,24 +10,24 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG155753 DB	'Error', 00H
+$SG157885 DB	'Error', 00H
 	ORG $+2
-$SG155757 DB	'Error', 00H
+$SG157889 DB	'Error', 00H
 	ORG $+2
-$SG155848 DB	'*.*', 00H
-$SG155849 DB	'All Files (*.*)', 00H
-$SG155850 DB	'*.', 00H
+$SG157980 DB	'*.*', 00H
+$SG157981 DB	'All Files (*.*)', 00H
+$SG157982 DB	'*.', 00H
 	ORG $+1
-$SG160630 DB	'invalid argument', 00H
+$SG162762 DB	'invalid argument', 00H
 	ORG $+3
-$SG160631 DB	'%s', 00H
+$SG162763 DB	'%s', 00H
 	ORG $+1
-$SG160632 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG162764 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG160634 DB	00H, 00H
+$SG162766 DB	00H, 00H
 	ORG $+2
-$SG160633 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG162765 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -43,7 +43,7 @@ $SG160633 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG160635 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG162767 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 CONST	ENDS
@@ -2798,11 +2798,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG160630
-	push	OFFSET $SG160631
+	push	OFFSET $SG162762
+	push	OFFSET $SG162763
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG160632
+	push	OFFSET $SG162764
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -2812,9 +2812,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG160633
-	push	OFFSET $SG160634
-	push	OFFSET $SG160635
+	push	OFFSET $SG162765
+	push	OFFSET $SG162766
+	push	OFFSET $SG162767
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -18457,13 +18457,13 @@ _defaultFileExtension$ = 20				; size = 4
 
 	push	0
 	push	0
-	push	OFFSET $SG155848
+	push	OFFSET $SG157980
 	push	0
-	push	OFFSET $SG155849
+	push	OFFSET $SG157981
 	push	0
 	mov	eax, DWORD PTR _defaultFileExtension$[ebp]
 	push	eax
-	push	OFFSET $SG155850
+	push	OFFSET $SG157982
 	push	0
 	mov	ecx, DWORD PTR _defaultFileTypeDescription$[ebp]
 	push	ecx
@@ -19007,7 +19007,7 @@ _msg$ = 8						; size = 4
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG155757
+	push	OFFSET $SG157889
 	mov	eax, DWORD PTR _msg$[ebp]
 	push	eax
 	push	0
@@ -19040,7 +19040,7 @@ _msg$ = 8						; size = 4
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG155753
+	push	OFFSET $SG157885
 	mov	ecx, DWORD PTR _msg$[ebp]
 	call	?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::c_str
 	push	eax

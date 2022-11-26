@@ -10,36 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-?colors@@3QBKB DD 0ffH					; colors
-	DD	0ff0000H
-	DD	0ff00H
-	DD	00H
-	DD	0c8c8ffH
-	DD	0c8c8c8H
-	DD	0ffffH
-	DD	0aaffH
-	DD	0aa00ffH
-	DD	05a85H
-	DD	0ffffffH
-	DD	06400H
-	DD	0ffff00H
-	DD	0c8c8c8H
-	DD	0e6e6ffH
-$SG170341 DB	'Rocket_MaxForce', 00H
-$SG170342 DB	'Rocket_Mass', 00H
-$SG170343 DB	'Rocket_MaxSpeed', 00H
-$SG170344 DB	'Rocket_Scale', 00H
+$SG172473 DB	'Rocket_MaxForce', 00H
+$SG172474 DB	'Rocket_Mass', 00H
+$SG172475 DB	'Rocket_MaxSpeed', 00H
+$SG172476 DB	'Rocket_Scale', 00H
 	ORG $+3
-$SG170345 DB	'Rocket_Damage', 00H
+$SG172477 DB	'Rocket_Damage', 00H
 	ORG $+2
-$SG170346 DB	'Rocket_BlastRadius', 00H
+$SG172478 DB	'Rocket_BlastRadius', 00H
 	ORG $+1
-$SG170348 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
-	DB	' ', 00H, '!', 00H, '=', 00H, ' ', 00H, 'V', 00H, 'e', 00H, 'c'
-	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, '2', 00H, 'D', 00H, '(', 00H
-	DB	')', 00H, 00H, 00H
-	ORG $+2
-$SG170347 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG172479 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
 	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
 	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
@@ -55,18 +35,38 @@ $SG170347 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'e', 00H, '_', 00H, 'R', 00H, 'o', 00H, 'c', 00H, 'k', 00H, 'e'
 	DB	00H, 't', 00H, '.', 00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+2
-$SG170362 DB	'Rocket_ExplosionDecayRate', 00H
+$SG172480 DB	't', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'e', 00H, 't', 00H
+	DB	' ', 00H, '!', 00H, '=', 00H, ' ', 00H, 'V', 00H, 'e', 00H, 'c'
+	DB	00H, 't', 00H, 'o', 00H, 'r', 00H, '2', 00H, 'D', 00H, '(', 00H
+	DB	')', 00H, 00H, 00H
 	ORG $+2
-$SG179351 DB	'invalid argument', 00H
+$SG172494 DB	'Rocket_ExplosionDecayRate', 00H
+	ORG $+2
+$SG181483 DB	'invalid argument', 00H
 	ORG $+3
-$SG179352 DB	'%s', 00H
+$SG181484 DB	'%s', 00H
 	ORG $+1
-$SG179353 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG181487 DB	00H, 00H
+	ORG $+2
+$SG181485 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG179355 DB	00H, 00H
-	ORG $+2
-$SG179354 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+?colors@@3QBKB DD 0ffH					; colors
+	DD	0ff0000H
+	DD	0ff00H
+	DD	00H
+	DD	0c8c8ffH
+	DD	0c8c8c8H
+	DD	0ffffH
+	DD	0aaffH
+	DD	0aa00ffH
+	DD	05a85H
+	DD	0ffffffH
+	DD	06400H
+	DD	0ffff00H
+	DD	0c8c8c8H
+	DD	0e6e6ffH
+$SG181486 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -82,11 +82,11 @@ $SG179354 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG179356 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG181488 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG179479 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG181611 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1708,11 +1708,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG179351
-	push	OFFSET $SG179352
+	push	OFFSET $SG181483
+	push	OFFSET $SG181484
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG179353
+	push	OFFSET $SG181485
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1722,9 +1722,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG179354
-	push	OFFSET $SG179355
-	push	OFFSET $SG179356
+	push	OFFSET $SG181486
+	push	OFFSET $SG181487
+	push	OFFSET $SG181488
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -4890,7 +4890,7 @@ $LN1@RedPen:
 ?RedPen@Cgdi@@QAEXXZ ENDP				; Cgdi::RedPen
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -5092,7 +5092,7 @@ __ehhandler$??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z:
 text$x	ENDS
 ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z ENDP		; PopLuaNumber<double>
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv95 = -104						; size = 4
@@ -5615,7 +5615,7 @@ $LN2@Update:
 ; 54   :   {
 ; 55   :     m_dCurrentBlastRadius += script->GetDouble("Rocket_ExplosionDecayRate");
 
-	push	OFFSET $SG170362
+	push	OFFSET $SG172494
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -5808,31 +5808,31 @@ _target$ = 12						; size = 16
 
 ; 18   :         Raven_Projectile(target,
 
-	push	OFFSET $SG170341
+	push	OFFSET $SG172473
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG170342
+	push	OFFSET $SG172474
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG170343
+	push	OFFSET $SG172475
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG170344
+	push	OFFSET $SG172476
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG170345
+	push	OFFSET $SG172477
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -5892,7 +5892,7 @@ _target$ = 12						; size = 16
 
 ; 30   :        m_dBlastRadius(script->GetDouble("Rocket_BlastRadius"))
 
-	push	OFFSET $SG170346
+	push	OFFSET $SG172478
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -5926,8 +5926,8 @@ _target$ = 12						; size = 16
 	test	ecx, ecx
 	jne	SHORT $LN3@Rocket
 	push	32					; 00000020H
-	push	OFFSET $SG170347
-	push	OFFSET $SG170348
+	push	OFFSET $SG172479
+	push	OFFSET $SG172480
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN3@Rocket:

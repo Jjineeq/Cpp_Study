@@ -21,33 +21,21 @@ _BSS	SEGMENT
 ?m_iPosLeft@DebugConsole@@0HA DD 01H DUP (?)		; DebugConsole::m_iPosLeft
 ?m_bDestroyed@DebugConsole@@0_NA DB 01H DUP (?)		; DebugConsole::m_bDestroyed
 _BSS	ENDS
+_DATA	SEGMENT
+?m_bFlushed@DebugConsole@@0_NA DB 01H			; DebugConsole::m_bFlushed
+?m_bActive@DebugConsole@@0_NA DB 01H			; DebugConsole::m_bActive
+_DATA	ENDS
 CONST	SEGMENT
-$SG157341 DB	'DebugLog.txt', 00H
+$SG164313 DB	'invalid argument', 00H
 	ORG $+3
-$SG157342 DB	'Debug', 00H
-	ORG $+2
-$SG157344 DB	'Error', 00H
-	ORG $+2
-$SG157345 DB	'Registration of Debug Console Failed!', 00H
-	ORG $+2
-$SG157346 DB	'Debug Console', 00H
-	ORG $+2
-$SG157347 DB	'Debug', 00H
-	ORG $+2
-$SG157349 DB	'Error!', 00H
+$SG164314 DB	'%s', 00H
 	ORG $+1
-$SG157350 DB	'CreateWindowEx Failed!', 00H
-	ORG $+1
-$SG162181 DB	'invalid argument', 00H
-	ORG $+3
-$SG162182 DB	'%s', 00H
-	ORG $+1
-$SG162183 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG164315 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG162185 DB	00H, 00H
+$SG164317 DB	00H, 00H
 	ORG $+2
-$SG162184 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG164316 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -63,14 +51,26 @@ $SG162184 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG162186 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG164318 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
+	ORG $+2
+$SG159473 DB	'DebugLog.txt', 00H
+	ORG $+3
+$SG159474 DB	'Debug', 00H
+	ORG $+2
+$SG159476 DB	'Error', 00H
+	ORG $+2
+$SG159477 DB	'Registration of Debug Console Failed!', 00H
+	ORG $+2
+$SG159478 DB	'Debug Console', 00H
+	ORG $+2
+$SG159479 DB	'Debug', 00H
+	ORG $+2
+$SG159481 DB	'Error!', 00H
+	ORG $+1
+$SG159482 DB	'CreateWindowEx Failed!', 00H
 CONST	ENDS
-_DATA	SEGMENT
-?m_bFlushed@DebugConsole@@0_NA DB 01H			; DebugConsole::m_bFlushed
-?m_bActive@DebugConsole@@0_NA DB 01H			; DebugConsole::m_bActive
-_DATA	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
 PUBLIC	?max@?$numeric_limits@H@std@@SAHXZ		; std::numeric_limits<int>::max
@@ -3387,11 +3387,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG162181
-	push	OFFSET $SG162182
+	push	OFFSET $SG164313
+	push	OFFSET $SG164314
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG162183
+	push	OFFSET $SG164315
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3401,9 +3401,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG162184
-	push	OFFSET $SG162185
-	push	OFFSET $SG162186
+	push	OFFSET $SG164316
+	push	OFFSET $SG164317
+	push	OFFSET $SG164318
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -17673,7 +17673,7 @@ _wDebugConsole$ = -52					; size = 48
 
 	push	64					; 00000040H
 	push	2
-	push	OFFSET $SG157341
+	push	OFFSET $SG159473
 	mov	ecx, OFFSET ?m_LogOut@DebugConsole@@0V?$basic_ofstream@DU?$char_traits@D@std@@@std@@A ; DebugConsole::m_LogOut
 	call	?open@?$basic_ofstream@DU?$char_traits@D@std@@@std@@QAEXPBDHH@Z ; std::basic_ofstream<char,std::char_traits<char> >::open
 
@@ -17731,7 +17731,7 @@ _wDebugConsole$ = -52					; size = 48
 
 ; 274  : 						           "Debug",
 
-	mov	DWORD PTR _wDebugConsole$[ebp+40], OFFSET $SG157342
+	mov	DWORD PTR _wDebugConsole$[ebp+40], OFFSET $SG159474
 
 ; 275  : 						           NULL }; 
 
@@ -17757,8 +17757,8 @@ _wDebugConsole$ = -52					; size = 48
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG157344
-	push	OFFSET $SG157345
+	push	OFFSET $SG159476
+	push	OFFSET $SG159477
 	push	0
 	call	DWORD PTR __imp__MessageBoxA@16
 	cmp	esi, esp
@@ -17793,8 +17793,8 @@ $LN2@Create:
 	push	0
 	push	0
 	push	271319040				; 102c0000H
-	push	OFFSET $SG157346
-	push	OFFSET $SG157347
+	push	OFFSET $SG159478
+	push	OFFSET $SG159479
 	push	0
 	call	DWORD PTR __imp__CreateWindowExA@48
 	cmp	esi, esp
@@ -17823,8 +17823,8 @@ $LN2@Create:
 
 	mov	esi, esp
 	push	0
-	push	OFFSET $SG157349
-	push	OFFSET $SG157350
+	push	OFFSET $SG159481
+	push	OFFSET $SG159482
 	mov	eax, DWORD PTR ?m_hwnd@DebugConsole@@0PAUHWND__@@A ; DebugConsole::m_hwnd
 	push	eax
 	call	DWORD PTR __imp__MessageBoxA@16

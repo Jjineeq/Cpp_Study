@@ -33,6 +33,7 @@ public:
   int Process();
   void Render();
   void Terminate(){}
+  
 };
 
 #endif

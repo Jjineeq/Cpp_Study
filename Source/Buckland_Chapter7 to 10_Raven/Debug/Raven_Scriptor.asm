@@ -10,18 +10,18 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG42469 DB	'Params.lua', 00H
+$SG42471 DB	'Params.lua', 00H
 	ORG $+1
-$SG48472 DB	'invalid argument', 00H
+$SG48474 DB	'invalid argument', 00H
 	ORG $+3
-$SG48473 DB	'%s', 00H
+$SG48475 DB	'%s', 00H
 	ORG $+1
-$SG48476 DB	00H, 00H
+$SG48478 DB	00H, 00H
 	ORG $+2
-$SG48474 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG48476 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG48475 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG48477 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -37,11 +37,11 @@ $SG48475 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG48477 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG48479 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG48492 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG48494 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3531,7 +3531,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG48492
+	push	OFFSET $SG48494
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -3716,11 +3716,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG48472
-	push	OFFSET $SG48473
+	push	OFFSET $SG48474
+	push	OFFSET $SG48475
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG48474
+	push	OFFSET $SG48476
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3730,9 +3730,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG48475
-	push	OFFSET $SG48476
 	push	OFFSET $SG48477
+	push	OFFSET $SG48478
+	push	OFFSET $SG48479
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -19942,7 +19942,7 @@ __$EHRec$ = -12						; size = 12
 
 ; 14   :   RunScriptFile("Params.lua");
 
-	push	OFFSET $SG42469
+	push	OFFSET $SG42471
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RunScriptFile@Scriptor@@QAEXPAD@Z	; Scriptor::RunScriptFile
 
@@ -20318,7 +20318,7 @@ __ehhandler$??$ttos@H@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D
 text$x	ENDS
 ??$ttos@H@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABHH@Z ENDP ; ttos<int>
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ?RunLuaScript@@YAXPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv148 = -192						; size = 4
@@ -31149,19 +31149,19 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _frexpl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 __Y$ = 16						; size = 4
 _frexpl	PROC						; COMDAT
 
-; 861  :     {
+; 867  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 862  :         return frexp((double)_X, _Y);
+; 868  :         return frexp((double)_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -31171,7 +31171,7 @@ _frexpl	PROC						; COMDAT
 	call	_frexp
 	add	esp, 12					; 0000000cH
 
-; 863  :     }
+; 869  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -31180,18 +31180,18 @@ _frexpl	PROC						; COMDAT
 _frexpl	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _fabsl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 _fabsl	PROC						; COMDAT
 
-; 840  :     {
+; 846  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 841  :         return fabs((double)_X);
+; 847  :         return fabs((double)_X);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __X$[ebp]
@@ -31199,7 +31199,7 @@ _fabsl	PROC						; COMDAT
 	call	_fabs
 	add	esp, 8
 
-; 842  :     }
+; 848  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -31232,7 +31232,7 @@ __Where$ = 12						; size = 4
 ??2@YAPAXIPAX@Z ENDP					; operator new
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT _sprintf_s
 _TEXT	SEGMENT
 __ArgList$ = -8						; size = 4
@@ -31292,7 +31292,7 @@ _sprintf_s PROC						; COMDAT
 _sprintf_s ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT __vsprintf_s_l
 _TEXT	SEGMENT
 tv73 = -8						; size = 4
@@ -31359,7 +31359,7 @@ $LN4@vsprintf_s:
 __vsprintf_s_l ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_stdio_config.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_stdio_config.h
 ;	COMDAT ___local_stdio_printf_options
 _TEXT	SEGMENT
 ___local_stdio_printf_options PROC			; COMDAT

@@ -25,17 +25,17 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG172904 DB	'<Goal_FollowPath::Activate>: Unrecognized edge type', 00H
-$SG182487 DB	'invalid argument', 00H
+$SG175036 DB	'<Goal_FollowPath::Activate>: Unrecognized edge type', 00H
+$SG184619 DB	'invalid argument', 00H
 	ORG $+3
-$SG182488 DB	'%s', 00H
+$SG184620 DB	'%s', 00H
 	ORG $+1
-$SG182489 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG184621 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG182491 DB	00H, 00H
+$SG184623 DB	00H, 00H
 	ORG $+2
-$SG182490 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG184622 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -51,11 +51,11 @@ $SG182490 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG182492 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG184624 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG182680 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG184812 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3355,11 +3355,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG182487
-	push	OFFSET $SG182488
+	push	OFFSET $SG184619
+	push	OFFSET $SG184620
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG182489
+	push	OFFSET $SG184621
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -3369,9 +3369,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG182490
-	push	OFFSET $SG182491
-	push	OFFSET $SG182492
+	push	OFFSET $SG184622
+	push	OFFSET $SG184623
+	push	OFFSET $SG184624
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -8869,7 +8869,7 @@ $LN8@Activate:
 ; 69   : 
 ; 70   :     throw std::runtime_error("<Goal_FollowPath::Activate>: Unrecognized edge type");
 
-	push	OFFSET $SG172904
+	push	OFFSET $SG175036
 	lea	ecx, DWORD PTR $T2[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@

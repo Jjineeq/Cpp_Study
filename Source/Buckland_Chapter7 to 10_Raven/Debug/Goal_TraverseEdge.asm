@@ -10,6 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
+$SG173549 DB	'Bot_MaxSwimmingSpeed', 00H
+$SG173581 DB	00H
+	ORG $+2
+$SG173551 DB	'Bot_MaxCrawlingSpeed', 00H
+	ORG $+3
+$SG173579 DB	'BOT ', 00H
+	ORG $+3
+$SG173580 DB	' IS STUCK!!', 00H
+$SG173585 DB	'Bot_MaxSpeed', 00H
+	ORG $+3
 ?colors@@3QBKB DD 0ffH					; colors
 	DD	0ff0000H
 	DD	0ff00H
@@ -25,18 +35,19 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG180262 DB	'invalid argument', 00H
-$SG171449 DB	00H
+$SG181973 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 	ORG $+2
-$SG180263 DB	'%s', 00H
+$SG182394 DB	'invalid argument', 00H
+	ORG $+3
+$SG182395 DB	'%s', 00H
 	ORG $+1
-$SG180266 DB	00H, 00H
+$SG182398 DB	00H, 00H
 	ORG $+2
-$SG180264 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG182396 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
-	ORG $+2
-$SG171448 DB	' IS STUCK!!', 00H
-$SG180265 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+	ORG $+6
+$SG182397 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -52,20 +63,9 @@ $SG180265 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG180267 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG182399 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
-	ORG $+2
-$SG171417 DB	'Bot_MaxSwimmingSpeed', 00H
-	ORG $+3
-$SG171419 DB	'Bot_MaxCrawlingSpeed', 00H
-	ORG $+3
-$SG171447 DB	'BOT ', 00H
-	ORG $+3
-$SG171453 DB	'Bot_MaxSpeed', 00H
-	ORG $+7
-$SG179841 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
-	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -5051,11 +5051,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG180262
-	push	OFFSET $SG180263
+	push	OFFSET $SG182394
+	push	OFFSET $SG182395
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG180264
+	push	OFFSET $SG182396
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -5065,9 +5065,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG180265
-	push	OFFSET $SG180266
-	push	OFFSET $SG180267
+	push	OFFSET $SG182397
+	push	OFFSET $SG182398
+	push	OFFSET $SG182399
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -5739,7 +5739,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG179841
+	push	OFFSET $SG181973
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -20297,7 +20297,7 @@ $LN1@flush:
 ?flush@DebugConsole@@SAXXZ ENDP				; DebugConsole::flush
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -21069,7 +21069,7 @@ _this$ = -4						; size = 4
 ; 141  :   //return max speed back to normal
 ; 142  :   m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxSpeed"));
 
-	push	OFFSET $SG171453
+	push	OFFSET $SG173585
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21240,7 +21240,7 @@ $LN4@Activate:
 ; 42   :     {
 ; 43   :       m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxSwimmingSpeed"));
 
-	push	OFFSET $SG171417
+	push	OFFSET $SG173549
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21262,7 +21262,7 @@ $LN5@Activate:
 ; 49   :     {
 ; 50   :        m_pOwner->SetMaxSpeed(script->GetDouble("Bot_MaxCrawlingSpeed"));
 
-	push	OFFSET $SG171419
+	push	OFFSET $SG173551
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -21516,11 +21516,11 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR [edx+8]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
-	push	OFFSET $SG171449
-	push	OFFSET $SG171448
+	push	OFFSET $SG173581
+	push	OFFSET $SG173580
 	lea	eax, DWORD PTR $T1[ebp]
 	push	eax
-	push	OFFSET $SG171447
+	push	OFFSET $SG173579
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY04D@DebugConsole@@QAEAAV0@AAY04$$CBD@Z ; DebugConsole::operator<<<char [5]>
@@ -36887,19 +36887,19 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _frexpl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 __Y$ = 16						; size = 4
 _frexpl	PROC						; COMDAT
 
-; 861  :     {
+; 867  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 862  :         return frexp((double)_X, _Y);
+; 868  :         return frexp((double)_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -36909,7 +36909,7 @@ _frexpl	PROC						; COMDAT
 	call	_frexp
 	add	esp, 12					; 0000000cH
 
-; 863  :     }
+; 869  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -36918,18 +36918,18 @@ _frexpl	PROC						; COMDAT
 _frexpl	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _fabsl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 _fabsl	PROC						; COMDAT
 
-; 840  :     {
+; 846  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 841  :         return fabs((double)_X);
+; 847  :         return fabs((double)_X);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __X$[ebp]
@@ -36937,7 +36937,7 @@ _fabsl	PROC						; COMDAT
 	call	_fabs
 	add	esp, 8
 
-; 842  :     }
+; 848  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -36946,7 +36946,7 @@ _fabsl	PROC						; COMDAT
 _fabsl	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT _sprintf_s
 _TEXT	SEGMENT
 __ArgList$ = -8						; size = 4
@@ -37006,7 +37006,7 @@ _sprintf_s PROC						; COMDAT
 _sprintf_s ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT __vsprintf_s_l
 _TEXT	SEGMENT
 tv73 = -8						; size = 4
@@ -37073,7 +37073,7 @@ $LN4@vsprintf_s:
 __vsprintf_s_l ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_stdio_config.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_stdio_config.h
 ;	COMDAT ___local_stdio_printf_options
 _TEXT	SEGMENT
 ___local_stdio_printf_options PROC			; COMDAT

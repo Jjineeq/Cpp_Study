@@ -25,18 +25,18 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG166431 DB	'Bot_TriggerUpdateFreq', 00H
+$SG168563 DB	'Bot_TriggerUpdateFreq', 00H
 	ORG $+2
-$SG175124 DB	'invalid argument', 00H
+$SG177256 DB	'invalid argument', 00H
 	ORG $+3
-$SG175125 DB	'%s', 00H
+$SG177257 DB	'%s', 00H
 	ORG $+1
-$SG175128 DB	00H, 00H
+$SG177260 DB	00H, 00H
 	ORG $+2
-$SG175126 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG177258 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG175127 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG177259 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -52,11 +52,11 @@ $SG175127 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG175129 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG177261 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG175251 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG177383 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1324,11 +1324,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG175124
-	push	OFFSET $SG175125
+	push	OFFSET $SG177256
+	push	OFFSET $SG177257
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG175126
+	push	OFFSET $SG177258
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1338,9 +1338,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG175127
-	push	OFFSET $SG175128
-	push	OFFSET $SG175129
+	push	OFFSET $SG177259
+	push	OFFSET $SG177260
+	push	OFFSET $SG177261
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -2723,7 +2723,7 @@ __Count$ = 8						; size = 4
 ?allocate@?$allocator@U_Container_proxy@std@@@std@@QAEPAU_Container_proxy@2@I@Z ENDP ; std::allocator<std::_Container_proxy>::allocate
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@H@@YAHPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv95 = -104						; size = 4
@@ -3254,7 +3254,7 @@ _range$ = 12						; size = 8
 
 ; 15   :                                      double      range):Trigger_LimitedLifetime<Raven_Bot>(FrameRate /script->GetInt("Bot_TriggerUpdateFreq")),
 
-	push	OFFSET $SG166431
+	push	OFFSET $SG168563
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt

@@ -10,16 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG165783 DB	'invalid argument', 00H
+$SG167915 DB	'invalid argument', 00H
 	ORG $+3
-$SG165784 DB	'%s', 00H
+$SG167916 DB	'%s', 00H
 	ORG $+1
-$SG165785 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG167917 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG165787 DB	00H, 00H
+$SG167919 DB	00H, 00H
 	ORG $+2
-$SG165786 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG167918 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -35,13 +35,13 @@ $SG165786 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG165788 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG167920 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG160147 DB	'<EntityManager::GetEntityFromID>: invalid ID', 00H
+$SG162279 DB	'<EntityManager::GetEntityFromID>: invalid ID', 00H
 	ORG $+7
-$SG160148 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG162280 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
 	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
 	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
@@ -52,7 +52,7 @@ $SG160148 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	00H, 't', 00H, 'i', 00H, 't', 00H, 'y', 00H, 'M', 00H, 'a', 00H
 	DB	'n', 00H, 'a', 00H, 'g', 00H, 'e', 00H, 'r', 00H, '.', 00H, 'c'
 	DB	00H, 'p', 00H, 'p', 00H, 00H, 00H
-$SG160149 DB	'(', 00H, 'e', 00H, 'n', 00H, 't', 00H, ' ', 00H, '!', 00H
+$SG162281 DB	'(', 00H, 'e', 00H, 'n', 00H, 't', 00H, ' ', 00H, '!', 00H
 	DB	'=', 00H, ' ', 00H, 'm', 00H, '_', 00H, 'E', 00H, 'n', 00H, 't'
 	DB	00H, 'i', 00H, 't', 00H, 'y', 00H, 'M', 00H, 'a', 00H, 'p', 00H
 	DB	'.', 00H, 'e', 00H, 'n', 00H, 'd', 00H, '(', 00H, ')', 00H, ')'
@@ -2556,11 +2556,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG165783
-	push	OFFSET $SG165784
+	push	OFFSET $SG167915
+	push	OFFSET $SG167916
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG165785
+	push	OFFSET $SG167917
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -2570,9 +2570,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG165786
-	push	OFFSET $SG165787
-	push	OFFSET $SG165788
+	push	OFFSET $SG167918
+	push	OFFSET $SG167919
+	push	OFFSET $SG167920
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -5695,13 +5695,13 @@ _id$ = 8						; size = 4
 	movzx	edx, al
 	test	edx, edx
 	je	SHORT $LN3@GetEntityF
-	mov	eax, OFFSET $SG160147
+	mov	eax, OFFSET $SG162279
 	test	eax, eax
 	jne	SHORT $LN4@GetEntityF
 $LN3@GetEntityF:
 	push	24					; 00000018H
-	push	OFFSET $SG160148
-	push	OFFSET $SG160149
+	push	OFFSET $SG162280
+	push	OFFSET $SG162281
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN4@GetEntityF:

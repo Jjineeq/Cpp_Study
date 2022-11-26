@@ -12,18 +12,18 @@ INCLUDELIB OLDNAMES
 CONST	SEGMENT
 ?piecewise_construct@std@@3Upiecewise_construct_t@1@B	ORG $+1 ; std::piecewise_construct
 	ORG $+3
-$SG53967 DB	'invalid argument', 00H
+$SG53969 DB	'invalid argument', 00H
 	ORG $+3
-$SG53968 DB	'%s', 00H
+$SG53970 DB	'%s', 00H
 	ORG $+1
-$SG53971 DB	00H, 00H
+$SG53973 DB	00H, 00H
 	ORG $+2
-$SG53969 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG53971 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG47298 DB	0aH, 00H
+$SG47300 DB	0aH, 00H
 	ORG $+2
-$SG53970 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG53972 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -39,16 +39,16 @@ $SG53970 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG53972 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG53974 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG54013 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG54015 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 	ORG $+2
-$SG46903 DB	'<FuzzyVariable::Fuzzify>: value out of range', 00H
+$SG46905 DB	'<FuzzyVariable::Fuzzify>: value out of range', 00H
 	ORG $+7
-$SG46904 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG46906 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
 	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
 	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
@@ -60,7 +60,7 @@ $SG46904 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 'i', 00H, 'a', 00H, 'b', 00H, 'l', 00H, 'e', 00H, '.'
 	DB	00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+6
-$SG46905 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
+$SG46907 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
 	DB	'=', 00H, ' ', 00H, 'm', 00H, '_', 00H, 'd', 00H, 'M', 00H, 'i'
 	DB	00H, 'n', 00H, 'R', 00H, 'a', 00H, 'n', 00H, 'g', 00H, 'e', 00H
 	DB	')', 00H, ' ', 00H, '&', 00H, '&', 00H, ' ', 00H, '(', 00H, 'v'
@@ -76,11 +76,11 @@ $SG46905 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
 	DB	' ', 00H, 'o', 00H, 'f', 00H, ' ', 00H, 'r', 00H, 'a', 00H, 'n'
 	DB	00H, 'g', 00H, 'e', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG47297 DB	' is ', 00H
+$SG47299 DB	' is ', 00H
 	ORG $+3
-$SG47299 DB	0aH, 'Max Range: ', 00H
+$SG47301 DB	0aH, 'Max Range: ', 00H
 	ORG $+3
-$SG47300 DB	0aH, 'Min Range: ', 00H
+$SG47302 DB	0aH, 'Min Range: ', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -4761,7 +4761,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG54013
+	push	OFFSET $SG54015
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -5150,11 +5150,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG53967
-	push	OFFSET $SG53968
+	push	OFFSET $SG53969
+	push	OFFSET $SG53970
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG53969
+	push	OFFSET $SG53971
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -5164,9 +5164,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG53970
-	push	OFFSET $SG53971
 	push	OFFSET $SG53972
+	push	OFFSET $SG53973
+	push	OFFSET $SG53974
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -25051,11 +25051,11 @@ $LN4@WriteDOMs:
 	call	?GetDOM@FuzzySet@@QBENXZ		; FuzzySet::GetDOM
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG47297
+	push	OFFSET $SG47299
 	lea	ecx, DWORD PTR _it$[ebp]
 	call	??C?$_Tree_iterator@V?$_Tree_val@U?$_Tree_simple_types@U?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzySet@@@std@@@std@@@std@@@std@@QBEPAU?$pair@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PAVFuzzySet@@@1@XZ ; std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const ,FuzzySet *> > > >::operator->
 	push	eax
-	push	OFFSET $SG47298
+	push	OFFSET $SG47300
 	mov	edx, DWORD PTR _os$[ebp]
 	push	edx
 	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
@@ -25081,12 +25081,12 @@ $LN3@WriteDOMs:
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR [eax+24]
 	movsd	QWORD PTR [esp], xmm0
-	push	OFFSET $SG47299
+	push	OFFSET $SG47301
 	mov	ecx, DWORD PTR _this$[ebp]
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR [ecx+16]
 	movsd	QWORD PTR [esp], xmm0
-	push	OFFSET $SG47300
+	push	OFFSET $SG47302
 	mov	edx, DWORD PTR _os$[ebp]
 	push	edx
 	call	??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z ; std::operator<<<std::char_traits<char> >
@@ -25720,13 +25720,13 @@ _val$ = 8						; size = 8
 	movsd	xmm0, QWORD PTR [ecx+24]
 	comisd	xmm0, QWORD PTR _val$[ebp]
 	jb	SHORT $LN6@Fuzzify
-	mov	edx, OFFSET $SG46903
+	mov	edx, OFFSET $SG46905
 	test	edx, edx
 	jne	SHORT $LN7@Fuzzify
 $LN6@Fuzzify:
 	push	33					; 00000021H
-	push	OFFSET $SG46904
-	push	OFFSET $SG46905
+	push	OFFSET $SG46906
+	push	OFFSET $SG46907
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN7@Fuzzify:
@@ -33839,7 +33839,7 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT _sprintf_s
 _TEXT	SEGMENT
 __ArgList$ = -8						; size = 4
@@ -33899,7 +33899,7 @@ _sprintf_s PROC						; COMDAT
 _sprintf_s ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 ;	COMDAT __vsprintf_s_l
 _TEXT	SEGMENT
 tv73 = -8						; size = 4
@@ -33966,7 +33966,7 @@ $LN4@vsprintf_s:
 __vsprintf_s_l ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_stdio_config.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_stdio_config.h
 ;	COMDAT ___local_stdio_printf_options
 _TEXT	SEGMENT
 ___local_stdio_printf_options PROC			; COMDAT
@@ -34009,19 +34009,19 @@ ___formal$ = 8						; size = 4
 ??0?$tuple@$$V@std@@QAE@ABV01@@Z ENDP			; std::tuple<>::tuple<>
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _frexpl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 __Y$ = 16						; size = 4
 _frexpl	PROC						; COMDAT
 
-; 861  :     {
+; 867  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 862  :         return frexp((double)_X, _Y);
+; 868  :         return frexp((double)_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -34031,7 +34031,7 @@ _frexpl	PROC						; COMDAT
 	call	_frexp
 	add	esp, 12					; 0000000cH
 
-; 863  :     }
+; 869  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
@@ -34040,18 +34040,18 @@ _frexpl	PROC						; COMDAT
 _frexpl	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _fabsl
 _TEXT	SEGMENT
 __X$ = 8						; size = 8
 _fabsl	PROC						; COMDAT
 
-; 840  :     {
+; 846  :     {
 
 	push	ebp
 	mov	ebp, esp
 
-; 841  :         return fabs((double)_X);
+; 847  :         return fabs((double)_X);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __X$[ebp]
@@ -34059,7 +34059,7 @@ _fabsl	PROC						; COMDAT
 	call	_fabs
 	add	esp, 8
 
-; 842  :     }
+; 848  :     }
 
 	cmp	ebp, esp
 	call	__RTC_CheckEsp

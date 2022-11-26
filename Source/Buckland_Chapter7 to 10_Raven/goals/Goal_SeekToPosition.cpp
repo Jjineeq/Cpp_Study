@@ -43,7 +43,7 @@ void Goal_SeekToPosition::Activate()
   
   m_pOwner->GetSteering()->SetTarget(m_vPosition);
 
-  m_pOwner->GetSteering()->SeekOn();
+  m_pOwner->GetSteering()->SeekOn(); 
 }
 
 

@@ -14,10 +14,10 @@ _BSS	SEGMENT
 ?m_iNextValidID@BaseGameEntity@@0HA DD 01H DUP (?)	; BaseGameEntity::m_iNextValidID
 _BSS	ENDS
 CONST	SEGMENT
-$SG156842 DB	'<BaseGameEntity::SetID>: invalid ID', 00H
-$SG161216 DB	'invalid argument', 00H
+$SG158974 DB	'<BaseGameEntity::SetID>: invalid ID', 00H
+$SG163348 DB	'invalid argument', 00H
 	ORG $+3
-$SG156843 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
+$SG158975 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'r', 00H, 's', 00H, '\', 00H, 'u', 00H, 's', 00H, 'e', 00H, 'r'
 	DB	00H, '\', 00H, 'g', 00H, 'i', 00H, 't', 00H, 'h', 00H, 'u', 00H
 	DB	'b', 00H, '\', 00H, 'C', 00H, 'p', 00H, 'p', 00H, '_', 00H, 'S'
@@ -29,9 +29,9 @@ $SG156843 DB	'C', 00H, ':', 00H, '\', 00H, 'U', 00H, 's', 00H, 'e', 00H
 	DB	'E', 00H, 'n', 00H, 't', 00H, 'i', 00H, 't', 00H, 'y', 00H, '.'
 	DB	00H, 'c', 00H, 'p', 00H, 'p', 00H, 00H, 00H
 	ORG $+2
-$SG161217 DB	'%s', 00H
+$SG163349 DB	'%s', 00H
 	ORG $+1
-$SG156844 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
+$SG158976 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
 	DB	'=', 00H, ' ', 00H, 'm', 00H, '_', 00H, 'i', 00H, 'N', 00H, 'e'
 	DB	00H, 'x', 00H, 't', 00H, 'V', 00H, 'a', 00H, 'l', 00H, 'i', 00H
 	DB	'd', 00H, 'I', 00H, 'D', 00H, ')', 00H, ' ', 00H, '&', 00H, '&'
@@ -43,12 +43,12 @@ $SG156844 DB	'(', 00H, 'v', 00H, 'a', 00H, 'l', 00H, ' ', 00H, '>', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'I', 00H, 'D', 00H, '"', 00H, 00H
 	DB	00H
 	ORG $+2
-$SG161220 DB	00H, 00H
+$SG163352 DB	00H, 00H
 	ORG $+2
-$SG161218 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG163350 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG161219 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG163351 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -64,7 +64,7 @@ $SG161219 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG161221 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG163353 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 CONST	ENDS
@@ -378,13 +378,13 @@ _val$ = 8						; size = 4
 	mov	eax, DWORD PTR _val$[ebp]
 	cmp	eax, DWORD PTR ?m_iNextValidID@BaseGameEntity@@0HA ; BaseGameEntity::m_iNextValidID
 	jl	SHORT $LN3@SetID
-	mov	ecx, OFFSET $SG156842
+	mov	ecx, OFFSET $SG158974
 	test	ecx, ecx
 	jne	SHORT $LN4@SetID
 $LN3@SetID:
 	push	26					; 0000001aH
-	push	OFFSET $SG156843
-	push	OFFSET $SG156844
+	push	OFFSET $SG158975
+	push	OFFSET $SG158976
 	call	__wassert
 	add	esp, 12					; 0000000cH
 $LN4@SetID:

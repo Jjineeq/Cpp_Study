@@ -10,34 +10,19 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-?colors@@3QBKB DD 0ffH					; colors
-	DD	0ff0000H
-	DD	0ff00H
-	DD	00H
-	DD	0c8c8ffH
-	DD	0c8c8c8H
-	DD	0ffffH
-	DD	0aaffH
-	DD	0aa00ffH
-	DD	05a85H
-	DD	0ffffffH
-	DD	06400H
-	DD	0ffff00H
-	DD	0c8c8c8H
-	DD	0e6e6ffH
-$SG162949 DB	'DefaultGiverTriggerRange', 00H
+$SG165081 DB	'DefaultGiverTriggerRange', 00H
 	ORG $+3
-$SG162950 DB	'Health_RespawnDelay', 00H
-$SG171540 DB	'invalid argument', 00H
+$SG165082 DB	'Health_RespawnDelay', 00H
+$SG173672 DB	'invalid argument', 00H
 	ORG $+3
-$SG171541 DB	'%s', 00H
+$SG173673 DB	'%s', 00H
 	ORG $+1
-$SG171544 DB	00H, 00H
-	ORG $+2
-$SG171542 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG173674 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
-	ORG $+6
-$SG171543 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+	ORG $+2
+$SG173676 DB	00H, 00H
+	ORG $+2
+$SG173675 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -53,11 +38,26 @@ $SG171543 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG171545 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG173677 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
-	ORG $+6
-$SG171646 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+	ORG $+2
+?colors@@3QBKB DD 0ffH					; colors
+	DD	0ff0000H
+	DD	0ff00H
+	DD	00H
+	DD	0c8c8ffH
+	DD	0c8c8c8H
+	DD	0ffffH
+	DD	0aaffH
+	DD	0aa00ffH
+	DD	05a85H
+	DD	0ffffffH
+	DD	06400H
+	DD	0ffff00H
+	DD	0c8c8c8H
+	DD	0e6e6ffH
+$SG173778 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -3794,7 +3794,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG171646
+	push	OFFSET $SG173778
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -4100,11 +4100,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG171540
-	push	OFFSET $SG171541
+	push	OFFSET $SG173672
+	push	OFFSET $SG173673
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG171542
+	push	OFFSET $SG173674
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4114,9 +4114,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG171543
-	push	OFFSET $SG171544
-	push	OFFSET $SG171545
+	push	OFFSET $SG173675
+	push	OFFSET $SG173676
+	push	OFFSET $SG173677
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -19627,7 +19627,7 @@ $LN4@clear:
 ?clear@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z ENDP ; std::basic_ios<char,std::char_traits<char> >::clear
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib (1)\include\LuaHelperFunctions.h
+; File C:\Users\user\github\Cpp_Study\Source\Common\lua-5.4.2_Win32_vc16_lib\include\LuaHelperFunctions.h
 ;	COMDAT ??$PopLuaNumber@N@@YANPAUlua_State@@PBD@Z
 _TEXT	SEGMENT
 tv94 = -108						; size = 4
@@ -20115,7 +20115,7 @@ _in$ = 8						; size = 4
 ; 56   :   //create this trigger's region of fluence
 ; 57   :   AddCircularTriggerRegion(Pos(), script->GetDouble("DefaultGiverTriggerRange"));
 
-	push	OFFSET $SG162949
+	push	OFFSET $SG165081
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -20141,7 +20141,7 @@ _in$ = 8						; size = 4
 ; 58   : 
 ; 59   :   SetRespawnDelay((unsigned int)(script->GetDouble("Health_RespawnDelay") * FrameRate));
 
-	push	OFFSET $SG162950
+	push	OFFSET $SG165082
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -31681,7 +31681,7 @@ _TEXT	SEGMENT
 ?max@?$numeric_limits@H@std@@SAHXZ ENDP			; std::numeric_limits<int>::max
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _powf
 _TEXT	SEGMENT
 tv74 = -4						; size = 4
@@ -31689,14 +31689,14 @@ __X$ = 8						; size = 4
 __Y$ = 12						; size = 4
 _powf	PROC						; COMDAT
 
-; 742  :         {
+; 748  :         {
 
 	push	ebp
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 
-; 743  :             return (float)pow(_X, _Y);
+; 749  :             return (float)pow(_X, _Y);
 
 	cvtss2sd xmm0, DWORD PTR __Y$[ebp]
 	sub	esp, 8
@@ -31709,7 +31709,7 @@ _powf	PROC						; COMDAT
 	fstp	DWORD PTR tv74[ebp]
 	fld	DWORD PTR tv74[ebp]
 
-; 744  :         }
+; 750  :         }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -31720,7 +31720,7 @@ _powf	PROC						; COMDAT
 _powf	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
-; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h
+; File C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 ;	COMDAT _ldexpf
 _TEXT	SEGMENT
 tv73 = -4						; size = 4
@@ -31728,14 +31728,14 @@ __X$ = 8						; size = 4
 __Y$ = 12						; size = 4
 _ldexpf	PROC						; COMDAT
 
-; 705  :     {
+; 711  :     {
 
 	push	ebp
 	mov	ebp, esp
 	push	ecx
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 
-; 706  :         return (float)ldexp(_X, _Y);
+; 712  :         return (float)ldexp(_X, _Y);
 
 	mov	eax, DWORD PTR __Y$[ebp]
 	push	eax
@@ -31747,7 +31747,7 @@ _ldexpf	PROC						; COMDAT
 	fstp	DWORD PTR tv73[ebp]
 	fld	DWORD PTR tv73[ebp]
 
-; 707  :     }
+; 713  :     }
 
 	add	esp, 4
 	cmp	ebp, esp

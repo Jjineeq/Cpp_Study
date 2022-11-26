@@ -10,16 +10,16 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG46423 DB	'invalid argument', 00H
+$SG46425 DB	'invalid argument', 00H
 	ORG $+3
-$SG46424 DB	'%s', 00H
+$SG46426 DB	'%s', 00H
 	ORG $+1
-$SG46425 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG46427 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG46427 DB	00H, 00H
+$SG46429 DB	00H, 00H
 	ORG $+2
-$SG46426 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG46428 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -35,7 +35,7 @@ $SG46426 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG46428 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG46430 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 CONST	ENDS
@@ -1566,11 +1566,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG46423
-	push	OFFSET $SG46424
+	push	OFFSET $SG46425
+	push	OFFSET $SG46426
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG46425
+	push	OFFSET $SG46427
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1580,9 +1580,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG46426
-	push	OFFSET $SG46427
 	push	OFFSET $SG46428
+	push	OFFSET $SG46429
+	push	OFFSET $SG46430
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
