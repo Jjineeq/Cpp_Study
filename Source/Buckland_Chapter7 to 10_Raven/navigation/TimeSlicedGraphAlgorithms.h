@@ -130,7 +130,7 @@ public:
                                               m_iTarget(target)
   { 
      //create the PQ   
-     m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes());
+     m_pPQ =new IndexedPriorityQLow<double>(m_FCosts, m_Graph.NumNodes()); // 가장 짧은거 골라서 넣음
 
     //put the source node on the queue
     m_pPQ->insert(m_iSource);
@@ -142,17 +142,25 @@ public:
   //When called, this method pops the next node off the PQ and examines all
   //its edges. The method returns an enumerated value (target_found,
   //target_not_found, search_incomplete) indicating the status of the search
-  int                      CycleOnce();
+  int                      CycleOnce(); // search대신 따로 빼놓음
 
   //returns the vector of edges that the algorithm has examined
   std::vector<const Edge*> GetSPT()const{return m_ShortestPathTree;}
+
 
   //returns a vector of node indexes that comprise the shortest path
   //from the source to the target
   std::list<int>         GetPathToTarget()const;
 
+
+  //return a vector of node indexs that comprise Early short path
+  //from the source to the target
+  std::list<int>        GetSubPath()const;
+  
   //returns the path as a list of PathEdges
   std::list<PathEdge>    GetPathAsPathEdges()const;
+
+  
 
   //returns the total cost to the target
   double            GetCostToTarget()const{return m_GCosts[m_iTarget];}
@@ -166,7 +174,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
   if (m_pPQ->empty())
   {
     return target_not_found;
-  }
+  } // 루프가 없음 한번만 돌음
 
   //get lowest cost node from the queue
   int NextClosestNode = m_pPQ->Pop();
@@ -219,7 +227,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
   }
   
   //there are still nodes to explore
-  return search_incomplete;
+  return search_incomplete; // 수행못하면 incomplete로 끝남
 }
 
 //-----------------------------------------------------------------------------
@@ -233,19 +241,43 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetPathToTarget()const
   if (m_iTarget < 0)  return path;    
 
   int nd = m_iTarget;
-
+  
   path.push_back(nd);
     
   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
   {
-    nd = m_ShortestPathTree[nd]->From();
+     nd = m_ShortestPathTree[nd]->From();
 
-    path.push_front(nd);
+     path.push_front(nd);
   }
 
   return path;
 } 
 
+
+//-----------------------------------------------------------------------------
+
+template <class graph_type, class heuristic>
+std::list<int>
+Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
+{
+    std::list<int> path;
+
+    //just return an empty path if no target or no path found
+    if (m_iTarget < 0)  return path;
+
+    int nd = m_iTarget;
+
+    path.push_back(nd);
+
+    while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0) && (path.length() < 5))
+    {
+        nd = m_ShortestPathTree[nd]->From();
+        path.push_front(nd);
+    }
+
+    return path;
+}
 
 //-------------------------- GetPathAsPathEdges -------------------------------
 //

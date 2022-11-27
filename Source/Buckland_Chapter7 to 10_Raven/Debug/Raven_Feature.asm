@@ -27,23 +27,23 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG177730 DB	'RailGun_MaxRoundsCarried', 00H
+$SG177734 DB	'RailGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG177732 DB	'RocketLauncher_MaxRoundsCarried', 00H
-$SG177734 DB	'ShotGun_MaxRoundsCarried', 00H
+$SG177736 DB	'RocketLauncher_MaxRoundsCarried', 00H
+$SG177738 DB	'ShotGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG177737 DB	'trying to calculate  of unknown weapon', 00H
+$SG177741 DB	'trying to calculate  of unknown weapon', 00H
 	ORG $+1
-$SG187889 DB	'invalid argument', 00H
+$SG187893 DB	'invalid argument', 00H
 	ORG $+3
-$SG187890 DB	'%s', 00H
+$SG187894 DB	'%s', 00H
 	ORG $+1
-$SG187891 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG187895 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG187893 DB	00H, 00H
+$SG187897 DB	00H, 00H
 	ORG $+2
-$SG187892 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG187896 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -59,11 +59,11 @@ $SG187892 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG187894 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG187898 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG188025 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG188029 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1025,11 +1025,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG187889
-	push	OFFSET $SG187890
+	push	OFFSET $SG187893
+	push	OFFSET $SG187894
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG187891
+	push	OFFSET $SG187895
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1039,9 +1039,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG187892
-	push	OFFSET $SG187893
-	push	OFFSET $SG187894
+	push	OFFSET $SG187896
+	push	OFFSET $SG187897
+	push	OFFSET $SG187898
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -2460,7 +2460,7 @@ $LN4@GetMaxRoun:
 ; 40   : 
 ; 41   :     return script->GetDouble("RailGun_MaxRoundsCarried");
 
-	push	OFFSET $SG177730
+	push	OFFSET $SG177734
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2472,7 +2472,7 @@ $LN5@GetMaxRoun:
 ; 44   : 
 ; 45   :     return script->GetDouble("RocketLauncher_MaxRoundsCarried");
 
-	push	OFFSET $SG177732
+	push	OFFSET $SG177736
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2484,7 +2484,7 @@ $LN6@GetMaxRoun:
 ; 48   : 
 ; 49   :     return script->GetDouble("ShotGun_MaxRoundsCarried");
 
-	push	OFFSET $SG177734
+	push	OFFSET $SG177738
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -2496,7 +2496,7 @@ $LN7@GetMaxRoun:
 ; 52   : 
 ; 53   :     throw std::runtime_error("trying to calculate  of unknown weapon");
 
-	push	OFFSET $SG177737
+	push	OFFSET $SG177741
 	lea	ecx, DWORD PTR $T1[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@

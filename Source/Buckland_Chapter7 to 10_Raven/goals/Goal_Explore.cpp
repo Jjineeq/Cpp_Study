@@ -35,7 +35,7 @@ void Goal_Explore::Activate()
   //the bot may have to wait a few update cycles before a path is calculated
   //so for appearances sake it simple ARRIVES at the destination until a path
   //has been found
-  AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination));
+  AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination)); // 답이 오기전까지 seek 수행 
 }
 
 //------------------------------ Process -------------------------------------

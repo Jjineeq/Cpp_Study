@@ -398,7 +398,7 @@ bool Raven_PathPlanner::RequestPathToPosition(Vector2D TargetPos)
                                ClosestNodeToTarget);
 
   //and register the search with the path manager
-  m_pOwner->GetWorld()->GetPathManager()->Register(this);
+  m_pOwner->GetWorld()->GetPathManager()->Register(this); // pathmanager°¡ Ã£¾ÆÁÜ
 
   return true;
 }
