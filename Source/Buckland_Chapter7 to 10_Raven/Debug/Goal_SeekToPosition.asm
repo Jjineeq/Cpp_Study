@@ -309,6 +309,7 @@ PUBLIC	??1Goal_SeekToPosition@@UAE@XZ			; Goal_SeekToPosition::~Goal_SeekToPosit
 PUBLIC	??_GGoal_SeekToPosition@@UAEPAXI@Z		; Goal_SeekToPosition::`scalar deleting destructor'
 PUBLIC	?On@Raven_Steering@@AAE_NW4behavior_type@1@@Z	; Raven_Steering::On
 PUBLIC	?SetTarget@Raven_Steering@@QAEXUVector2D@@@Z	; Raven_Steering::SetTarget
+PUBLIC	?SeekOn@Raven_Steering@@QAEXXZ			; Raven_Steering::SeekOn
 PUBLIC	?SeekOff@Raven_Steering@@QAEXXZ			; Raven_Steering::SeekOff
 PUBLIC	?ArriveOff@Raven_Steering@@QAEXXZ		; Raven_Steering::ArriveOff
 PUBLIC	?GetTickCount@CrudeTimer@@QAENXZ		; CrudeTimer::GetTickCount
@@ -23844,6 +23845,30 @@ $LN1@SeekOff:
 _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\Raven_SteeringBehaviors.h
+;	COMDAT ?SeekOn@Raven_Steering@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4						; size = 4
+?SeekOn@Raven_Steering@@QAEXXZ PROC			; Raven_Steering::SeekOn, COMDAT
+; _this$ = ecx
+
+; 206  :   void SeekOn(){m_iFlags |= seek;}
+
+	push	ebp
+	mov	ebp, esp
+	push	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+168]
+	or	ecx, 2
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [edx+168], ecx
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?SeekOn@Raven_Steering@@QAEXXZ ENDP			; Raven_Steering::SeekOn
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu
+; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\Raven_SteeringBehaviors.h
 ;	COMDAT ?SetTarget@Raven_Steering@@QAEXUVector2D@@@Z
 _TEXT	SEGMENT
 _this$ = -4						; size = 4
@@ -24304,7 +24329,14 @@ _this$ = -4						; size = 4
 	call	?SetTarget@Raven_Steering@@QAEXUVector2D@@@Z ; Raven_Steering::SetTarget
 
 ; 45   : 
-; 46   :   //m_pOwner->GetSteering()->SeekOn(); 
+; 46   :   m_pOwner->GetSteering()->SeekOn(); 
+
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+8]
+	call	?GetSteering@Raven_Bot@@QAEQAVRaven_Steering@@XZ ; Raven_Bot::GetSteering
+	mov	ecx, eax
+	call	?SeekOn@Raven_Steering@@QAEXXZ		; Raven_Steering::SeekOn
+
 ; 47   : }
 
 	add	esp, 12					; 0000000cH

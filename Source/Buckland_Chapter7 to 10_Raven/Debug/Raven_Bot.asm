@@ -10,48 +10,46 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG180224 DB	'HitFlashTime', 00H
-$SG180278 DB	00H
-$SG180380 DB	00H
-$SG180389 DB	00H
-$SG180228 DB	'Bot_WeaponSelectionFrequency', 00H
-	ORG $+3
-$SG180230 DB	'Bot_GoalAppraisalUpdateFreq', 00H
-$SG180232 DB	'Bot_TargetingUpdateFreq', 00H
-$SG180234 DB	'Bot_TriggerUpdateFreq', 00H
+$SG180225 DB	'Bot_WeaponSelectionFrequency', 00H
+$SG180275 DB	00H
+$SG180377 DB	00H
+$SG180386 DB	00H
+$SG180227 DB	'Bot_GoalAppraisalUpdateFreq', 00H
+$SG180229 DB	'Bot_TargetingUpdateFreq', 00H
+$SG180231 DB	'Bot_TriggerUpdateFreq', 00H
 	ORG $+2
-$SG180236 DB	'Bot_VisionUpdateFreq', 00H
+$SG180233 DB	'Bot_VisionUpdateFreq', 00H
 	ORG $+3
-$SG180240 DB	'Bot_AimPersistance', 00H
+$SG180237 DB	'Bot_AimPersistance', 00H
 	ORG $+1
-$SG180241 DB	'Bot_AimAccuracy', 00H
-$SG180242 DB	'Bot_ReactionTime', 00H
+$SG180238 DB	'Bot_AimAccuracy', 00H
+$SG180239 DB	'Bot_ReactionTime', 00H
 	ORG $+3
-$SG180244 DB	'Bot_MemorySpan', 00H
+$SG180241 DB	'Bot_MemorySpan', 00H
 	ORG $+1
-$SG180276 DB	'deleting raven bot (id = ', 00H
+$SG180273 DB	'deleting raven bot (id = ', 00H
 	ORG $+2
-$SG180277 DB	')', 00H
+$SG180274 DB	')', 00H
 	ORG $+2
-$SG180370 DB	'HitFlashTime', 00H
+$SG180367 DB	'HitFlashTime', 00H
 	ORG $+3
-$SG180379 DB	'Player Possesses bot ', 00H
+$SG180376 DB	'Player Possesses bot ', 00H
 	ORG $+2
-$SG180388 DB	'Player is exorcised from bot ', 00H
+$SG180385 DB	'Player is exorcised from bot ', 00H
 	ORG $+2
-$SG180538 DB	'H:', 00H
+$SG180535 DB	'H:', 00H
 	ORG $+1
-$SG180540 DB	'Scr:', 00H
+$SG180537 DB	'Scr:', 00H
 	ORG $+3
-$SG180555 DB	'Bot_Scale', 00H
+$SG180552 DB	'Bot_Scale', 00H
 	ORG $+2
-$SG190673 DB	'invalid argument', 00H
+$SG190670 DB	'invalid argument', 00H
 	ORG $+3
-$SG190674 DB	'%s', 00H
+$SG190671 DB	'%s', 00H
 	ORG $+1
-$SG190677 DB	00H, 00H
+$SG190674 DB	00H, 00H
 	ORG $+2
-$SG190675 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG190672 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
 ?colors@@3QBKB DD 0ffH					; colors
@@ -69,7 +67,7 @@ $SG190675 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG190676 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG190673 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -85,31 +83,32 @@ $SG190676 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG190678 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG190675 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+2
-$SG180215 DB	'Bot_MaxHeadTurnRate', 00H
-$SG190882 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG180212 DB	'Bot_MaxHeadTurnRate', 00H
+$SG190879 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 	ORG $+2
-$SG180214 DB	'Bot_MaxForce', 00H
+$SG180211 DB	'Bot_MaxForce', 00H
 	ORG $+3
-$SG180216 DB	'Bot_Scale', 00H
+$SG180213 DB	'Bot_Scale', 00H
 	ORG $+2
+$SG180214 DB	'Bot_Scale', 00H
+	ORG $+2
+$SG180215 DB	'Bot_Mass', 00H
+	ORG $+3
+$SG180216 DB	'Bot_MaxSpeed', 00H
+	ORG $+3
 $SG180217 DB	'Bot_Scale', 00H
 	ORG $+2
-$SG180218 DB	'Bot_Mass', 00H
-	ORG $+3
-$SG180219 DB	'Bot_MaxSpeed', 00H
-	ORG $+3
-$SG180220 DB	'Bot_Scale', 00H
+$SG180218 DB	'Bot_MaxHealth', 00H
 	ORG $+2
-$SG180221 DB	'Bot_MaxHealth', 00H
+$SG180219 DB	'Bot_MaxHealth', 00H
 	ORG $+2
-$SG180222 DB	'Bot_MaxHealth', 00H
-	ORG $+2
-$SG180223 DB	'Bot_FOV', 00H
+$SG180220 DB	'Bot_FOV', 00H
+$SG180221 DB	'HitFlashTime', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
 PUBLIC	?__empty_global_delete@@YAXPAXI@Z		; __empty_global_delete
@@ -7646,7 +7645,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG190882
+	push	OFFSET $SG190879
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -8428,11 +8427,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG190673
-	push	OFFSET $SG190674
+	push	OFFSET $SG190670
+	push	OFFSET $SG190671
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG190675
+	push	OFFSET $SG190672
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -8442,9 +8441,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG190676
-	push	OFFSET $SG190677
-	push	OFFSET $SG190678
+	push	OFFSET $SG190673
+	push	OFFSET $SG190674
+	push	OFFSET $SG190675
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -33367,10 +33366,10 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
-	push	OFFSET $SG180389
+	push	OFFSET $SG180386
 	lea	edx, DWORD PTR $T1[ebp]
 	push	edx
-	push	OFFSET $SG180388
+	push	OFFSET $SG180385
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY0BO@D@DebugConsole@@QAEAAV0@AAY0BO@$$CBD@Z ; DebugConsole::operator<<<char [30]>
@@ -33431,10 +33430,10 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
-	push	OFFSET $SG180380
+	push	OFFSET $SG180377
 	lea	eax, DWORD PTR $T1[ebp]
 	push	eax
-	push	OFFSET $SG180379
+	push	OFFSET $SG180376
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY0BG@D@DebugConsole@@QAEAAV0@AAY0BG@$$CBD@Z ; DebugConsole::operator<<<char [22]>
@@ -33975,7 +33974,7 @@ $LN2@ReduceHeal:
 ; 342  : 
 ; 343  :   m_iNumUpdatesHitPersistant = (int)(FrameRate * script->GetDouble("HitFlashTime"));
 
-	push	OFFSET $SG180370
+	push	OFFSET $SG180367
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35065,7 +35064,7 @@ $LN6@Render:
 	mov	DWORD PTR __$EHRec$[ebp+8], 1
 	mov	eax, DWORD PTR tv333[ebp]
 	push	eax
-	push	OFFSET $SG180538
+	push	OFFSET $SG180535
 	lea	ecx, DWORD PTR $T21[ebp]
 	push	ecx
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
@@ -35131,7 +35130,7 @@ $LN7@Render:
 	mov	DWORD PTR __$EHRec$[ebp+8], 3
 	mov	ecx, DWORD PTR tv337[ebp]
 	push	ecx
-	push	OFFSET $SG180540
+	push	OFFSET $SG180537
 	lea	edx, DWORD PTR $T19[ebp]
 	push	edx
 	call	??$?HDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QBD$$QAV10@@Z ; std::operator+<char,std::char_traits<char>,std::allocator<char> >
@@ -35279,11 +35278,11 @@ __$EHRec$ = -12						; size = 12
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T13[ebp], eax
-	push	OFFSET $SG180278
-	push	OFFSET $SG180277
+	push	OFFSET $SG180275
+	push	OFFSET $SG180274
 	lea	ecx, DWORD PTR $T13[ebp]
 	push	ecx
-	push	OFFSET $SG180276
+	push	OFFSET $SG180273
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY0BK@D@DebugConsole@@QAEAAV0@AAY0BK@$$CBD@Z ; DebugConsole::operator<<<char [26]>
@@ -35565,25 +35564,25 @@ _pos$ = 12						; size = 16
 
 ; 28   :   MovingEntity(pos,
 
+	push	OFFSET $SG180211
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG180212
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
+	push	OFFSET $SG180213
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	sub	esp, 8
+	fstp	QWORD PTR [esp]
 	push	OFFSET $SG180214
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG180215
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG180216
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	sub	esp, 8
-	fstp	QWORD PTR [esp]
-	push	OFFSET $SG180217
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35601,7 +35600,7 @@ _pos$ = 12						; size = 16
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	push	OFFSET $SG180218
+	push	OFFSET $SG180215
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35625,7 +35624,7 @@ _pos$ = 12						; size = 16
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	push	OFFSET $SG180219
+	push	OFFSET $SG180216
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35649,7 +35648,7 @@ _pos$ = 12						; size = 16
 	mov	DWORD PTR [ecx+8], edx
 	mov	eax, DWORD PTR [eax+12]
 	mov	DWORD PTR [ecx+12], eax
-	push	OFFSET $SG180220
+	push	OFFSET $SG180217
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35702,7 +35701,7 @@ _pos$ = 12						; size = 16
 
 ; 39   :                  m_iHealth(script->GetInt("Bot_MaxHealth")),
 
-	push	OFFSET $SG180221
+	push	OFFSET $SG180218
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -35720,7 +35719,7 @@ _pos$ = 12						; size = 16
 ; 37   :                  
 ; 38   :                  m_iMaxHealth(script->GetInt("Bot_MaxHealth")),
 
-	push	OFFSET $SG180222
+	push	OFFSET $SG180219
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetInt@Scriptor@@QAEHPAD@Z		; Scriptor::GetInt
@@ -35740,7 +35739,7 @@ _pos$ = 12						; size = 16
 
 ; 49   :                  m_dFieldOfView(DegsToRads(script->GetDouble("Bot_FOV")))
 
-	push	OFFSET $SG180223
+	push	OFFSET $SG180220
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35753,7 +35752,7 @@ _pos$ = 12						; size = 16
 
 ; 44   :                  m_iNumUpdatesHitPersistant((int)(FrameRate * script->GetDouble("HitFlashTime"))),
 
-	push	OFFSET $SG180224
+	push	OFFSET $SG180221
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35881,7 +35880,7 @@ $LN6@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 5
 	cmp	DWORD PTR $T18[ebp], 0
 	je	SHORT $LN7@Raven_Bot
-	push	OFFSET $SG180228
+	push	OFFSET $SG180225
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35910,7 +35909,7 @@ $LN8@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 6
 	cmp	DWORD PTR $T16[ebp], 0
 	je	SHORT $LN9@Raven_Bot
-	push	OFFSET $SG180230
+	push	OFFSET $SG180227
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35939,7 +35938,7 @@ $LN10@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 7
 	cmp	DWORD PTR $T14[ebp], 0
 	je	SHORT $LN11@Raven_Bot
-	push	OFFSET $SG180232
+	push	OFFSET $SG180229
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35968,7 +35967,7 @@ $LN12@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 8
 	cmp	DWORD PTR $T12[ebp], 0
 	je	SHORT $LN13@Raven_Bot
-	push	OFFSET $SG180234
+	push	OFFSET $SG180231
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -35997,7 +35996,7 @@ $LN14@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 9
 	cmp	DWORD PTR $T10[ebp], 0
 	je	SHORT $LN15@Raven_Bot
-	push	OFFSET $SG180236
+	push	OFFSET $SG180233
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -36081,19 +36080,19 @@ $LN20@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 12		; 0000000cH
 	cmp	DWORD PTR $T4[ebp], 0
 	je	SHORT $LN21@Raven_Bot
-	push	OFFSET $SG180240
+	push	OFFSET $SG180237
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG180241
+	push	OFFSET $SG180238
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	sub	esp, 8
 	fstp	QWORD PTR [esp]
-	push	OFFSET $SG180242
+	push	OFFSET $SG180239
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -36128,7 +36127,7 @@ $LN22@Raven_Bot:
 	mov	BYTE PTR __$EHRec$[ebp+8], 13		; 0000000dH
 	cmp	DWORD PTR $T2[ebp], 0
 	je	SHORT $LN23@Raven_Bot
-	push	OFFSET $SG180244
+	push	OFFSET $SG180241
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
@@ -36361,7 +36360,7 @@ __$ArrayPad$ = -4					; size = 4
 
 ; 551  :   double scale = script->GetDouble("Bot_Scale");
 
-	push	OFFSET $SG180555
+	push	OFFSET $SG180552
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble

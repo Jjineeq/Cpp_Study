@@ -197,7 +197,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
     double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To()); 
 
     //calculate the 'real' cost to this node from the source (G)
-    double GCost = m_GCosts[NextClosestNode] + pE->Cost();¤¤
+    double GCost = m_GCosts[NextClosestNode] + pE->Cost();
 
     //if the node has not been added to the frontier, add it and update
     //the G and F costs
@@ -269,7 +269,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
 
     path.push_back(nd);
 
-    while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0) && (path.length() < 5))
+    while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0) && (path.length() < 6))
     {
         nd = m_ShortestPathTree[nd]->From();
         path.push_front(nd);

@@ -25,16 +25,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG183969 DB	'invalid argument', 00H
+$SG183973 DB	'invalid argument', 00H
 	ORG $+3
-$SG183970 DB	'%s', 00H
+$SG183974 DB	'%s', 00H
 	ORG $+1
-$SG183973 DB	00H, 00H
+$SG183977 DB	00H, 00H
 	ORG $+2
-$SG183971 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183975 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG183972 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG183976 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -50,11 +50,11 @@ $SG183972 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG183974 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG183978 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG184136 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG184140 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -152,6 +152,7 @@ EXTRN	??1_Lockit@std@@QAE@XZ:PROC			; std::_Lockit::~_Lockit
 EXTRN	?GetRandomNodeLocation@Raven_Map@@QBE?AUVector2D@@XZ:PROC ; Raven_Map::GetRandomNodeLocation
 EXTRN	?RequestPathToPosition@Raven_PathPlanner@@QAE_NUVector2D@@@Z:PROC ; Raven_PathPlanner::RequestPathToPosition
 EXTRN	?GetPath@Raven_PathPlanner@@QAE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ:PROC ; Raven_PathPlanner::GetPath
+EXTRN	??0Goal_SeekToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z:PROC ; Goal_SeekToPosition::Goal_SeekToPosition
 EXTRN	??0Goal_FollowPath@@QAE@PAVRaven_Bot@@V?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@@Z:PROC ; Goal_FollowPath::Goal_FollowPath
 EXTRN	@_RTC_CheckStackVars@8:PROC
 EXTRN	@__security_check_cookie@4:PROC
@@ -424,13 +425,25 @@ voltbl	SEGMENT
 _volmd	DD	0ffffffffH
 	DDSymXIndex: 	FLAT:__unwindfunclet$?HandleMessage@Goal_Explore@@UAE_NABUTelegram@@@Z$0
 	DD	01dH
+_volmd	DD	0ffffffffH
+	DDSymXIndex: 	FLAT:__unwindfunclet$?Activate@Goal_Explore@@UAEXXZ$0
+	DD	01dH
 voltbl	ENDS
 xdata$x	SEGMENT
 __unwindtable$?HandleMessage@Goal_Explore@@UAE_NABUTelegram@@@Z DD 0ffffffffH
 	DD	FLAT:__unwindfunclet$?HandleMessage@Goal_Explore@@UAE_NABUTelegram@@@Z$0
+__unwindtable$?Activate@Goal_Explore@@UAEXXZ DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?Activate@Goal_Explore@@UAEXXZ$0
 __ehfuncinfo$?HandleMessage@Goal_Explore@@UAE_NABUTelegram@@@Z DD 019930522H
 	DD	01H
 	DD	FLAT:__unwindtable$?HandleMessage@Goal_Explore@@UAE_NABUTelegram@@@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	DD	00H
+	DD	01H
+__ehfuncinfo$?Activate@Goal_Explore@@UAEXXZ DD 019930522H
+	DD	01H
+	DD	FLAT:__unwindtable$?Activate@Goal_Explore@@UAEXXZ
 	DD	2 DUP(00H)
 	DD	2 DUP(00H)
 	DD	00H
@@ -1846,8 +1859,12 @@ _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\goals\Goal_Explore.cpp
 _TEXT	SEGMENT
-$T1 = -20						; size = 16
-_this$ = -4						; size = 4
+tv163 = -44						; size = 4
+$T2 = -40						; size = 4
+$T3 = -36						; size = 4
+$T4 = -32						; size = 16
+_this$ = -16						; size = 4
+__$EHRec$ = -12						; size = 12
 ?Activate@Goal_Explore@@UAEXXZ PROC			; Goal_Explore::Activate
 ; _this$ = ecx
 
@@ -1855,13 +1872,26 @@ _this$ = -4						; size = 4
 
 	push	ebp
 	mov	ebp, esp
-	sub	esp, 20					; 00000014H
+	push	-1
+	push	__ehhandler$?Activate@Goal_Explore@@UAEXXZ
+	mov	eax, DWORD PTR fs:0
+	push	eax
+	sub	esp, 32					; 00000020H
+	push	esi
 	mov	eax, -858993460				; ccccccccH
+	mov	DWORD PTR [ebp-44], eax
+	mov	DWORD PTR [ebp-40], eax
+	mov	DWORD PTR [ebp-36], eax
+	mov	DWORD PTR [ebp-32], eax
+	mov	DWORD PTR [ebp-28], eax
+	mov	DWORD PTR [ebp-24], eax
 	mov	DWORD PTR [ebp-20], eax
 	mov	DWORD PTR [ebp-16], eax
-	mov	DWORD PTR [ebp-12], eax
-	mov	DWORD PTR [ebp-8], eax
-	mov	DWORD PTR [ebp-4], eax
+	mov	eax, DWORD PTR ___security_cookie
+	xor	eax, ebp
+	push	eax
+	lea	eax, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
 ; 18   :   m_iStatus = active;
@@ -1889,7 +1919,7 @@ _this$ = -4						; size = 4
 ; 26   :     //grab a random location
 ; 27   :     m_CurrentDestination = m_pOwner->GetWorld()->GetMap()->GetRandomNodeLocation();
 
-	lea	eax, DWORD PTR $T1[ebp]
+	lea	eax, DWORD PTR $T4[ebp]
 	push	eax
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [ecx+8]
@@ -1943,17 +1973,89 @@ $LN2@Activate:
 ; 35   :   //the bot may have to wait a few update cycles before a path is calculated
 ; 36   :   //so for appearances sake it simple ARRIVES at the destination until a path
 ; 37   :   //has been found
-; 38   :   //AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination)); // 답이 오기전까지 seek 수행 
+; 38   :   AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_CurrentDestination)); // 답이 오기전까지 seek 수행 
+
+	push	48					; 00000030H
+	call	??2@YAPAXI@Z				; operator new
+	add	esp, 4
+	mov	DWORD PTR $T2[ebp], eax
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	cmp	DWORD PTR $T2[ebp], 0
+	je	SHORT $LN4@Activate
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 32					; 00000020H
+	sub	esp, 16					; 00000010H
+	mov	edx, esp
+	mov	eax, DWORD PTR [ecx]
+	mov	DWORD PTR [edx], eax
+	mov	eax, DWORD PTR [ecx+4]
+	mov	DWORD PTR [edx+4], eax
+	mov	eax, DWORD PTR [ecx+8]
+	mov	DWORD PTR [edx+8], eax
+	mov	ecx, DWORD PTR [ecx+12]
+	mov	DWORD PTR [edx+12], ecx
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx+8]
+	push	eax
+	mov	ecx, DWORD PTR $T2[ebp]
+	call	??0Goal_SeekToPosition@@QAE@PAVRaven_Bot@@UVector2D@@@Z ; Goal_SeekToPosition::Goal_SeekToPosition
+	mov	DWORD PTR tv163[ebp], eax
+	jmp	SHORT $LN5@Activate
+$LN4@Activate:
+	mov	DWORD PTR tv163[ebp], 0
+$LN5@Activate:
+	mov	ecx, DWORD PTR tv163[ebp]
+	mov	DWORD PTR $T3[ebp], ecx
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	mov	esi, esp
+	mov	edx, DWORD PTR $T3[ebp]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [eax]
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx+20]
+	call	eax
+	cmp	esi, esp
+	call	__RTC_CheckEsp
+
 ; 39   : }
 
-	add	esp, 20					; 00000014H
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:0, ecx
+	pop	ecx
+	pop	esi
+	add	esp, 44					; 0000002cH
 	cmp	ebp, esp
 	call	__RTC_CheckEsp
 	mov	esp, ebp
 	pop	ebp
 	ret	0
-?Activate@Goal_Explore@@UAEXXZ ENDP			; Goal_Explore::Activate
 _TEXT	ENDS
+text$x	SEGMENT
+__unwindfunclet$?Activate@Goal_Explore@@UAEXXZ$0:
+	push	48					; 00000030H
+	mov	eax, DWORD PTR $T2[ebp]
+	push	eax
+	call	??3@YAXPAXI@Z				; operator delete
+	add	esp, 8
+	ret	0
+	int	3
+	int	3
+	int	3
+	int	3
+	int	3
+__ehhandler$?Activate@Goal_Explore@@UAEXXZ:
+	npad	1
+	npad	1
+	mov	edx, DWORD PTR [esp+8]
+	lea	eax, DWORD PTR [edx+12]
+	mov	ecx, DWORD PTR [edx-40]
+	xor	ecx, eax
+	call	@__security_check_cookie@4
+	mov	eax, OFFSET __ehfuncinfo$?Activate@Goal_Explore@@UAEXXZ
+	jmp	___CxxFrameHandler3
+text$x	ENDS
+?Activate@Goal_Explore@@UAEXXZ ENDP			; Goal_Explore::Activate
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\user\github\Cpp_Study\Source\Common\Goals\Goal_Composite.h
 ;	COMDAT ?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ
