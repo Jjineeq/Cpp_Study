@@ -264,7 +264,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
 
     //just return an empty path if no target or no path found
     if (m_iTarget < 0)  return path;
-    ¤¤
+    
     int nd = m_iTarget;
 
     path.push_back(nd);

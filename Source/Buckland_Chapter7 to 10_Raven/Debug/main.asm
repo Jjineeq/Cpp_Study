@@ -16,11 +16,11 @@ _BSS	SEGMENT
 ?g_pRaven@@3PAVRaven_Game@@A DD 01H DUP (?)		; g_pRaven
 _BSS	ENDS
 CONST	SEGMENT
-$SG174216 DB	'Raven', 00H
+$SG174216 DB	'2018321031 ', 0c0H, 0e5H, 0bcH, 0baH, 0c8H, 0a3H, ' Rave'
+	DB	'n', 00H
+$SG174218 DB	'MyWindowClass', 00H
 $SG174295 DB	00H
 	ORG $+1
-$SG174218 DB	'MyWindowClass', 00H
-	ORG $+2
 $SG174292 DB	'map', 00H
 $SG174293 DB	'Raven map file (*.map)', 00H
 	ORG $+1
