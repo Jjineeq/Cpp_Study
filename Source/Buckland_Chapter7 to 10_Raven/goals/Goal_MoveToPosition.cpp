@@ -32,7 +32,6 @@ void Goal_MoveToPosition::Activate()
   {
 
     AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_vDestination));
-  //  AddSubgoal(new Goal_Wander(m_pOwner));
     
   }
 }

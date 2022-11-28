@@ -153,9 +153,8 @@ public:
   std::list<int>         GetPathToTarget()const;
 
 
-  //return a vector of node indexs that comprise Early short path
-  //from the source to the target
-  std::list<int>        GetSubPath()const;
+  //길찾기 시작시 목적지까지 짧은 경로를 list에 vector로 Path를 돌려줌  
+  std::list<int>        GetSubPath()const; // subpath 정의
   
   //returns the path as a list of PathEdges
   std::list<PathEdge>    GetPathAsPathEdges()const;
@@ -198,7 +197,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
     double HCost = heuristic::Calculate(m_Graph, m_iTarget, pE->To()); 
 
     //calculate the 'real' cost to this node from the source (G)
-    double GCost = m_GCosts[NextClosestNode] + pE->Cost();
+    double GCost = m_GCosts[NextClosestNode] + pE->Cost();ㄴ
 
     //if the node has not been added to the frontier, add it and update
     //the G and F costs
@@ -265,7 +264,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
 
     //just return an empty path if no target or no path found
     if (m_iTarget < 0)  return path;
-
+    ㄴ
     int nd = m_iTarget;
 
     path.push_back(nd);
