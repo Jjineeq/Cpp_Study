@@ -27,23 +27,23 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG177734 DB	'RailGun_MaxRoundsCarried', 00H
+$SG177738 DB	'RailGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG177736 DB	'RocketLauncher_MaxRoundsCarried', 00H
-$SG177738 DB	'ShotGun_MaxRoundsCarried', 00H
+$SG177740 DB	'RocketLauncher_MaxRoundsCarried', 00H
+$SG177742 DB	'ShotGun_MaxRoundsCarried', 00H
 	ORG $+3
-$SG177741 DB	'trying to calculate  of unknown weapon', 00H
+$SG177745 DB	'trying to calculate  of unknown weapon', 00H
 	ORG $+1
-$SG187893 DB	'invalid argument', 00H
+$SG187906 DB	'invalid argument', 00H
 	ORG $+3
-$SG187894 DB	'%s', 00H
+$SG187907 DB	'%s', 00H
 	ORG $+1
-$SG187895 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG187908 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG187897 DB	00H, 00H
+$SG187910 DB	00H, 00H
 	ORG $+2
-$SG187896 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG187909 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -59,11 +59,11 @@ $SG187896 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG187898 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG187911 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG188029 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG188042 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -72,6 +72,8 @@ PUBLIC	?Health@Raven_Feature@@SANPAVRaven_Bot@@@Z	; Raven_Feature::Health
 PUBLIC	?DistanceToItem@Raven_Feature@@SANPAVRaven_Bot@@H@Z ; Raven_Feature::DistanceToItem
 PUBLIC	?IndividualWeaponStrength@Raven_Feature@@SANPAVRaven_Bot@@H@Z ; Raven_Feature::IndividualWeaponStrength
 PUBLIC	?TotalWeaponStrength@Raven_Feature@@SANPAVRaven_Bot@@@Z ; Raven_Feature::TotalWeaponStrength
+PUBLIC	?MaxHealth@Raven_Feature@@SANPAVRaven_Bot@@@Z	; Raven_Feature::MaxHealth
+PUBLIC	?Damage@Raven_Feature@@SANPAVRaven_Bot@@@Z	; Raven_Feature::Damage
 PUBLIC	?max@?$numeric_limits@H@std@@SAHXZ		; std::numeric_limits<int>::max
 PUBLIC	??2@YAPAXIPAX@Z					; operator new
 PUBLIC	??0exception@std@@QAE@QBD@Z			; std::exception::exception
@@ -1025,11 +1027,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG187893
-	push	OFFSET $SG187894
+	push	OFFSET $SG187906
+	push	OFFSET $SG187907
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG187895
+	push	OFFSET $SG187908
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -1039,9 +1041,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG187896
-	push	OFFSET $SG187897
-	push	OFFSET $SG187898
+	push	OFFSET $SG187909
+	push	OFFSET $SG187910
+	push	OFFSET $SG187911
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -2431,7 +2433,7 @@ $T1 = -12						; size = 12
 _WeaponType$ = 8					; size = 4
 ?GetMaxRoundsBotCanCarryForWeapon@@YANH@Z PROC		; GetMaxRoundsBotCanCarryForWeapon
 
-; 36   : {
+; 37   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -2442,7 +2444,7 @@ _WeaponType$ = 8					; size = 4
 	mov	DWORD PTR [ebp-8], eax
 	mov	DWORD PTR [ebp-4], eax
 
-; 37   :   switch(WeaponType)
+; 38   :   switch(WeaponType)
 
 	mov	eax, DWORD PTR _WeaponType$[ebp]
 	mov	DWORD PTR tv64[ebp], eax
@@ -2455,48 +2457,48 @@ _WeaponType$ = 8					; size = 4
 	jmp	SHORT $LN7@GetMaxRoun
 $LN4@GetMaxRoun:
 
-; 38   :   {
-; 39   :   case type_rail_gun:
-; 40   : 
-; 41   :     return script->GetDouble("RailGun_MaxRoundsCarried");
-
-	push	OFFSET $SG177734
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	jmp	SHORT $LN2@GetMaxRoun
-$LN5@GetMaxRoun:
-
-; 42   : 
-; 43   :   case type_rocket_launcher:
-; 44   : 
-; 45   :     return script->GetDouble("RocketLauncher_MaxRoundsCarried");
-
-	push	OFFSET $SG177736
-	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
-	mov	ecx, eax
-	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
-	jmp	SHORT $LN2@GetMaxRoun
-$LN6@GetMaxRoun:
-
-; 46   : 
-; 47   :   case type_shotgun:
-; 48   : 
-; 49   :     return script->GetDouble("ShotGun_MaxRoundsCarried");
+; 39   :   {
+; 40   :   case type_rail_gun:
+; 41   : 
+; 42   :     return script->GetDouble("RailGun_MaxRoundsCarried");
 
 	push	OFFSET $SG177738
 	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
 	mov	ecx, eax
 	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
 	jmp	SHORT $LN2@GetMaxRoun
+$LN5@GetMaxRoun:
+
+; 43   : 
+; 44   :   case type_rocket_launcher:
+; 45   : 
+; 46   :     return script->GetDouble("RocketLauncher_MaxRoundsCarried");
+
+	push	OFFSET $SG177740
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	jmp	SHORT $LN2@GetMaxRoun
+$LN6@GetMaxRoun:
+
+; 47   : 
+; 48   :   case type_shotgun:
+; 49   : 
+; 50   :     return script->GetDouble("ShotGun_MaxRoundsCarried");
+
+	push	OFFSET $SG177742
+	call	?Instance@Raven_Scriptor@@SAPAV1@XZ	; Raven_Scriptor::Instance
+	mov	ecx, eax
+	call	?GetDouble@Scriptor@@QAENPAD@Z		; Scriptor::GetDouble
+	jmp	SHORT $LN2@GetMaxRoun
 $LN7@GetMaxRoun:
 
-; 50   : 
-; 51   :   default:
-; 52   : 
-; 53   :     throw std::runtime_error("trying to calculate  of unknown weapon");
+; 51   : 
+; 52   :   default:
+; 53   : 
+; 54   :     throw std::runtime_error("trying to calculate  of unknown weapon");
 
-	push	OFFSET $SG177741
+	push	OFFSET $SG177745
 	lea	ecx, DWORD PTR $T1[ebp]
 	call	??0runtime_error@std@@QAE@PBD@Z		; std::runtime_error::runtime_error
 	push	OFFSET __TI2?AVruntime_error@std@@
@@ -2505,9 +2507,9 @@ $LN7@GetMaxRoun:
 	call	__CxxThrowException@8
 $LN2@GetMaxRoun:
 
-; 54   : 
-; 55   :   }//end switch
-; 56   : }
+; 55   : 
+; 56   :   }//end switch
+; 57   : }
 
 	add	esp, 16					; 00000010H
 	cmp	ebp, esp
@@ -6141,6 +6143,85 @@ _TEXT	ENDS
 ; Function compile flags: /Odtp /RTCsu
 ; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\goals\Raven_Feature.cpp
 _TEXT	SEGMENT
+tv74 = -16						; size = 8
+tv77 = -8						; size = 8
+_pBot$ = 8						; size = 4
+?Damage@Raven_Feature@@SANPAVRaven_Bot@@@Z PROC		; Raven_Feature::Damage
+
+; 115  : {
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	mov	DWORD PTR [ebp-16], eax
+	mov	DWORD PTR [ebp-12], eax
+	mov	DWORD PTR [ebp-8], eax
+	mov	DWORD PTR [ebp-4], eax
+
+; 116  :   return (double)pBot->MaxHealth() - (double)pBot->Health();
+
+	mov	ecx, DWORD PTR _pBot$[ebp]
+	call	?MaxHealth@Raven_Bot@@QBEHXZ		; Raven_Bot::MaxHealth
+	cvtsi2sd xmm0, eax
+	mov	ecx, DWORD PTR _pBot$[ebp]
+	movsd	QWORD PTR tv77[ebp], xmm0
+	call	?Health@Raven_Bot@@QBEHXZ		; Raven_Bot::Health
+	cvtsi2sd xmm0, eax
+	movsd	xmm1, QWORD PTR tv77[ebp]
+	subsd	xmm1, xmm0
+	movsd	QWORD PTR tv74[ebp], xmm1
+	fld	QWORD PTR tv74[ebp]
+
+; 117  : }
+
+	add	esp, 16					; 00000010H
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?Damage@Raven_Feature@@SANPAVRaven_Bot@@@Z ENDP		; Raven_Feature::Damage
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu
+; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\goals\Raven_Feature.cpp
+_TEXT	SEGMENT
+tv69 = -12						; size = 8
+tv68 = -4						; size = 4
+_pBot$ = 8						; size = 4
+?MaxHealth@Raven_Feature@@SANPAVRaven_Bot@@@Z PROC	; Raven_Feature::MaxHealth
+
+; 110  : {
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 12					; 0000000cH
+	mov	DWORD PTR [ebp-12], -858993460		; ccccccccH
+	mov	DWORD PTR [ebp-8], -858993460		; ccccccccH
+	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
+
+; 111  :     return (double)pBot->MaxHealth();
+
+	mov	ecx, DWORD PTR _pBot$[ebp]
+	call	?MaxHealth@Raven_Bot@@QBEHXZ		; Raven_Bot::MaxHealth
+	mov	DWORD PTR tv68[ebp], eax
+	fild	DWORD PTR tv68[ebp]
+	fstp	QWORD PTR tv69[ebp]
+	fld	QWORD PTR tv69[ebp]
+
+; 112  : }
+
+	add	esp, 12					; 0000000cH
+	cmp	ebp, esp
+	call	__RTC_CheckEsp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?MaxHealth@Raven_Feature@@SANPAVRaven_Bot@@@Z ENDP	; Raven_Feature::MaxHealth
+_TEXT	ENDS
+; Function compile flags: /Odtp /RTCsu
+; File C:\Users\user\github\Cpp_Study\Source\Buckland_Chapter7 to 10_Raven\goals\Raven_Feature.cpp
+_TEXT	SEGMENT
 tv148 = -72						; size = 8
 _Tweaker$ = -64						; size = 8
 _NumRockets$ = -56					; size = 8
@@ -6153,7 +6234,7 @@ _MaxRoundsForShotgun$ = -8				; size = 8
 _pBot$ = 8						; size = 4
 ?TotalWeaponStrength@Raven_Feature@@SANPAVRaven_Bot@@@Z PROC ; Raven_Feature::TotalWeaponStrength
 
-; 81   : {
+; 82   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6164,36 +6245,36 @@ _pBot$ = 8						; size = 4
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 
-; 82   :   const double MaxRoundsForShotgun = GetMaxRoundsBotCanCarryForWeapon(type_shotgun);
+; 83   :   const double MaxRoundsForShotgun = GetMaxRoundsBotCanCarryForWeapon(type_shotgun);
 
 	push	8
 	call	?GetMaxRoundsBotCanCarryForWeapon@@YANH@Z ; GetMaxRoundsBotCanCarryForWeapon
 	add	esp, 4
 	fstp	QWORD PTR _MaxRoundsForShotgun$[ebp]
 
-; 83   :   const double MaxRoundsForRailgun = GetMaxRoundsBotCanCarryForWeapon(type_rail_gun);
+; 84   :   const double MaxRoundsForRailgun = GetMaxRoundsBotCanCarryForWeapon(type_rail_gun);
 
 	push	6
 	call	?GetMaxRoundsBotCanCarryForWeapon@@YANH@Z ; GetMaxRoundsBotCanCarryForWeapon
 	add	esp, 4
 	fstp	QWORD PTR _MaxRoundsForRailgun$[ebp]
 
-; 84   :   const double MaxRoundsForRocketLauncher = GetMaxRoundsBotCanCarryForWeapon(type_rocket_launcher);
+; 85   :   const double MaxRoundsForRocketLauncher = GetMaxRoundsBotCanCarryForWeapon(type_rocket_launcher);
 
 	push	7
 	call	?GetMaxRoundsBotCanCarryForWeapon@@YANH@Z ; GetMaxRoundsBotCanCarryForWeapon
 	add	esp, 4
 	fstp	QWORD PTR _MaxRoundsForRocketLauncher$[ebp]
 
-; 85   :   const double TotalRoundsCarryable = MaxRoundsForShotgun + MaxRoundsForRailgun + MaxRoundsForRocketLauncher;
+; 86   :   const double TotalRoundsCarryable = MaxRoundsForShotgun + MaxRoundsForRailgun + MaxRoundsForRocketLauncher;
 
 	movsd	xmm0, QWORD PTR _MaxRoundsForShotgun$[ebp]
 	addsd	xmm0, QWORD PTR _MaxRoundsForRailgun$[ebp]
 	addsd	xmm0, QWORD PTR _MaxRoundsForRocketLauncher$[ebp]
 	movsd	QWORD PTR _TotalRoundsCarryable$[ebp], xmm0
 
-; 86   : 
-; 87   :   double NumSlugs      = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_rail_gun);
+; 87   : 
+; 88   :   double NumSlugs      = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_rail_gun);
 
 	push	6
 	mov	ecx, DWORD PTR _pBot$[ebp]
@@ -6203,7 +6284,7 @@ _pBot$ = 8						; size = 4
 	cvtsi2sd xmm0, eax
 	movsd	QWORD PTR _NumSlugs$[ebp], xmm0
 
-; 88   :   double NumCartridges = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_shotgun);
+; 89   :   double NumCartridges = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_shotgun);
 
 	push	8
 	mov	ecx, DWORD PTR _pBot$[ebp]
@@ -6213,7 +6294,7 @@ _pBot$ = 8						; size = 4
 	cvtsi2sd xmm0, eax
 	movsd	QWORD PTR _NumCartridges$[ebp], xmm0
 
-; 89   :   double NumRockets    = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_rocket_launcher);
+; 90   :   double NumRockets    = (double)pBot->GetWeaponSys()->GetAmmoRemainingForWeapon(type_rocket_launcher);
 
 	push	7
 	mov	ecx, DWORD PTR _pBot$[ebp]
@@ -6223,17 +6304,17 @@ _pBot$ = 8						; size = 4
 	cvtsi2sd xmm0, eax
 	movsd	QWORD PTR _NumRockets$[ebp], xmm0
 
-; 90   : 
-; 91   :   //the value of the tweaker (must be in the range 0-1) indicates how much
-; 92   :   //desirability value is returned even if a bot has not picked up any weapons.
-; 93   :   //(it basically adds in an amount for a bot's persistent weapon -- the blaster)
-; 94   :   const double Tweaker = 0.1;
+; 91   : 
+; 92   :   //the value of the tweaker (must be in the range 0-1) indicates how much
+; 93   :   //desirability value is returned even if a bot has not picked up any weapons.
+; 94   :   //(it basically adds in an amount for a bot's persistent weapon -- the blaster)
+; 95   :   const double Tweaker = 0.1;
 
 	movsd	xmm0, QWORD PTR __real@3fb999999999999a
 	movsd	QWORD PTR _Tweaker$[ebp], xmm0
 
-; 95   : 
-; 96   :   return Tweaker + (1-Tweaker)*(NumSlugs + NumCartridges + NumRockets)/(MaxRoundsForShotgun + MaxRoundsForRailgun + MaxRoundsForRocketLauncher);
+; 96   : 
+; 97   :   return Tweaker + (1-Tweaker)*(NumSlugs + NumCartridges + NumRockets)/(MaxRoundsForShotgun + MaxRoundsForRailgun + MaxRoundsForRocketLauncher);
 
 	movsd	xmm0, QWORD PTR _NumSlugs$[ebp]
 	addsd	xmm0, QWORD PTR _NumCartridges$[ebp]
@@ -6247,7 +6328,7 @@ _pBot$ = 8						; size = 4
 	movsd	QWORD PTR tv148[ebp], xmm0
 	fld	QWORD PTR tv148[ebp]
 
-; 97   : }
+; 98   : }
 
 	pop	edi
 	add	esp, 72					; 00000048H
@@ -6269,7 +6350,7 @@ _pBot$ = 8						; size = 4
 _WeaponType$ = 12					; size = 4
 ?IndividualWeaponStrength@Raven_Feature@@SANPAVRaven_Bot@@H@Z PROC ; Raven_Feature::IndividualWeaponStrength
 
-; 63   : {
+; 64   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6283,8 +6364,8 @@ _WeaponType$ = 12					; size = 4
 	mov	DWORD PTR [ebp-8], eax
 	mov	DWORD PTR [ebp-4], eax
 
-; 64   :   //grab a pointer to the gun (if the bot owns an instance)
-; 65   :   Raven_Weapon* wp = pBot->GetWeaponSys()->GetWeaponFromInventory(WeaponType);
+; 65   :   //grab a pointer to the gun (if the bot owns an instance)
+; 66   :   Raven_Weapon* wp = pBot->GetWeaponSys()->GetWeaponFromInventory(WeaponType);
 
 	mov	eax, DWORD PTR _WeaponType$[ebp]
 	push	eax
@@ -6294,14 +6375,14 @@ _WeaponType$ = 12					; size = 4
 	call	?GetWeaponFromInventory@Raven_WeaponSystem@@QAEPAVRaven_Weapon@@H@Z ; Raven_WeaponSystem::GetWeaponFromInventory
 	mov	DWORD PTR _wp$[ebp], eax
 
-; 66   : 
-; 67   :   if (wp)
+; 67   : 
+; 68   :   if (wp)
 
 	cmp	DWORD PTR _wp$[ebp], 0
 	je	SHORT $LN2@Individual
 
-; 68   :   {
-; 69   :     return wp->NumRoundsRemaining() / GetMaxRoundsBotCanCarryForWeapon(WeaponType);
+; 69   :   {
+; 70   :     return wp->NumRoundsRemaining() / GetMaxRoundsBotCanCarryForWeapon(WeaponType);
 
 	mov	ecx, DWORD PTR _wp$[ebp]
 	call	?NumRoundsRemaining@Raven_Weapon@@QBEHXZ ; Raven_Weapon::NumRoundsRemaining
@@ -6318,21 +6399,21 @@ _WeaponType$ = 12					; size = 4
 	fld	QWORD PTR tv87[ebp]
 	jmp	SHORT $LN3@Individual
 
-; 70   :   }
+; 71   :   }
 
 	jmp	SHORT $LN3@Individual
 $LN2@Individual:
 
-; 71   : 
-; 72   :   else
-; 73   :   {
-; 74   :    return 0.0;
+; 72   : 
+; 73   :   else
+; 74   :   {
+; 75   :    return 0.0;
 
 	fldz
 $LN3@Individual:
 
-; 75   :   }
-; 76   : }
+; 76   :   }
+; 77   : }
 
 	add	esp, 28					; 0000001cH
 	cmp	ebp, esp
@@ -6353,7 +6434,7 @@ _pBot$ = 8						; size = 4
 _ItemType$ = 12						; size = 4
 ?DistanceToItem@Raven_Feature@@SANPAVRaven_Bot@@H@Z PROC ; Raven_Feature::DistanceToItem
 
-; 11   : {
+; 12   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6364,8 +6445,8 @@ _ItemType$ = 12						; size = 4
 	mov	eax, -858993460				; ccccccccH
 	rep stosd
 
-; 12   :   //determine the distance to the closest instance of the item type
-; 13   :   double DistanceToItem = pBot->GetPathPlanner()->GetCostToClosestItem(ItemType);
+; 13   :   //determine the distance to the closest instance of the item type
+; 14   :   double DistanceToItem = pBot->GetPathPlanner()->GetCostToClosestItem(ItemType);
 
 	mov	eax, DWORD PTR _ItemType$[ebp]
 	push	eax
@@ -6375,10 +6456,10 @@ _ItemType$ = 12						; size = 4
 	call	?GetCostToClosestItem@Raven_PathPlanner@@QBENI@Z ; Raven_PathPlanner::GetCostToClosestItem
 	fstp	QWORD PTR _DistanceToItem$[ebp]
 
-; 14   : 
-; 15   :   //if the previous method returns a negative value then there is no item of
-; 16   :   //the specified type present in the game world at this time.
-; 17   :   if (DistanceToItem < 0 ) return 1;
+; 15   : 
+; 16   :   //if the previous method returns a negative value then there is no item of
+; 17   :   //the specified type present in the game world at this time.
+; 18   :   if (DistanceToItem < 0 ) return 1;
 
 	xorps	xmm0, xmm0
 	comisd	xmm0, QWORD PTR _DistanceToItem$[ebp]
@@ -6387,21 +6468,21 @@ _ItemType$ = 12						; size = 4
 	jmp	SHORT $LN1@DistanceTo
 $LN2@DistanceTo:
 
-; 18   : 
-; 19   :   //these values represent cutoffs. Any distance over MaxDistance results in
-; 20   :   //a value of 0, and value below MinDistance results in a value of 1
-; 21   :   const double MaxDistance = 500.0;
+; 19   : 
+; 20   :   //these values represent cutoffs. Any distance over MaxDistance results in
+; 21   :   //a value of 0, and value below MinDistance results in a value of 1
+; 22   :   const double MaxDistance = 500.0;
 
 	movsd	xmm0, QWORD PTR __real@407f400000000000
 	movsd	QWORD PTR _MaxDistance$[ebp], xmm0
 
-; 22   :   const double MinDistance = 50.0;
+; 23   :   const double MinDistance = 50.0;
 
 	movsd	xmm0, QWORD PTR __real@4049000000000000
 	movsd	QWORD PTR _MinDistance$[ebp], xmm0
 
-; 23   : 
-; 24   :   Clamp(DistanceToItem, MinDistance, MaxDistance);
+; 24   : 
+; 25   :   Clamp(DistanceToItem, MinDistance, MaxDistance);
 
 	lea	ecx, DWORD PTR _MaxDistance$[ebp]
 	push	ecx
@@ -6412,8 +6493,8 @@ $LN2@DistanceTo:
 	call	??$Clamp@NNN@@YAXAANABN1@Z		; Clamp<double,double,double>
 	add	esp, 12					; 0000000cH
 
-; 25   : 
-; 26   :   return DistanceToItem / MaxDistance;
+; 26   : 
+; 27   :   return DistanceToItem / MaxDistance;
 
 	movsd	xmm0, QWORD PTR _DistanceToItem$[ebp]
 	divsd	xmm0, QWORD PTR __real@407f400000000000
@@ -6421,7 +6502,7 @@ $LN2@DistanceTo:
 	fld	QWORD PTR tv87[ebp]
 $LN1@DistanceTo:
 
-; 27   : }
+; 28   : }
 
 	push	edx
 	mov	ecx, ebp
@@ -6503,7 +6584,7 @@ tv77 = -8						; size = 8
 _pBot$ = 8						; size = 4
 ?Health@Raven_Feature@@SANPAVRaven_Bot@@@Z PROC		; Raven_Feature::Health
 
-; 103  : {
+; 104  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -6514,7 +6595,7 @@ _pBot$ = 8						; size = 4
 	mov	DWORD PTR [ebp-8], eax
 	mov	DWORD PTR [ebp-4], eax
 
-; 104  :   return (double)pBot->Health() / (double)pBot->MaxHealth();
+; 105  :   return (double)pBot->Health() / (double)pBot->MaxHealth();
 
 	mov	ecx, DWORD PTR _pBot$[ebp]
 	call	?Health@Raven_Bot@@QBEHXZ		; Raven_Bot::Health
@@ -6528,8 +6609,8 @@ _pBot$ = 8						; size = 4
 	movsd	QWORD PTR tv74[ebp], xmm1
 	fld	QWORD PTR tv74[ebp]
 
-; 105  : 
-; 106  : }
+; 106  : 
+; 107  : }
 
 	add	esp, 16					; 00000010H
 	cmp	ebp, esp

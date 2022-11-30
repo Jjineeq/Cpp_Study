@@ -10,23 +10,23 @@ INCLUDELIB LIBCMTD
 INCLUDELIB OLDNAMES
 
 CONST	SEGMENT
-$SG180653 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG180654 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
-$SG172516 DB	00H
+$SG172517 DB	00H
 	ORG $+1
-$SG172514 DB	'BOT ', 00H
+$SG172515 DB	'BOT ', 00H
 	ORG $+3
-$SG172515 DB	' IS STUCK!!', 00H
-$SG181074 DB	'invalid argument', 00H
+$SG172516 DB	' IS STUCK!!', 00H
+$SG181075 DB	'invalid argument', 00H
 	ORG $+3
-$SG181075 DB	'%s', 00H
+$SG181076 DB	'%s', 00H
 	ORG $+1
-$SG181076 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG181077 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+2
-$SG181078 DB	00H, 00H
+$SG181079 DB	00H, 00H
 	ORG $+2
-$SG181077 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG181078 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -42,7 +42,7 @@ $SG181077 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG181079 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG181080 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+2
@@ -4976,11 +4976,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG181074
 	push	OFFSET $SG181075
+	push	OFFSET $SG181076
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG181076
+	push	OFFSET $SG181077
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -4990,9 +4990,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG181077
 	push	OFFSET $SG181078
 	push	OFFSET $SG181079
+	push	OFFSET $SG181080
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx
@@ -5664,7 +5664,7 @@ ___formal$ = 16						; size = 4
 ; 517  :     _Elem* _Ptrdest = static_cast<_Elem*>(_calloc_dbg(_Count, sizeof(_Elem), _CRT_BLOCK, __FILE__, __LINE__));
 
 	push	517					; 00000205H
-	push	OFFSET $SG180653
+	push	OFFSET $SG180654
 	push	2
 	push	1
 	mov	ecx, DWORD PTR __Count$[ebp]
@@ -24329,7 +24329,7 @@ _this$ = -4						; size = 4
 	call	?SetTarget@Raven_Steering@@QAEXUVector2D@@@Z ; Raven_Steering::SetTarget
 
 ; 45   : 
-; 46   :   m_pOwner->GetSteering()->SeekOn(); 
+; 46   :   m_pOwner->GetSteering()->SeekOn();
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+8]
@@ -24458,11 +24458,11 @@ _this$ = -4						; size = 4
 	mov	ecx, DWORD PTR [edx+8]
 	call	?ID@BaseGameEntity@@QBEHXZ		; BaseGameEntity::ID
 	mov	DWORD PTR $T1[ebp], eax
+	push	OFFSET $SG172517
 	push	OFFSET $SG172516
-	push	OFFSET $SG172515
 	lea	eax, DWORD PTR $T1[ebp]
 	push	eax
-	push	OFFSET $SG172514
+	push	OFFSET $SG172515
 	call	?Instance@DebugConsole@@SAPAV1@XZ	; DebugConsole::Instance
 	mov	ecx, eax
 	call	??$?6$$BY04D@DebugConsole@@QAEAAV0@AAY04$$CBD@Z ; DebugConsole::operator<<<char [5]>

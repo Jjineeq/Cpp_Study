@@ -25,16 +25,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG183725 DB	'invalid argument', 00H
+$SG183726 DB	'invalid argument', 00H
 	ORG $+3
-$SG183726 DB	'%s', 00H
+$SG183727 DB	'%s', 00H
 	ORG $+1
-$SG183729 DB	00H, 00H
+$SG183730 DB	00H, 00H
 	ORG $+2
-$SG183727 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183728 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG183728 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG183729 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -50,11 +50,11 @@ $SG183728 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG183730 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG183731 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG183892 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183893 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -2382,11 +2382,11 @@ $LN4@Allocate_m:
 	je	SHORT $LN7@Allocate_m
 	jmp	SHORT $LN2@Allocate_m
 $LN7@Allocate_m:
-	push	OFFSET $SG183725
 	push	OFFSET $SG183726
+	push	OFFSET $SG183727
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG183727
+	push	OFFSET $SG183728
 	push	2
 	call	__CrtDbgReport
 	add	esp, 24					; 00000018H
@@ -2396,9 +2396,9 @@ $LN7@Allocate_m:
 $LN12@Allocate_m:
 	push	0
 	push	135					; 00000087H
-	push	OFFSET $SG183728
 	push	OFFSET $SG183729
 	push	OFFSET $SG183730
+	push	OFFSET $SG183731
 	call	__invalid_parameter
 	add	esp, 20					; 00000014H
 	xor	ecx, ecx

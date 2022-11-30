@@ -269,7 +269,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
 
     path.push_back(nd);
 
-    while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0) && (path.length() < 6))
+    while (((nd != m_iSource) && (m_ShortestPathTree[nd] != 0)) || (path.length() < 6))
     {
         nd = m_ShortestPathTree[nd]->From();
         path.push_front(nd);
@@ -469,7 +469,7 @@ Graph_SearchDijkstras_TS<graph_type, termination_condition>::GetPathToTarget()co
   if (m_iTarget < 0)  return path;    
 
   int nd = m_iTarget;
-
+  
   path.push_back(nd);
     
   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))

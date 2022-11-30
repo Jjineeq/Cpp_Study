@@ -213,6 +213,9 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="goals\Goal_MoveToPosition.cpp" />
+    <ClCompile Include="goals\Goal_Respawn.cpp" />
+    <ClCompile Include="goals\RespawnGoal_Evaluator.cpp" />
     <ClCompile Include="main.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -344,11 +347,6 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='boundschecker|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <ClCompile Include="goals\Goal_HuntTarget.cpp">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='boundschecker|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="goals\Goal_MoveToPosition.cpp">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='boundschecker|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -530,6 +528,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="goals\Goal_MoveToPosition.h" />
+    <ClInclude Include="goals\Goal_Respawn.h" />
+    <ClInclude Include="goals\RespawnGoal_Evaluator.h" />
     <ClInclude Include="Raven_Bot.h" />
     <ClInclude Include="Raven_Game.h" />
     <ClInclude Include="Raven_Map.h" />
@@ -567,7 +568,6 @@
     <ClInclude Include="goals\Goal_FollowPath.h" />
     <ClInclude Include="goals\Goal_GetItem.h" />
     <ClInclude Include="goals\Goal_HuntTarget.h" />
-    <ClInclude Include="goals\Goal_MoveToPosition.h" />
     <ClInclude Include="goals\Goal_NegotiateDoor.h" />
     <ClInclude Include="goals\Goal_Think.h" />
     <ClInclude Include="goals\AttackTargetGoal_Evaluator.h" />

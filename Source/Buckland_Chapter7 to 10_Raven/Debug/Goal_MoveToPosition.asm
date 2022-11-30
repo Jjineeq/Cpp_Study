@@ -25,16 +25,16 @@ CONST	SEGMENT
 	DD	0ffff00H
 	DD	0c8c8c8H
 	DD	0e6e6ffH
-$SG184015 DB	'invalid argument', 00H
+$SG183985 DB	'invalid argument', 00H
 	ORG $+3
-$SG184016 DB	'%s', 00H
+$SG183986 DB	'%s', 00H
 	ORG $+1
-$SG184019 DB	00H, 00H
+$SG183989 DB	00H, 00H
 	ORG $+2
-$SG184017 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG183987 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xmemory', 00H
 	ORG $+6
-$SG184018 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
+$SG183988 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'g', 00H, 'r', 00H, 'a', 00H, 'm', 00H, ' ', 00H, 'F', 00H, 'i'
 	DB	00H, 'l', 00H, 'e', 00H, 's', 00H, '\', 00H, 'M', 00H, 'i', 00H
 	DB	'c', 00H, 'r', 00H, 'o', 00H, 's', 00H, 'o', 00H, 'f', 00H, 't'
@@ -50,11 +50,11 @@ $SG184018 DB	'C', 00H, ':', 00H, '\', 00H, 'P', 00H, 'r', 00H, 'o', 00H
 	DB	'c', 00H, 'l', 00H, 'u', 00H, 'd', 00H, 'e', 00H, '\', 00H, 'x'
 	DB	00H, 'm', 00H, 'e', 00H, 'm', 00H, 'o', 00H, 'r', 00H, 'y', 00H
 	DB	00H, 00H
-$SG184020 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
+$SG183990 DB	'"', 00H, 'i', 00H, 'n', 00H, 'v', 00H, 'a', 00H, 'l', 00H
 	DB	'i', 00H, 'd', 00H, ' ', 00H, 'a', 00H, 'r', 00H, 'g', 00H, 'u'
 	DB	00H, 'm', 00H, 'e', 00H, 'n', 00H, 't', 00H, '"', 00H, 00H, 00H
 	ORG $+6
-$SG184182 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
+$SG184152 DB	'C:\Program Files\Microsoft Visual Studio\2022\Community\'
 	DB	'VC\Tools\MSVC\14.34.31933\include\xlocale', 00H
 CONST	ENDS
 PUBLIC	?__empty_global_delete@@YAXPAX@Z		; __empty_global_delete
@@ -1581,7 +1581,7 @@ _this$ = -4						; size = 4
 ?Render@Goal_MoveToPosition@@UAEXXZ PROC		; Goal_MoveToPosition::Render
 ; _this$ = ecx
 
-; 95   : {
+; 91   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -1589,27 +1589,27 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 96   :   //forward the request to the subgoals
-; 97   :   Goal_Composite<Raven_Bot>::Render();
+; 92   :   //forward the request to the subgoals
+; 93   :   Goal_Composite<Raven_Bot>::Render();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?Render@?$Goal_Composite@VRaven_Bot@@@@UAEXXZ ; Goal_Composite<Raven_Bot>::Render
 
-; 98   :   
-; 99   :   //draw a bullseye
-; 100  :   gdi->BlackPen();
+; 94   :   
+; 95   :   //draw a bullseye
+; 96   :   gdi->BlackPen();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?BlackPen@Cgdi@@QAEXXZ			; Cgdi::BlackPen
 
-; 101  :   gdi->BlueBrush();
+; 97   :   gdi->BlueBrush();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?BlueBrush@Cgdi@@QAEXXZ			; Cgdi::BlueBrush
 
-; 102  :   gdi->Circle(m_vDestination, 6);
+; 98   :   gdi->Circle(m_vDestination, 6);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __real@4018000000000000
@@ -1630,19 +1630,19 @@ _this$ = -4						; size = 4
 	mov	ecx, eax
 	call	?Circle@Cgdi@@QAEXUVector2D@@N@Z	; Cgdi::Circle
 
-; 103  :   gdi->RedBrush();
+; 99   :   gdi->RedBrush();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?RedBrush@Cgdi@@QAEXXZ			; Cgdi::RedBrush
 
-; 104  :   gdi->RedPen();
+; 100  :   gdi->RedPen();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?RedPen@Cgdi@@QAEXXZ			; Cgdi::RedPen
 
-; 105  :   gdi->Circle(m_vDestination, 4);
+; 101  :   gdi->Circle(m_vDestination, 4);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __real@4010000000000000
@@ -1663,19 +1663,19 @@ _this$ = -4						; size = 4
 	mov	ecx, eax
 	call	?Circle@Cgdi@@QAEXUVector2D@@N@Z	; Cgdi::Circle
 
-; 106  :   gdi->YellowBrush();
+; 102  :   gdi->YellowBrush();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?YellowBrush@Cgdi@@QAEXXZ		; Cgdi::YellowBrush
 
-; 107  :   gdi->YellowPen();
+; 103  :   gdi->YellowPen();
 
 	call	?Instance@Cgdi@@SAPAV1@XZ		; Cgdi::Instance
 	mov	ecx, eax
 	call	?YellowPen@Cgdi@@QAEXXZ			; Cgdi::YellowPen
 
-; 108  :   gdi->Circle(m_vDestination, 2);
+; 104  :   gdi->Circle(m_vDestination, 2);
 
 	sub	esp, 8
 	movsd	xmm0, QWORD PTR __real@4000000000000000
@@ -1696,7 +1696,7 @@ _this$ = -4						; size = 4
 	mov	ecx, eax
 	call	?Circle@Cgdi@@QAEXUVector2D@@N@Z	; Cgdi::Circle
 
-; 109  : }
+; 105  : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -1722,7 +1722,7 @@ _msg$ = 8						; size = 4
 ?HandleMessage@Goal_MoveToPosition@@UAE_NABUTelegram@@@Z PROC ; Goal_MoveToPosition::HandleMessage
 ; _this$ = ecx
 
-; 58   : {
+; 54   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -1748,8 +1748,8 @@ _msg$ = 8						; size = 4
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 59   :   //first, pass the message down the goal hierarchy
-; 60   :   bool bHandled = ForwardMessageToFrontMostSubgoal(msg);
+; 55   :   //first, pass the message down the goal hierarchy
+; 56   :   bool bHandled = ForwardMessageToFrontMostSubgoal(msg);
 
 	mov	eax, DWORD PTR _msg$[ebp]
 	push	eax
@@ -1757,16 +1757,16 @@ _msg$ = 8						; size = 4
 	call	?ForwardMessageToFrontMostSubgoal@?$Goal_Composite@VRaven_Bot@@@@IAE_NABUTelegram@@@Z ; Goal_Composite<Raven_Bot>::ForwardMessageToFrontMostSubgoal
 	mov	BYTE PTR _bHandled$[ebp], al
 
-; 61   : 
-; 62   :   //if the msg was not handled, test to see if this goal can handle it
-; 63   :   if (bHandled == false)
+; 57   : 
+; 58   :   //if the msg was not handled, test to see if this goal can handle it
+; 59   :   if (bHandled == false)
 
 	movzx	ecx, BYTE PTR _bHandled$[ebp]
 	test	ecx, ecx
 	jne	$LN4@HandleMess
 
-; 64   :   {
-; 65   :     switch(msg.Msg)
+; 60   :   {
+; 61   :     switch(msg.Msg)
 
 	mov	edx, DWORD PTR _msg$[ebp]
 	mov	eax, DWORD PTR [edx+8]
@@ -1778,17 +1778,17 @@ _msg$ = 8						; size = 4
 	jmp	$LN7@HandleMess
 $LN5@HandleMess:
 
-; 66   :     {
-; 67   :     case Msg_PathReady:
-; 68   : 
-; 69   :       //clear any existing goals
-; 70   :       RemoveAllSubgoals();
+; 62   :     {
+; 63   :     case Msg_PathReady:
+; 64   : 
+; 65   :       //clear any existing goals
+; 66   :       RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 71   : 
-; 72   :       AddSubgoal(new Goal_FollowPath(m_pOwner,
+; 67   : 
+; 68   :       AddSubgoal(new Goal_FollowPath(m_pOwner,
 
 	push	40					; 00000028H
 	call	??2@YAPAXI@Z				; operator new
@@ -1832,47 +1832,47 @@ $LN10@HandleMess:
 	cmp	esi, esp
 	call	__RTC_CheckEsp
 
-; 73   :                                      m_pOwner->GetPathPlanner()->GetPath()));
-; 74   : 
-; 75   :       return true; //msg handled
+; 69   :                                      m_pOwner->GetPathPlanner()->GetPath()));
+; 70   : 
+; 71   :       return true; //msg handled
 
 	mov	al, 1
 	jmp	SHORT $LN1@HandleMess
 $LN6@HandleMess:
 
-; 76   : 
-; 77   : 
-; 78   :     case Msg_NoPathAvailable:
-; 79   : 
-; 80   :       m_iStatus = failed;
+; 72   : 
+; 73   : 
+; 74   :     case Msg_NoPathAvailable:
+; 75   : 
+; 76   :       m_iStatus = failed;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 3
 
-; 81   : 
-; 82   :       return true; //msg handled
+; 77   : 
+; 78   :       return true; //msg handled
 
 	mov	al, 1
 	jmp	SHORT $LN1@HandleMess
 $LN7@HandleMess:
 
-; 83   : 
-; 84   :     default: return false;
+; 79   : 
+; 80   :     default: return false;
 
 	xor	al, al
 	jmp	SHORT $LN1@HandleMess
 $LN4@HandleMess:
 
-; 85   :     }
-; 86   :   }
-; 87   : 
-; 88   :   //handled by subgoals
-; 89   :   return true;
+; 81   :     }
+; 82   :   }
+; 83   : 
+; 84   :   //handled by subgoals
+; 85   :   return true;
 
 	mov	al, 1
 $LN1@HandleMess:
 
-; 90   : }
+; 86   : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx
@@ -1917,7 +1917,7 @@ _this$ = -4						; size = 4
 ?Process@Goal_MoveToPosition@@UAEHXZ PROC		; Goal_MoveToPosition::Process
 ; _this$ = ecx
 
-; 42   : {
+; 38   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -1925,35 +1925,35 @@ _this$ = -4						; size = 4
 	mov	DWORD PTR [ebp-4], -858993460		; ccccccccH
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 43   :   //if status is inactive, call Activate()
-; 44   :   ActivateIfInactive();
+; 39   :   //if status is inactive, call Activate()
+; 40   :   ActivateIfInactive();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ActivateIfInactive@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ActivateIfInactive
 
-; 45   :     
-; 46   :   //process the subgoals
-; 47   :   m_iStatus = ProcessSubgoals();
+; 41   :     
+; 42   :   //process the subgoals
+; 43   :   m_iStatus = ProcessSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ProcessSubgoals@?$Goal_Composite@VRaven_Bot@@@@IAEHXZ ; Goal_Composite<Raven_Bot>::ProcessSubgoals
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [ecx+12], eax
 
-; 48   : 
-; 49   :   //if any of the subgoals have failed then this goal re-plans
-; 50   :   ReactivateIfFailed();
+; 44   : 
+; 45   :   //if any of the subgoals have failed then this goal re-plans
+; 46   :   ReactivateIfFailed();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?ReactivateIfFailed@?$Goal@VRaven_Bot@@@@IAEXXZ ; Goal<Raven_Bot>::ReactivateIfFailed
 
-; 51   : 
-; 52   :   return m_iStatus;
+; 47   : 
+; 48   :   return m_iStatus;
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR [edx+12]
 
-; 53   : }
+; 49   : }
 
 	add	esp, 4
 	cmp	ebp, esp
@@ -1974,7 +1974,7 @@ __$EHRec$ = -12						; size = 12
 ?Activate@Goal_MoveToPosition@@UAEXXZ PROC		; Goal_MoveToPosition::Activate
 ; _this$ = ecx
 
-; 19   : {
+; 17   : {
 
 	push	ebp
 	mov	ebp, esp
@@ -1996,26 +1996,26 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 20   :   m_iStatus = active;
+; 18   :   m_iStatus = active;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax+12], 0
 
-; 21   :   
-; 22   :   //make sure the subgoal list is clear.
-; 23   :   RemoveAllSubgoals();
+; 19   :   
+; 20   :   //make sure the subgoal list is clear.
+; 21   :   RemoveAllSubgoals();
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	?RemoveAllSubgoals@?$Goal_Composite@VRaven_Bot@@@@QAEXXZ ; Goal_Composite<Raven_Bot>::RemoveAllSubgoals
 
-; 24   : 
-; 25   :   //requests a path to the target position from the path planner. Because, for
-; 26   :   //demonstration purposes, the Raven path planner uses time-slicing when 
-; 27   :   //processing the path requests the bot may have to wait a few update cycles
-; 28   :   //before a path is calculated. Consequently, for appearances sake, it just
-; 29   :   //seeks directly to the target position whilst it's awaiting notification
-; 30   :   //that the path planning request has succeeded/failed
-; 31   :   if (m_pOwner->GetPathPlanner()->RequestPathToPosition(m_vDestination))
+; 22   : 
+; 23   :   //requests a path to the target position from the path planner. Because, for
+; 24   :   //demonstration purposes, the Raven path planner uses time-slicing when 
+; 25   :   //processing the path requests the bot may have to wait a few update cycles
+; 26   :   //before a path is calculated. Consequently, for appearances sake, it just
+; 27   :   //seeks directly to the target position whilst it's awaiting notification
+; 28   :   //that the path planning request has succeeded/failed
+; 29   :   if (m_pOwner->GetPathPlanner()->RequestPathToPosition(m_vDestination))
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 32					; 00000020H
@@ -2038,9 +2038,8 @@ __$EHRec$ = -12						; size = 12
 	test	eax, eax
 	je	SHORT $LN1@Activate
 
-; 32   :   {
-; 33   : 
-; 34   :     AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_vDestination));
+; 30   :   {
+; 31   :     AddSubgoal(new Goal_SeekToPosition(m_pOwner, m_vDestination));
 
 	push	48					; 00000030H
 	call	??2@YAPAXI@Z				; operator new
@@ -2086,9 +2085,8 @@ $LN5@Activate:
 	call	__RTC_CheckEsp
 $LN1@Activate:
 
-; 35   :     
-; 36   :   }
-; 37   : }
+; 32   :   }
+; 33   : }
 
 	mov	ecx, DWORD PTR __$EHRec$[ebp]
 	mov	DWORD PTR fs:0, ecx

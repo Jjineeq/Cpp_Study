@@ -11,39 +11,43 @@
 #include "Goal_Wander.h"
 #include "Raven_Goal_Types.h"
 #include "Goal_AttackTarget.h"
+#include "Goal_Respawn.h"
 
 
 #include "GetWeaponGoal_Evaluator.h"
 #include "GetHealthGoal_Evaluator.h"
 #include "ExploreGoal_Evaluator.h"
 #include "AttackTargetGoal_Evaluator.h"
+#include "RespawnGoal_Evaluator.h"
 
 
-Goal_Think::Goal_Think(Raven_Bot* pBot):Goal_Composite<Raven_Bot>(pBot, goal_think)
+Goal_Think::Goal_Think(Raven_Bot* pBot) :Goal_Composite<Raven_Bot>(pBot, goal_think)
 {
-  
-  //these biases could be loaded in from a script on a per bot basis
-  //but for now we'll just give them some random values
-  const double LowRangeOfBias = 0.5;
-  const double HighRangeOfBias = 1.5;
 
-  double HealthBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-  double ShotgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-  double RocketLauncherBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-  double RailgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-  double ExploreBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
-  double AttackBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    //these biases could be loaded in from a script on a per bot basis
+    //but for now we'll just give them some random values
+    const double LowRangeOfBias = 0.5;
+    const double HighRangeOfBias = 1.5;
 
-  //create the evaluator objects
-  m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
-  m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
-  m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
-                                                     type_shotgun));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
-                                                     type_rail_gun));
-  m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
-                                                     type_rocket_launcher));
+    double HealthBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double ShotgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double RocketLauncherBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double RailgunBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double ExploreBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double AttackBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+    double RespawnBias = RandInRange(LowRangeOfBias, HighRangeOfBias);
+
+    //create the evaluator objects
+    m_Evaluators.push_back(new GetHealthGoal_Evaluator(HealthBias));
+    m_Evaluators.push_back(new ExploreGoal_Evaluator(ExploreBias));
+    m_Evaluators.push_back(new AttackTargetGoal_Evaluator(AttackBias));
+    m_Evaluators.push_back(new GetWeaponGoal_Evaluator(ShotgunBias,
+        type_shotgun));
+    m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RailgunBias,
+        type_rail_gun));
+    m_Evaluators.push_back(new GetWeaponGoal_Evaluator(RocketLauncherBias,
+        type_rocket_launcher));
+    m_Evaluators.push_back(new RespawnGoal_Evaluator(RespawnBias));
 }
 
 //----------------------------- dtor ------------------------------------------
@@ -164,6 +168,15 @@ void Goal_Think::AddGoal_AttackTarget()
     RemoveAllSubgoals();
     AddSubgoal( new Goal_AttackTarget(m_pOwner));
   }
+}
+
+void Goal_Think::AddGoal_Respawn()
+{
+    if (notPresent(goal_respawn))
+    {
+        RemoveAllSubgoals();
+        AddSubgoal(new Goal_Respawn(m_pOwner));
+    }
 }
 
 //-------------------------- Queue Goals --------------------------------------

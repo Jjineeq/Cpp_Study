@@ -16649,7 +16649,7 @@ $LN4@GetPathToT:
 	mov	ecx, DWORD PTR [eax+64]
 	mov	DWORD PTR _nd$[ebp], ecx
 
-; 472  : 
+; 472  :   
 ; 473  :   path.push_back(nd);
 
 	lea	edx, DWORD PTR _nd$[ebp]

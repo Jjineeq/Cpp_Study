@@ -6,6 +6,7 @@
 #include "../Raven_ObjectEnumerations.h"
 #include "../lua/Raven_Scriptor.h"
 
+
 //-----------------------------------------------------------------------------
 double Raven_Feature::DistanceToItem(Raven_Bot* pBot, int ItemType)
 {
@@ -103,4 +104,14 @@ double Raven_Feature::Health(Raven_Bot* pBot)
 {
   return (double)pBot->Health() / (double)pBot->MaxHealth();
 
+}
+
+double Raven_Feature::MaxHealth(Raven_Bot* pBot)
+{
+    return (double)pBot->MaxHealth();
+}
+
+double Raven_Feature::Damage(Raven_Bot* pBot)
+{
+  return (double)pBot->MaxHealth() - (double)pBot->Health();
 }
