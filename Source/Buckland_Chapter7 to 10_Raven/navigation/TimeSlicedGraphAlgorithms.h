@@ -269,6 +269,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetSubPath()const
 
     path.push_back(nd);
 
+    // 찾은 길이가 6 미만이거나 목적지를 찾으면 path를 리턴
     while (((nd != m_iSource) && (m_ShortestPathTree[nd] != 0)) || (path.length() < 6))
     {
         nd = m_ShortestPathTree[nd]->From();
