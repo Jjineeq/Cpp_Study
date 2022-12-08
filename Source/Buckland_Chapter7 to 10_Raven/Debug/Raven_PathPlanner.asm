@@ -16299,7 +16299,7 @@ _this$ = -4						; size = 4
 ?GetCostToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBENXZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::GetCostToTarget, COMDAT
 ; _this$ = ecx
 
-; 387  :   double            GetCostToTarget()const{return m_CostToThisNode[m_iTarget];}
+; 388  :   double            GetCostToTarget()const{return m_CostToThisNode[m_iTarget];}
 
 	push	ebp
 	mov	ebp, esp
@@ -16337,7 +16337,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?GetPathAsPathEdges@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::GetPathAsPathEdges, COMDAT
 ; _this$ = ecx
 
-; 493  : {
+; 494  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -16361,15 +16361,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	DWORD PTR $T2[ebp], 0
 
-; 494  :   std::list<PathEdge> path;
+; 495  :   std::list<PathEdge> path;
 
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 495  : 
-; 496  :   //just return an empty path if no target or no path found
-; 497  :   if (m_iTarget < 0)  return path;    
+; 496  : 
+; 497  :   //just return an empty path if no target or no path found
+; 498  :   if (m_iTarget < 0)  return path;    
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+64], 0
@@ -16388,16 +16388,16 @@ ___$ReturnUdt$ = 8					; size = 4
 	jmp	$LN1@GetPathAsP
 $LN4@GetPathAsP:
 
-; 498  : 
-; 499  :   int nd = m_iTarget;
+; 499  : 
+; 500  :   int nd = m_iTarget;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+64]
 	mov	DWORD PTR _nd$[ebp], ecx
 $LN2@GetPathAsP:
 
-; 500  :     
-; 501  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
+; 501  :     
+; 502  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR _nd$[ebp]
@@ -16411,8 +16411,8 @@ $LN2@GetPathAsP:
 	cmp	DWORD PTR [eax], 0
 	je	$LN3@GetPathAsP
 
-; 502  :   {
-; 503  :     path.push_front(PathEdge(m_Graph.GetNode(m_ShortestPathTree[nd]->From()).Pos(),
+; 503  :   {
+; 504  :     path.push_front(PathEdge(m_Graph.GetNode(m_ShortestPathTree[nd]->From()).Pos(),
 
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -16486,11 +16486,11 @@ $LN2@GetPathAsP:
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	?push_front@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::push_front
 
-; 504  :                              m_Graph.GetNode(m_ShortestPathTree[nd]->To()).Pos(),
-; 505  :                              m_ShortestPathTree[nd]->Flags(),
-; 506  :                              m_ShortestPathTree[nd]->IDofIntersectingEntity()));
-; 507  :     
-; 508  :     nd = m_ShortestPathTree[nd]->From();
+; 505  :                              m_Graph.GetNode(m_ShortestPathTree[nd]->To()).Pos(),
+; 506  :                              m_ShortestPathTree[nd]->Flags(),
+; 507  :                              m_ShortestPathTree[nd]->IDofIntersectingEntity()));
+; 508  :     
+; 509  :     nd = m_ShortestPathTree[nd]->From();
 
 	mov	ecx, DWORD PTR _nd$[ebp]
 	push	ecx
@@ -16501,13 +16501,13 @@ $LN2@GetPathAsP:
 	call	?From@GraphEdge@@QBEHXZ			; GraphEdge::From
 	mov	DWORD PTR _nd$[ebp], eax
 
-; 509  :   }
+; 510  :   }
 
 	jmp	$LN2@GetPathAsP
 $LN3@GetPathAsP:
 
-; 510  : 
-; 511  :   return path;
+; 511  : 
+; 512  :   return path;
 
 	lea	edx, DWORD PTR _path$[ebp]
 	push	edx
@@ -16522,7 +16522,7 @@ $LN3@GetPathAsP:
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN1@GetPathAsP:
 
-; 512  : }
+; 513  : }
 
 	push	edx
 	mov	ecx, ebp
@@ -16591,7 +16591,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?GetPathToTarget@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$list@HV?$allocator@H@std@@@std@@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::GetPathToTarget, COMDAT
 ; _this$ = ecx
 
-; 465  : {
+; 466  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -16615,15 +16615,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	DWORD PTR $T2[ebp], 0
 
-; 466  :   std::list<int> path;
+; 467  :   std::list<int> path;
 
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??0?$list@HV?$allocator@H@std@@@std@@QAE@XZ ; std::list<int,std::allocator<int> >::list<int,std::allocator<int> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 467  : 
-; 468  :   //just return an empty path if no target or no path found
-; 469  :   if (m_iTarget < 0)  return path;    
+; 468  : 
+; 469  :   //just return an empty path if no target or no path found
+; 470  :   if (m_iTarget < 0)  return path;    
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+64], 0
@@ -16642,15 +16642,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	jmp	$LN1@GetPathToT
 $LN4@GetPathToT:
 
-; 470  : 
-; 471  :   int nd = m_iTarget;
+; 471  : 
+; 472  :   int nd = m_iTarget;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+64]
 	mov	DWORD PTR _nd$[ebp], ecx
 
-; 472  :   
-; 473  :   path.push_back(nd);
+; 473  :   
+; 474  :   path.push_back(nd);
 
 	lea	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -16658,8 +16658,8 @@ $LN4@GetPathToT:
 	call	?push_back@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z ; std::list<int,std::allocator<int> >::push_back
 $LN2@GetPathToT:
 
-; 474  :     
-; 475  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
+; 475  :     
+; 476  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR _nd$[ebp]
@@ -16673,8 +16673,8 @@ $LN2@GetPathToT:
 	cmp	DWORD PTR [eax], 0
 	je	SHORT $LN3@GetPathToT
 
-; 476  :   {
-; 477  :     nd = m_ShortestPathTree[nd]->From();
+; 477  :   {
+; 478  :     nd = m_ShortestPathTree[nd]->From();
 
 	mov	eax, DWORD PTR _nd$[ebp]
 	push	eax
@@ -16685,21 +16685,21 @@ $LN2@GetPathToT:
 	call	?From@GraphEdge@@QBEHXZ			; GraphEdge::From
 	mov	DWORD PTR _nd$[ebp], eax
 
-; 478  : 
-; 479  :     path.push_front(nd);
+; 479  : 
+; 480  :     path.push_front(nd);
 
 	lea	ecx, DWORD PTR _nd$[ebp]
 	push	ecx
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	?push_front@?$list@HV?$allocator@H@std@@@std@@QAEXABH@Z ; std::list<int,std::allocator<int> >::push_front
 
-; 480  :   }
+; 481  :   }
 
 	jmp	SHORT $LN2@GetPathToT
 $LN3@GetPathToT:
 
-; 481  : 
-; 482  :   return path;
+; 482  : 
+; 483  :   return path;
 
 	lea	edx, DWORD PTR _path$[ebp]
 	push	edx
@@ -16714,7 +16714,7 @@ $LN3@GetPathToT:
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN1@GetPathToT:
 
-; 483  : } 
+; 484  : } 
 
 	push	edx
 	mov	ecx, ebp
@@ -16786,7 +16786,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?GetSPT@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UBE?AV?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::GetSPT, COMDAT
 ; _this$ = ecx
 
-; 377  :   std::vector<const Edge*> GetSPT()const{return m_ShortestPathTree;}
+; 378  :   std::vector<const Edge*> GetSPT()const{return m_ShortestPathTree;}
 
 	push	ebp
 	mov	ebp, esp
@@ -16827,7 +16827,7 @@ __$EHRec$ = -12						; size = 12
 ?CycleOnce@?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UAEHXZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::CycleOnce, COMDAT
 ; _this$ = ecx
 
-; 393  : {
+; 394  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -16851,8 +16851,8 @@ __$EHRec$ = -12						; size = 12
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 394  :   //if the PQ is empty the target has not been found
-; 395  :   if (m_pPQ->empty())
+; 395  :   //if the PQ is empty the target has not been found
+; 396  :   if (m_pPQ->empty())
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+68]
@@ -16861,26 +16861,26 @@ __$EHRec$ = -12						; size = 12
 	test	ecx, ecx
 	je	SHORT $LN5@CycleOnce
 
-; 396  :   {
-; 397  :     return target_not_found;
+; 397  :   {
+; 398  :     return target_not_found;
 
 	mov	eax, 1
 	jmp	$LN1@CycleOnce
 $LN5@CycleOnce:
 
-; 398  :   }
-; 399  : 
-; 400  :   //get lowest cost node from the queue
-; 401  :   int NextClosestNode = m_pPQ->Pop();
+; 399  :   }
+; 400  : 
+; 401  :   //get lowest cost node from the queue
+; 402  :   int NextClosestNode = m_pPQ->Pop();
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [edx+68]
 	call	?Pop@?$IndexedPriorityQLow@N@@QAEHXZ	; IndexedPriorityQLow<double>::Pop
 	mov	DWORD PTR _NextClosestNode$[ebp], eax
 
-; 402  : 
-; 403  :   //move this node from the frontier to the spanning tree
-; 404  :   m_ShortestPathTree[NextClosestNode] = m_SearchFrontier[NextClosestNode];
+; 403  : 
+; 404  :   //move this node from the frontier to the spanning tree
+; 405  :   m_ShortestPathTree[NextClosestNode] = m_SearchFrontier[NextClosestNode];
 
 	mov	eax, DWORD PTR _NextClosestNode$[ebp]
 	push	eax
@@ -16896,9 +16896,9 @@ $LN5@CycleOnce:
 	mov	edx, DWORD PTR [esi]
 	mov	DWORD PTR [eax], edx
 
-; 405  : 
-; 406  :   //if the target has been found exit
-; 407  :   if (termination_condition::isSatisfied(m_Graph, m_iTarget, NextClosestNode))
+; 406  : 
+; 407  :   //if the target has been found exit
+; 408  :   if (termination_condition::isSatisfied(m_Graph, m_iTarget, NextClosestNode))
 
 	mov	eax, DWORD PTR _NextClosestNode$[ebp]
 	push	eax
@@ -16914,27 +16914,27 @@ $LN5@CycleOnce:
 	test	edx, edx
 	je	SHORT $LN6@CycleOnce
 
-; 408  :   {
-; 409  :     //make a note of the node index that has satisfied the condition. This
-; 410  :     //is so we can work backwards from the index to extract the path from
-; 411  :     //the shortest path tree.
-; 412  :     m_iTarget = NextClosestNode;
+; 409  :   {
+; 410  :     //make a note of the node index that has satisfied the condition. This
+; 411  :     //is so we can work backwards from the index to extract the path from
+; 412  :     //the shortest path tree.
+; 413  :     m_iTarget = NextClosestNode;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR _NextClosestNode$[ebp]
 	mov	DWORD PTR [eax+64], ecx
 
-; 413  : 
-; 414  :     return target_found;
+; 414  : 
+; 415  :     return target_found;
 
 	xor	eax, eax
 	jmp	$LN1@CycleOnce
 $LN6@CycleOnce:
 
-; 415  :   }
-; 416  : 
-; 417  :   //now to test all the edges attached to this node
-; 418  :   graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+; 416  :   }
+; 417  : 
+; 418  :   //now to test all the edges attached to this node
+; 419  :   graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
 
 	mov	edx, DWORD PTR _NextClosestNode$[ebp]
 	push	edx
@@ -16945,7 +16945,7 @@ $LN6@CycleOnce:
 	call	??0ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE@ABV1@H@Z ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::ConstEdgeIterator
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 419  :   for (const Edge* pE=ConstEdgeItr.begin();
+; 420  :   for (const Edge* pE=ConstEdgeItr.begin();
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?begin@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::begin
@@ -16953,14 +16953,14 @@ $LN6@CycleOnce:
 	jmp	SHORT $LN4@CycleOnce
 $LN2@CycleOnce:
 
-; 421  :        pE=ConstEdgeItr.next())
+; 422  :        pE=ConstEdgeItr.next())
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?next@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAEPBVNavGraphEdge@@XZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::next
 	mov	DWORD PTR _pE$4[ebp], eax
 $LN4@CycleOnce:
 
-; 420  :       !ConstEdgeItr.end();
+; 421  :       !ConstEdgeItr.end();
 
 	lea	ecx, DWORD PTR _ConstEdgeItr$[ebp]
 	call	?end@ConstEdgeIterator@?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@QAE_NXZ ; SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>::ConstEdgeIterator::end
@@ -16968,10 +16968,10 @@ $LN4@CycleOnce:
 	test	edx, edx
 	jne	$LN3@CycleOnce
 
-; 422  :   {
-; 423  :     //the total cost to the node this edge points to is the cost to the
-; 424  :     //current node plus the cost of the edge connecting them.
-; 425  :     double NewCost = m_CostToThisNode[NextClosestNode] + pE->Cost();
+; 423  :   {
+; 424  :     //the total cost to the node this edge points to is the cost to the
+; 425  :     //current node plus the cost of the edge connecting them.
+; 426  :     double NewCost = m_CostToThisNode[NextClosestNode] + pE->Cost();
 
 	mov	eax, DWORD PTR _NextClosestNode$[ebp]
 	push	eax
@@ -16986,11 +16986,11 @@ $LN4@CycleOnce:
 	addsd	xmm0, QWORD PTR [esi]
 	movsd	QWORD PTR _NewCost$3[ebp], xmm0
 
-; 426  : 
-; 427  :     //if this edge has never been on the frontier make a note of the cost
-; 428  :     //to get to the node it points to, then add the edge to the frontier
-; 429  :     //and the destination node to the PQ.
-; 430  :     if (m_SearchFrontier[pE->To()] == 0)
+; 427  : 
+; 428  :     //if this edge has never been on the frontier make a note of the cost
+; 429  :     //to get to the node it points to, then add the edge to the frontier
+; 430  :     //and the destination node to the PQ.
+; 431  :     if (m_SearchFrontier[pE->To()] == 0)
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17001,8 +17001,8 @@ $LN4@CycleOnce:
 	cmp	DWORD PTR [eax], 0
 	jne	SHORT $LN7@CycleOnce
 
-; 431  :     {
-; 432  :       m_CostToThisNode[pE->To()] = NewCost;
+; 432  :     {
+; 433  :       m_CostToThisNode[pE->To()] = NewCost;
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17013,8 +17013,8 @@ $LN4@CycleOnce:
 	movsd	xmm0, QWORD PTR _NewCost$3[ebp]
 	movsd	QWORD PTR [eax], xmm0
 
-; 433  : 
-; 434  :       m_pPQ->insert(pE->To());
+; 434  : 
+; 435  :       m_pPQ->insert(pE->To());
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17023,8 +17023,8 @@ $LN4@CycleOnce:
 	mov	ecx, DWORD PTR [ecx+68]
 	call	?insert@?$IndexedPriorityQLow@N@@QAEXH@Z ; IndexedPriorityQLow<double>::insert
 
-; 435  : 
-; 436  :       m_SearchFrontier[pE->To()] = pE;
+; 436  : 
+; 437  :       m_SearchFrontier[pE->To()] = pE;
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17035,18 +17035,18 @@ $LN4@CycleOnce:
 	mov	edx, DWORD PTR _pE$4[ebp]
 	mov	DWORD PTR [eax], edx
 
-; 437  :     }
+; 438  :     }
 
 	jmp	$LN9@CycleOnce
 $LN7@CycleOnce:
 
-; 438  : 
-; 439  :     //else test to see if the cost to reach the destination node via the
-; 440  :     //current node is cheaper than the cheapest cost found so far. If
-; 441  :     //this path is cheaper, we assign the new cost to the destination
-; 442  :     //node, update its entry in the PQ to reflect the change and add the
-; 443  :     //edge to the frontier
-; 444  :     else if ( (NewCost < m_CostToThisNode[pE->To()]) &&
+; 439  : 
+; 440  :     //else test to see if the cost to reach the destination node via the
+; 441  :     //current node is cheaper than the cheapest cost found so far. If
+; 442  :     //this path is cheaper, we assign the new cost to the destination
+; 443  :     //node, update its entry in the PQ to reflect the change and add the
+; 444  :     //edge to the frontier
+; 445  :     else if ( (NewCost < m_CostToThisNode[pE->To()]) &&
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17066,9 +17066,9 @@ $LN7@CycleOnce:
 	cmp	DWORD PTR [eax], 0
 	jne	SHORT $LN9@CycleOnce
 
-; 445  :               (m_ShortestPathTree[pE->To()] == 0) )
-; 446  :     {
-; 447  :       m_CostToThisNode[pE->To()] = NewCost;
+; 446  :               (m_ShortestPathTree[pE->To()] == 0) )
+; 447  :     {
+; 448  :       m_CostToThisNode[pE->To()] = NewCost;
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17079,10 +17079,10 @@ $LN7@CycleOnce:
 	movsd	xmm0, QWORD PTR _NewCost$3[ebp]
 	movsd	QWORD PTR [eax], xmm0
 
-; 448  : 
-; 449  :       //because the cost is less than it was previously, the PQ must be
-; 450  :       //re-sorted to account for this.
-; 451  :       m_pPQ->ChangePriority(pE->To());
+; 449  : 
+; 450  :       //because the cost is less than it was previously, the PQ must be
+; 451  :       //re-sorted to account for this.
+; 452  :       m_pPQ->ChangePriority(pE->To());
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17091,8 +17091,8 @@ $LN7@CycleOnce:
 	mov	ecx, DWORD PTR [eax+68]
 	call	?ChangePriority@?$IndexedPriorityQLow@N@@QAEXH@Z ; IndexedPriorityQLow<double>::ChangePriority
 
-; 452  : 
-; 453  :       m_SearchFrontier[pE->To()] = pE;
+; 453  : 
+; 454  :       m_SearchFrontier[pE->To()] = pE;
 
 	mov	ecx, DWORD PTR _pE$4[ebp]
 	call	?To@GraphEdge@@QBEHXZ			; GraphEdge::To
@@ -17104,15 +17104,15 @@ $LN7@CycleOnce:
 	mov	DWORD PTR [eax], ecx
 $LN9@CycleOnce:
 
-; 454  :     }
-; 455  :   }
+; 455  :     }
+; 456  :   }
 
 	jmp	$LN2@CycleOnce
 $LN3@CycleOnce:
 
-; 456  :   
-; 457  :   //there are still nodes to explore
-; 458  :   return search_incomplete;
+; 457  :   
+; 458  :   //there are still nodes to explore
+; 459  :   return search_incomplete;
 
 	mov	DWORD PTR $T2[ebp], 2
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
@@ -17121,7 +17121,7 @@ $LN3@CycleOnce:
 	mov	eax, DWORD PTR $T2[ebp]
 $LN1@CycleOnce:
 
-; 459  : }
+; 460  : }
 
 	push	edx
 	mov	ecx, ebp
@@ -17196,7 +17196,7 @@ _this$ = -4						; size = 4
 ??1?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@UAE@XZ PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::~Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >, COMDAT
 ; _this$ = ecx
 
-; 366  :    {
+; 367  :    {
 
 	push	ebp
 	mov	ebp, esp
@@ -17208,7 +17208,7 @@ _this$ = -4						; size = 4
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax], OFFSET ??_7?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@6B@
 
-; 367  :      delete m_pPQ;
+; 368  :      delete m_pPQ;
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+68]
@@ -17224,7 +17224,7 @@ $LN3@Graph_Sear:
 	mov	DWORD PTR tv85[ebp], 0
 $LN1@Graph_Sear:
 
-; 368  :    }
+; 369  :    }
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	add	ecx, 44					; 0000002cH
@@ -17264,7 +17264,7 @@ _target$ = 16						; size = 4
 ??0?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@QAE@ABV?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@HH@Z PROC ; Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >::Graph_SearchDijkstras_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,FindActiveTrigger<Trigger<Raven_Bot> > >, COMDAT
 ; _this$ = ecx
 
-; 354  :   { 
+; 355  :   { 
 
 	push	ebp
 	mov	ebp, esp
@@ -17289,26 +17289,26 @@ _target$ = 16						; size = 4
 	mov	DWORD PTR fs:0, eax
 	mov	DWORD PTR _this$[ebp], ecx
 
-; 346  :                           int                   target):Graph_SearchTimeSliced<Edge>(Dijkstra),
+; 347  :                           int                   target):Graph_SearchTimeSliced<Edge>(Dijkstra),
 
 	push	1
 	mov	ecx, DWORD PTR _this$[ebp]
 	call	??0?$Graph_SearchTimeSliced@VNavGraphEdge@@@@QAE@W4SearchType@0@@Z ; Graph_SearchTimeSliced<NavGraphEdge>::Graph_SearchTimeSliced<NavGraphEdge>
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 354  :   { 
+; 355  :   { 
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	DWORD PTR [eax], OFFSET ??_7?$Graph_SearchDijkstras_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@V?$FindActiveTrigger@V?$Trigger@VRaven_Bot@@@@@@@@6B@
 
-; 347  :   
-; 348  :                                               m_Graph(G),
+; 348  :   
+; 349  :                                               m_Graph(G),
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR _G$[ebp]
 	mov	DWORD PTR [ecx+8], edx
 
-; 351  :                                               m_CostToThisNode(G.NumNodes(), 0.0),
+; 352  :                                               m_CostToThisNode(G.NumNodes(), 0.0),
 
 	xorps	xmm0, xmm0
 	movsd	QWORD PTR $T6[ebp], xmm0
@@ -17325,7 +17325,7 @@ _target$ = 16						; size = 4
 	call	??0?$vector@NV?$allocator@N@std@@@std@@QAE@IABNABV?$allocator@N@1@@Z ; std::vector<double,std::allocator<double> >::vector<double,std::allocator<double> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 1
 
-; 349  :                                               m_ShortestPathTree(G.NumNodes()),                              
+; 350  :                                               m_ShortestPathTree(G.NumNodes()),                              
 
 	lea	ecx, DWORD PTR $T5[ebp]
 	call	??0?$allocator@PBVNavGraphEdge@@@std@@QAE@XZ ; std::allocator<NavGraphEdge const *>::allocator<NavGraphEdge const *>
@@ -17338,7 +17338,7 @@ _target$ = 16						; size = 4
 	call	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@IABV?$allocator@PBVNavGraphEdge@@@1@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 2
 
-; 350  :                                               m_SearchFrontier(G.NumNodes()),
+; 351  :                                               m_SearchFrontier(G.NumNodes()),
 
 	lea	ecx, DWORD PTR $T4[ebp]
 	call	??0?$allocator@PBVNavGraphEdge@@@std@@QAE@XZ ; std::allocator<NavGraphEdge const *>::allocator<NavGraphEdge const *>
@@ -17351,20 +17351,20 @@ _target$ = 16						; size = 4
 	call	??0?$vector@PBVNavGraphEdge@@V?$allocator@PBVNavGraphEdge@@@std@@@std@@QAE@IABV?$allocator@PBVNavGraphEdge@@@1@@Z ; std::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >::vector<NavGraphEdge const *,std::allocator<NavGraphEdge const *> >
 	mov	BYTE PTR __$EHRec$[ebp+8], 3
 
-; 352  :                                               m_iSource(source),
+; 353  :                                               m_iSource(source),
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR _source$[ebp]
 	mov	DWORD PTR [ecx+60], edx
 
-; 353  :                                               m_iTarget(target)
+; 354  :                                               m_iTarget(target)
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR _target$[ebp]
 	mov	DWORD PTR [eax+64], ecx
 
-; 355  :      //create the PQ         ,
-; 356  :      m_pPQ =new IndexedPriorityQLow<double>(m_CostToThisNode, m_Graph.NumNodes());
+; 356  :      //create the PQ         ,
+; 357  :      m_pPQ =new IndexedPriorityQLow<double>(m_CostToThisNode, m_Graph.NumNodes());
 
 	push	44					; 0000002cH
 	call	??2@YAPAXI@Z				; operator new
@@ -17394,9 +17394,9 @@ $LN4@Graph_Sear:
 	mov	eax, DWORD PTR $T3[ebp]
 	mov	DWORD PTR [edx+68], eax
 
-; 357  : 
-; 358  :     //put the source node on the queue
-; 359  :     m_pPQ->insert(m_iSource);
+; 358  : 
+; 359  :     //put the source node on the queue
+; 360  :     m_pPQ->insert(m_iSource);
 
 	mov	ecx, DWORD PTR _this$[ebp]
 	mov	edx, DWORD PTR [ecx+60]
@@ -17405,7 +17405,7 @@ $LN4@Graph_Sear:
 	mov	ecx, DWORD PTR [eax+68]
 	call	?insert@?$IndexedPriorityQLow@N@@QAEXH@Z ; IndexedPriorityQLow<double>::insert
 
-; 360  :   }
+; 361  :   }
 
 	mov	DWORD PTR __$EHRec$[ebp+8], -1
 	mov	eax, DWORD PTR _this$[ebp]
@@ -17538,7 +17538,7 @@ ___$ReturnUdt$ = 8					; size = 4
 ?GetPathAsPathEdges@?$Graph_SearchAStar_TS@V?$SparseGraph@V?$NavGraphNode@PAV?$Trigger@VRaven_Bot@@@@@@VNavGraphEdge@@@@VHeuristic_Euclid@@@@UBE?AV?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@XZ PROC ; Graph_SearchAStar_TS<SparseGraph<NavGraphNode<Trigger<Raven_Bot> *>,NavGraphEdge>,Heuristic_Euclid>::GetPathAsPathEdges, COMDAT
 ; _this$ = ecx
 
-; 288  : {
+; 289  : {
 
 	push	ebp
 	mov	ebp, esp
@@ -17562,15 +17562,15 @@ ___$ReturnUdt$ = 8					; size = 4
 	mov	DWORD PTR _this$[ebp], ecx
 	mov	DWORD PTR $T2[ebp], 0
 
-; 289  :   std::list<PathEdge> path;
+; 290  :   std::list<PathEdge> path;
 
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	??0?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAE@XZ ; std::list<PathEdge,std::allocator<PathEdge> >::list<PathEdge,std::allocator<PathEdge> >
 	mov	DWORD PTR __$EHRec$[ebp+8], 0
 
-; 290  : 
-; 291  :   //just return an empty path if no target or no path found
-; 292  :   if (m_iTarget < 0)  return path;    
+; 291  : 
+; 292  :   //just return an empty path if no target or no path found
+; 293  :   if (m_iTarget < 0)  return path;    
 
 	mov	eax, DWORD PTR _this$[ebp]
 	cmp	DWORD PTR [eax+80], 0
@@ -17589,16 +17589,16 @@ ___$ReturnUdt$ = 8					; size = 4
 	jmp	$LN1@GetPathAsP
 $LN4@GetPathAsP:
 
-; 293  : 
-; 294  :   int nd = m_iTarget;
+; 294  : 
+; 295  :   int nd = m_iTarget;
 
 	mov	eax, DWORD PTR _this$[ebp]
 	mov	ecx, DWORD PTR [eax+80]
 	mov	DWORD PTR _nd$[ebp], ecx
 $LN2@GetPathAsP:
 
-; 295  :     
-; 296  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
+; 296  :     
+; 297  :   while ((nd != m_iSource) && (m_ShortestPathTree[nd] != 0))
 
 	mov	edx, DWORD PTR _this$[ebp]
 	mov	eax, DWORD PTR _nd$[ebp]
@@ -17612,8 +17612,8 @@ $LN2@GetPathAsP:
 	cmp	DWORD PTR [eax], 0
 	je	$LN3@GetPathAsP
 
-; 297  :   {
-; 298  :     path.push_front(PathEdge(m_Graph.GetNode(m_ShortestPathTree[nd]->From()).Pos(),
+; 298  :   {
+; 299  :     path.push_front(PathEdge(m_Graph.GetNode(m_ShortestPathTree[nd]->From()).Pos(),
 
 	mov	edx, DWORD PTR _nd$[ebp]
 	push	edx
@@ -17687,11 +17687,11 @@ $LN2@GetPathAsP:
 	lea	ecx, DWORD PTR _path$[ebp]
 	call	?push_front@?$list@VPathEdge@@V?$allocator@VPathEdge@@@std@@@std@@QAEX$$QAVPathEdge@@@Z ; std::list<PathEdge,std::allocator<PathEdge> >::push_front
 
-; 299  :                              m_Graph.GetNode(m_ShortestPathTree[nd]->To()).Pos(),
-; 300  :                              m_ShortestPathTree[nd]->Flags(),
-; 301  :                              m_ShortestPathTree[nd]->IDofIntersectingEntity()));
-; 302  : 
-; 303  :     nd = m_ShortestPathTree[nd]->From();
+; 300  :                              m_Graph.GetNode(m_ShortestPathTree[nd]->To()).Pos(),
+; 301  :                              m_ShortestPathTree[nd]->Flags(),
+; 302  :                              m_ShortestPathTree[nd]->IDofIntersectingEntity()));
+; 303  : 
+; 304  :     nd = m_ShortestPathTree[nd]->From();
 
 	mov	ecx, DWORD PTR _nd$[ebp]
 	push	ecx
@@ -17702,13 +17702,13 @@ $LN2@GetPathAsP:
 	call	?From@GraphEdge@@QBEHXZ			; GraphEdge::From
 	mov	DWORD PTR _nd$[ebp], eax
 
-; 304  :   }
+; 305  :   }
 
 	jmp	$LN2@GetPathAsP
 $LN3@GetPathAsP:
 
-; 305  : 
-; 306  :   return path;
+; 306  : 
+; 307  :   return path;
 
 	lea	edx, DWORD PTR _path$[ebp]
 	push	edx
@@ -17723,7 +17723,7 @@ $LN3@GetPathAsP:
 	mov	eax, DWORD PTR ___$ReturnUdt$[ebp]
 $LN1@GetPathAsP:
 
-; 307  : }
+; 308  : }
 
 	push	edx
 	mov	ecx, ebp

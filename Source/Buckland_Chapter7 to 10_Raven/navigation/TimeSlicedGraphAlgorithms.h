@@ -155,7 +155,7 @@ public:
 
   //길찾기 시작시 목적지까지 짧은 경로를 list에 vector로 Path를 돌려줌  
   std::list<int>        GetSubPath()const; // subpath 정의
-  
+      
   //returns the path as a list of PathEdges
   std::list<PathEdge>    GetPathAsPathEdges()const;
 
